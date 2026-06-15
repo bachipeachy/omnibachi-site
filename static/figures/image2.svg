@@ -1,0 +1,89 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="700" viewBox="-24 -24 1248 748">
+
+<!-- White background -->
+<rect x="-24" y="-24" width="1248" height="748" fill="#FFFFFF"/>
+
+<!-- Border -->
+<rect x="-18" y="-18" width="1236" height="736" rx="4" fill="none" stroke="#CCCCCC" stroke-width="1.5"/>
+
+<!-- Title -->
+<text x="600" y="52" text-anchor="middle" font-family="Garamond, 'Times New Roman', serif" font-size="38" font-weight="bold" fill="#000">Where Governance Lives</text>
+
+<!-- Subtitle -->
+<text x="600" y="80" text-anchor="middle" font-family="Garamond, 'Times New Roman', serif" font-size="18" fill="#000">Figure 1.2a — Application-centric vs. protocol-governed systems</text>
+
+<!-- ===== LEFT PANEL: Application-Centric ===== -->
+<rect x="80" y="110" width="480" height="480" rx="8" fill="#FFF3E0" stroke="#D4883A" stroke-width="2"/>
+
+<!-- Panel header bar -->
+<rect x="80" y="110" width="480" height="50" rx="8" fill="#D4883A"/>
+<rect x="80" y="136" width="480" height="24" fill="#D4883A"/>
+<text x="320" y="142" text-anchor="middle" font-family="Garamond, 'Times New Roman', serif" font-size="26" font-weight="bold" fill="#FFF">Application-Centric</text>
+
+<!-- Bullet items -->
+<rect x="112" y="188" width="416" height="54" rx="4" fill="#FFFFFF" stroke="#D4883A" stroke-width="1"/>
+<text x="144" y="210" font-family="Garamond, 'Times New Roman', serif" font-size="20" fill="#000">&#x2022;</text>
+<text x="165" y="210" font-family="Garamond, 'Times New Roman', serif" font-size="20" font-weight="bold" fill="#000">Governance buried in code</text>
+<text x="165" y="231" font-family="Garamond, 'Times New Roman', serif" font-size="16" fill="#444">Rules are scattered across methods and modules</text>
+
+<rect x="112" y="254" width="416" height="54" rx="4" fill="#FFFFFF" stroke="#D4883A" stroke-width="1"/>
+<text x="144" y="276" font-family="Garamond, 'Times New Roman', serif" font-size="20" fill="#000">&#x2022;</text>
+<text x="165" y="276" font-family="Garamond, 'Times New Roman', serif" font-size="20" font-weight="bold" fill="#000">Implicit contracts</text>
+<text x="165" y="297" font-family="Garamond, 'Times New Roman', serif" font-size="16" fill="#444">Assumptions undocumented; enforced only at runtime</text>
+
+<rect x="112" y="320" width="416" height="54" rx="4" fill="#FFFFFF" stroke="#D4883A" stroke-width="1"/>
+<text x="144" y="342" font-family="Garamond, 'Times New Roman', serif" font-size="20" fill="#000">&#x2022;</text>
+<text x="165" y="342" font-family="Garamond, 'Times New Roman', serif" font-size="20" font-weight="bold" fill="#000">Emergent architecture</text>
+<text x="165" y="363" font-family="Garamond, 'Times New Roman', serif" font-size="16" fill="#444">Structure grows from code, not from design</text>
+
+<rect x="112" y="386" width="416" height="54" rx="4" fill="#FFFFFF" stroke="#D4883A" stroke-width="1"/>
+<text x="144" y="408" font-family="Garamond, 'Times New Roman', serif" font-size="20" fill="#000">&#x2022;</text>
+<text x="165" y="408" font-family="Garamond, 'Times New Roman', serif" font-size="20" font-weight="bold" fill="#000">Hidden coupling</text>
+<text x="165" y="429" font-family="Garamond, 'Times New Roman', serif" font-size="16" fill="#444">Dependencies invisible until they break</text>
+
+<!-- Consequence label -->
+<rect x="112" y="460" width="416" height="100" rx="4" fill="#FFCCBC" stroke="#BF360C" stroke-width="1.5"/>
+<text x="320" y="487" text-anchor="middle" font-family="Garamond, 'Times New Roman', serif" font-size="17" font-weight="bold" fill="#5D1A00">Governance overhead: O(N²)</text>
+<text x="320" y="509" text-anchor="middle" font-family="Garamond, 'Times New Roman', serif" font-size="15" fill="#5D1A00">Each new component must understand</text>
+<text x="320" y="528" text-anchor="middle" font-family="Garamond, 'Times New Roman', serif" font-size="15" fill="#5D1A00">all existing assumptions to stay consistent</text>
+
+<!-- ===== RIGHT PANEL: Protocol-Governed ===== -->
+<rect x="640" y="110" width="480" height="480" rx="8" fill="#E8F5E9" stroke="#4A8C5C" stroke-width="2"/>
+
+<!-- Panel header bar -->
+<rect x="640" y="110" width="480" height="50" rx="8" fill="#4A8C5C"/>
+<rect x="640" y="136" width="480" height="24" fill="#4A8C5C"/>
+<text x="880" y="142" text-anchor="middle" font-family="Garamond, 'Times New Roman', serif" font-size="26" font-weight="bold" fill="#FFF">Protocol-Governed</text>
+
+<!-- Bullet items -->
+<rect x="672" y="188" width="416" height="54" rx="4" fill="#FFFFFF" stroke="#4A8C5C" stroke-width="1"/>
+<text x="704" y="210" font-family="Garamond, 'Times New Roman', serif" font-size="20" fill="#000">&#x2022;</text>
+<text x="725" y="210" font-family="Garamond, 'Times New Roman', serif" font-size="20" font-weight="bold" fill="#000">Declared governance surface</text>
+<text x="725" y="231" font-family="Garamond, 'Times New Roman', serif" font-size="16" fill="#444">Rules live in validated, versioned artifacts</text>
+
+<rect x="672" y="254" width="416" height="54" rx="4" fill="#FFFFFF" stroke="#4A8C5C" stroke-width="1"/>
+<text x="704" y="276" font-family="Garamond, 'Times New Roman', serif" font-size="20" fill="#000">&#x2022;</text>
+<text x="725" y="276" font-family="Garamond, 'Times New Roman', serif" font-size="20" font-weight="bold" fill="#000">Validatable artifacts</text>
+<text x="725" y="297" font-family="Garamond, 'Times New Roman', serif" font-size="16" fill="#444">Schema + constitutional checks run at compile time</text>
+
+<rect x="672" y="320" width="416" height="54" rx="4" fill="#FFFFFF" stroke="#4A8C5C" stroke-width="1"/>
+<text x="704" y="342" font-family="Garamond, 'Times New Roman', serif" font-size="20" fill="#000">&#x2022;</text>
+<text x="725" y="342" font-family="Garamond, 'Times New Roman', serif" font-size="20" font-weight="bold" fill="#000">Explicit authority boundaries</text>
+<text x="725" y="363" font-family="Garamond, 'Times New Roman', serif" font-size="16" fill="#444">Federation boundaries declare scope of each domain</text>
+
+<rect x="672" y="386" width="416" height="54" rx="4" fill="#FFFFFF" stroke="#4A8C5C" stroke-width="1"/>
+<text x="704" y="408" font-family="Garamond, 'Times New Roman', serif" font-size="20" fill="#000">&#x2022;</text>
+<text x="725" y="408" font-family="Garamond, 'Times New Roman', serif" font-size="20" font-weight="bold" fill="#000">Structural admissibility</text>
+<text x="725" y="429" font-family="Garamond, 'Times New Roman', serif" font-size="16" fill="#444">Invalid behavior cannot be expressed or executed</text>
+
+<!-- Consequence label -->
+<rect x="672" y="460" width="416" height="100" rx="4" fill="#C8E6C9" stroke="#2E7D32" stroke-width="1.5"/>
+<text x="880" y="487" text-anchor="middle" font-family="Garamond, 'Times New Roman', serif" font-size="17" font-weight="bold" fill="#1B4020">Governance overhead: O(N)</text>
+<text x="880" y="509" text-anchor="middle" font-family="Garamond, 'Times New Roman', serif" font-size="15" fill="#1B4020">Each new component declares its own contract —</text>
+<text x="880" y="528" text-anchor="middle" font-family="Garamond, 'Times New Roman', serif" font-size="15" fill="#1B4020">no global coupling required</text>
+
+<!-- VS divider -->
+<text x="600" y="368" text-anchor="middle" font-family="Garamond, 'Times New Roman', serif" font-size="36" font-weight="bold" fill="#999">vs</text>
+
+</svg>

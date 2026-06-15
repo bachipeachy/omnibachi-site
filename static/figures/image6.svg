@@ -1,0 +1,71 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="700" viewBox="-24 -24 1248 748">
+
+<!-- White background -->
+<rect x="-24" y="-24" width="1248" height="748" fill="#FFFFFF"/>
+
+<!-- Border -->
+<rect x="-18" y="-18" width="1236" height="736" rx="4" fill="none" stroke="#CCCCCC" stroke-width="1.5"/>
+
+<!-- Title -->
+<text x="600" y="52" text-anchor="middle" font-family="Garamond, 'Times New Roman', serif" font-size="38" font-weight="bold" fill="#000">Generation–Governance Impedance Mismatch</text>
+
+<!-- Subtitle -->
+<text x="600" y="80" text-anchor="middle" font-family="Garamond, 'Times New Roman', serif" font-size="18" fill="#000">Figure 1.6a — Code generation velocity outpaces governance establishment</text>
+
+<!-- Axes -->
+<line x1="150" y1="590" x2="1070" y2="590" stroke="#000" stroke-width="3"/>
+<line x1="150" y1="590" x2="150" y2="140" stroke="#000" stroke-width="3"/>
+
+<!-- Axis arrowheads -->
+<polygon points="1070,584 1070,596 1090,590" fill="#000"/>
+<polygon points="144,140 156,140 150,120" fill="#000"/>
+
+<!-- X-axis label -->
+<text x="600" y="648" text-anchor="middle" font-family="Garamond, 'Times New Roman', serif" font-size="30" fill="#000">Time</text>
+
+<!-- Y-axis label -->
+<text x="55" y="380" transform="rotate(-90 55,380)" text-anchor="middle" font-family="Garamond, 'Times New Roman', serif" font-size="30" fill="#000">Velocity</text>
+
+<!-- Light grid lines -->
+<line x1="150" y1="470" x2="1060" y2="470" stroke="#EEE" stroke-width="1"/>
+<line x1="150" y1="350" x2="1060" y2="350" stroke="#EEE" stroke-width="1"/>
+<line x1="150" y1="230" x2="1060" y2="230" stroke="#EEE" stroke-width="1"/>
+
+<!-- Shaded gap between curves — filled area representing governance debt -->
+<path d="M150,550 Q400,510 650,390 T1060,148
+         L1060,320 L150,570 Z"
+      fill="#BF360C" fill-opacity="0.07"/>
+
+<!-- Code Generation Velocity curve (accelerating — blue) -->
+<path d="M150,550 Q400,510 650,390 T1060,148"
+      fill="none" stroke="#1A3660" stroke-width="4"/>
+
+<!-- Governance Establishment Velocity line (lagging — orange dashed) -->
+<line x1="150" y1="570" x2="1060" y2="320"
+      stroke="#D4883A" stroke-width="4" stroke-dasharray="14,10"/>
+
+<!-- Code Gen label with swatch -->
+<rect x="650" y="162" width="14" height="14" rx="2" fill="#1A3660"/>
+<text x="672" y="174" font-family="Garamond, 'Times New Roman', serif" font-size="26" fill="#1A3660" font-weight="bold">Code Generation Velocity</text>
+
+<!-- Annotation arrow from label to curve -->
+<line x1="660" y1="178" x2="620" y2="250" stroke="#1A3660" stroke-width="1.5"/>
+<polygon points="617,246 615,257 624,252" fill="#1A3660"/>
+
+<!-- Governance label with swatch -->
+<rect x="650" y="350" width="14" height="14" rx="2" fill="none" stroke="#D4883A" stroke-width="2" stroke-dasharray="4,2"/>
+<text x="672" y="362" font-family="Garamond, 'Times New Roman', serif" font-size="26" fill="#D4883A" font-weight="bold">Governance Establishment Velocity</text>
+
+<!-- Annotation arrow from label to line -->
+<line x1="660" y1="366" x2="640" y2="420" stroke="#D4883A" stroke-width="1.5"/>
+<polygon points="637,416 635,427 644,422" fill="#D4883A"/>
+
+<!-- Gap annotation -->
+<text x="920" y="260" text-anchor="middle" font-family="Garamond, 'Times New Roman', serif" font-size="22" fill="#BF360C" font-style="italic">← governance</text>
+<text x="920" y="282" text-anchor="middle" font-family="Garamond, 'Times New Roman', serif" font-size="22" fill="#BF360C" font-style="italic">    debt gap →</text>
+
+<!-- Bottom annotation -->
+<text x="600" y="692" text-anchor="middle" font-family="Garamond, 'Times New Roman', serif" font-size="20" fill="#000">The gap between curves represents ungoverned execution — the structural liability accumulating over time.</text>
+
+</svg>

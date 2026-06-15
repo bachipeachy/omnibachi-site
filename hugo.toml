@@ -1,0 +1,131 @@
+baseURL = "https://omnibachi.org/"
+title = "omnibachi"
+theme = "PaperMod"
+
+enableRobotsTXT = true
+buildDrafts = false
+buildFuture = false
+buildExpired = false
+
+pagination.pagerSize = 10
+
+[minify]
+  disableXML = true
+  minifyOutput = true
+
+[params]
+  env = "production"
+  description = "Protocol-Governed Systems — blogs, papers, and a practitioner guide by Bhash Ganti."
+  author = "Bhash Ganti"
+  # Fallback social-share image for pages without their own cover (home, about, etc.).
+  images = ["og-default.png"]
+  defaultTheme = "auto"
+  ShowReadingTime = true
+  ShowShareButtons = false
+  ShowPostNavLinks = true
+  ShowBreadCrumbs = true
+  ShowCodeCopyButtons = true
+  ShowToc = true
+  TocOpen = false
+  ShowWordCount = true
+  # Comments are rendered by layouts/_partials/comments.html (giscus). Enabled
+  # globally; book chapters opt out via cascade in content/book/_index.md.
+  comments = true
+
+  [params.assets]
+    favicon = "/favicon.ico"
+    favicon16x16 = "/favicon-16x16.png"
+    favicon32x32 = "/favicon-32x32.png"
+    apple_touch_icon = "/apple-touch-icon.png"
+    safari_pinned_tab = "/safari-pinned-tab.svg"
+    theme_color = "#2e2e33"
+    msapplication_TileColor = "#2e2e33"
+
+  [params.homeInfoParams]
+    Title = "Welcome to OmniBachi"
+    Content = """
+The home of **Protocol-Governed Systems (PGS)** — an open-source architecture for building trustworthy software, AI agents, autonomous systems, and digital ecosystems through explicit protocol, governance, and verifiable execution.
+
+Rather than embedding behavior in opaque code paths or runtime discretion, PGS treats **governance, authority, intent, workflow, capability, and execution** as first-class declarative artifacts that can be authored, compiled, validated, and executed deterministically.
+
+This site is the primary knowledge hub for the PGS ecosystem — bringing together the conceptual foundations, reference architecture, technical specifications, implementation guidance, research publications, and practical examples that demonstrate how complex systems can be governed by protocol rather than convention.
+
+- **[Blog](/blog/)** — essays, architectural insights, project updates, and design explorations.
+- **[Papers](/papers/)** — peer-reviewed and technical publications, including DOI-backed reference papers.
+- **[Book](/book/)** — the practitioner's guide to Protocol-Governed Systems.
+- **[Learn](/learn/)** — tutorials, walkthroughs, examples, and hands-on learning resources.
+- **[Open Source](https://github.com/bachipeachy)** — repositories, tooling, reference implementations, and project documentation.
+"""
+
+  [params.profileMode]
+    enabled = false
+
+  # giscus (GitHub Discussions-backed comments).
+  # Fill repoId + categoryId from https://giscus.app after the public repo exists
+  # and Discussions are enabled. Until repoId is set (still the REPLACE_* value),
+  # comments.html renders nothing — so the site is safe to deploy beforehand.
+  [params.giscus]
+    repo = "bachipeachy/omnibachi-site"
+    repoId = "REPLACE_WITH_REPO_ID"
+    category = "Comments"
+    categoryId = "REPLACE_WITH_CATEGORY_ID"
+    mapping = "pathname"
+    strict = "0"
+    reactionsEnabled = "1"
+    emitMetadata = "0"
+    inputPosition = "bottom"
+    lang = "en"
+
+[outputs]
+  home = ["HTML", "RSS", "JSON"]
+
+# Tier-1 top menu
+[menu]
+  [[menu.main]]
+    identifier = "blog"
+    name = "Blog"
+    url = "/blog/"
+    weight = 10
+  [[menu.main]]
+    identifier = "papers"
+    name = "Papers"
+    url = "/papers/"
+    weight = 20
+  [[menu.main]]
+    identifier = "book"
+    name = "Book"
+    url = "/book/"
+    weight = 30
+  [[menu.main]]
+    identifier = "learn"
+    name = "Learn"
+    url = "/learn/"
+    weight = 40
+  [[menu.main]]
+    identifier = "open-source"
+    name = "Open Source"
+    url = "https://github.com/bachipeachy"
+    weight = 42
+  [[menu.main]]
+    identifier = "use-cases"
+    name = "Use Cases"
+    url = "/use-cases/"
+    weight = 45
+  [[menu.main]]
+    identifier = "about"
+    name = "About"
+    url = "/about/"
+    weight = 50
+  [[menu.main]]
+    identifier = "search"
+    name = "Search"
+    url = "/search/"
+    weight = 60
+
+[markup]
+  [markup.goldmark.renderer]
+    unsafe = true
+  [markup.highlight]
+    noClasses = false
+    codeFences = true
+    guessSyntax = true

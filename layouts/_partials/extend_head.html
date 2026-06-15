@@ -1,0 +1,48 @@
+{{- /* Project styles layered on top of PaperMod. */ -}}
+<link rel="icon" type="image/svg+xml" href="{{ "favicon.svg" | absURL }}">
+<style>
+  .series-box {
+    margin: 36px 0 8px;
+    padding: 16px 20px;
+    border: 1px solid var(--border);
+    border-radius: var(--radius);
+    background: var(--code-bg);
+  }
+  .series-box-title {
+    font-weight: 700;
+    margin-bottom: 10px;
+    color: var(--secondary);
+    font-size: 15px;
+    text-transform: uppercase;
+    letter-spacing: 0.04em;
+  }
+  .series-list {
+    margin: 0;
+    padding-left: 1.2em;
+    line-height: 1.6;
+  }
+  .series-list li { margin: 2px 0; }
+  .series-list a { color: var(--primary); }
+  .series-current > span {
+    font-weight: 700;
+    color: var(--primary);
+  }
+  .series-current::marker { font-weight: 700; }
+
+  .book-toc { margin-top: 24px; }
+  .book-toc ol { line-height: 1.9; padding-left: 1.4em; }
+  .book-toc a { color: var(--primary); }
+
+  /* Tier-1 header: emphasize the site title, and pin the menu line.
+     Higher-specificity selector guarantees it beats the theme's `.logo a`. */
+  .header .logo a { font-size: 40px; font-weight: 800; letter-spacing: -0.015em; }
+  .header {
+    position: sticky;
+    top: 0;
+    z-index: 30;
+    background: var(--theme);
+    border-bottom: 1px solid var(--border);
+  }
+  /* keep in-page anchor jumps clear of the pinned header */
+  html { scroll-padding-top: 70px; }
+</style>

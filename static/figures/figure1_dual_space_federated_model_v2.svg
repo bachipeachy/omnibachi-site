@@ -1,0 +1,1575 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<svg
+   id="svg90"
+   version="1.1"
+   viewBox="0 0 2100 1200"
+   sodipodi:docname="figure1_dual_space_federated_model_v2.svg"
+   inkscape:version="1.4.3 (0d15f75, 2025-12-25)"
+   xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
+   xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
+   xmlns="http://www.w3.org/2000/svg"
+   xmlns:svg="http://www.w3.org/2000/svg">
+  <sodipodi:namedview
+     id="namedview1"
+     pagecolor="#ffffff"
+     bordercolor="#000000"
+     borderopacity="0.25"
+     inkscape:showpageshadow="2"
+     inkscape:pageopacity="0.0"
+     inkscape:pagecheckerboard="0"
+     inkscape:deskcolor="#d1d1d1"
+     inkscape:zoom="0.35369398"
+     inkscape:cx="1099.8208"
+     inkscape:cy="435.40464"
+     inkscape:window-width="1102"
+     inkscape:window-height="541"
+     inkscape:window-x="9"
+     inkscape:window-y="56"
+     inkscape:window-maximized="0"
+     inkscape:current-layer="svg90" />
+  <defs
+     id="defs4">
+    <style
+       id="style1">.title        { font: bold 32px Georgia, serif; fill: #1a1a2e; }
+.space-label  { font: bold 20px Georgia, serif; fill: #1a1a2e; letter-spacing: 1.5px; }
+.fb-name      { font: bold 12px 'Courier New', monospace; fill: white; }
+.fb-name-future { font: bold 11.5px 'Courier New', monospace; fill: #2c4a80; }
+.fb-sovereign-text { font: bold 13px 'Courier New', monospace; fill: #4a2800; }
+.fb-sovereign-sub  { font: italic 11px Georgia, serif; fill: #6b3c00; }
+.exec-code    { font: bold 17px 'Courier New', monospace; fill: white; }
+.exec-name    { font: 11px Georgia, serif; fill: #c8e6c9; font-style: italic; }
+.rb-code      { font: bold 14px 'Courier New', monospace; fill: #1b5e20; }
+.rb-name      { font: 11px Georgia, serif; fill: #2e7d32; font-style: italic; }
+.bridge-title { font: bold 19px Georgia, serif; fill: white; letter-spacing: 1px; }
+.bridge-math  { font: bold 22px Georgia, serif; fill: #fdd835; }
+.bridge-sub   { font: italic 12px Georgia, serif; fill: #90a4ae; }
+.callout      { font: italic 13px Georgia, serif; fill: #444; }
+.legend-title { font: bold 12px Georgia, serif; fill: #333; }
+.legend-text  { font: 11.5px 'Courier New', monospace; fill: #333; }
+.section-note { font: 11px Georgia, serif; fill: #888; font-style: italic; }</style>
+    <!-- Arrowheads -->
+    <marker
+       id="arr-green"
+       markerHeight="9"
+       markerWidth="9"
+       orient="auto"
+       refX="8"
+       refY="4.5">
+      <path
+         id="path2"
+         d="m0 0 9 4.5-9 4.5z"
+         fill="#388e3c" />
+    </marker>
+    <marker
+       id="arr-gold"
+       markerHeight="9"
+       markerWidth="9"
+       orient="auto"
+       refX="8"
+       refY="4.5">
+      <path
+         id="path3"
+         d="m0 0 9 4.5-9 4.5z"
+         fill="#c8a000" />
+    </marker>
+    <marker
+       id="arr-gold-7"
+       markerHeight="9"
+       markerWidth="9"
+       orient="auto"
+       refX="8"
+       refY="4.5">
+      <path
+         id="path3-5"
+         d="m0 0 9 4.5-9 4.5z"
+         fill="#c8a000" />
+    </marker>
+    <marker
+       id="arr-green-7"
+       markerHeight="9"
+       markerWidth="9"
+       orient="auto"
+       refX="8"
+       refY="4.5">
+      <path
+         id="path2-5"
+         d="m0 0 9 4.5-9 4.5z"
+         fill="#388e3c" />
+    </marker>
+  </defs>
+  <!-- ═══════════════════════════════════════════════ -->
+  <!-- TITLE                                           -->
+  <!-- ═══════════════════════════════════════════════ -->
+  <!-- ═══════════════════════════════════════════════ -->
+  <!-- GOVERNANCE SPACE — background ellipse           -->
+  <!-- ═══════════════════════════════════════════════ -->
+  <!-- Orbit rings -->
+  <!-- Space label -->
+  <!-- ═══════════════════════════════════════════════ -->
+  <!-- fb.constitution — sovereign center              -->
+  <!-- ═══════════════════════════════════════════════ -->
+  <!-- ═══════════════════════════════════════════════ -->
+  <!-- DELEGATED FB NODES — 10 nodes around center    -->
+  <!-- radius ≈ 318, angles 36° apart from top        -->
+  <!-- ═══════════════════════════════════════════════ -->
+  <!-- Node template: rx=79, ry=28 gives width=158 height=56 -->
+  <!-- CURRENT FBs — solid blue fill -->
+  <!-- 0: top (500, 320) — fb.topology -->
+  <!-- 1: upper-right (688, 380) — fb.authority -->
+  <!-- 2: right (806, 538) — fb.transport -->
+  <!-- 9: upper-left-2 (312, 380) — fb.conformance -->
+  <!-- 8: upper-left (194, 538) — fb.vocabulary -->
+  <!-- 7: left (194, 738) — fb.identity -->
+  <!-- V0 FBs — solid blue (implemented) -->
+  <!-- 3: lower-right (806, 738) — fb.security -->
+  <!-- 4: bottom-right (688, 896) — fb.trust -->
+  <!-- 5: bottom (500, 956) — FB_EXECUTION_PLACEMENT -->
+  <!-- 6: bottom-left (312, 896) — FB_EXECUTION_SCHEDULING -->
+  <!-- ═══════════════════════════════════════════════ -->
+  <!-- COMPILER BRIDGE                                 -->
+  <!-- ═══════════════════════════════════════════════ -->
+  <!-- Mini admissibility graph -->
+  <!-- ═══════════════════════════════════════════════ -->
+  <!-- ARROWS: Governance → Bridge → Execution         -->
+  <!-- ═══════════════════════════════════════════════ -->
+  <!-- fb.transport right edge to Bridge left edge -->
+  <!-- Bridge right to Execution Space -->
+  <!-- ═══════════════════════════════════════════════ -->
+  <!-- MACHINE EXECUTION SPACE                         -->
+  <!-- ═══════════════════════════════════════════════ -->
+  <!-- Execution nodes: width=172, height=58 -->
+  <!-- Two-line: code (bold monospace) + name (italic serif) -->
+  <!-- Row 1: TI | AC -->
+  <!-- Row 2: IN | WF -->
+  <!-- Row 3: CC (centered) -->
+  <!-- Row 4: CT | CS -->
+  <!-- Row 5: EV | TE -->
+  <!-- RB — orthogonal resolution (different style) -->
+  <!-- ═══════════════════════════════════════════════ -->
+  <!-- FLOW ARROWS in execution space                  -->
+  <!-- ═══════════════════════════════════════════════ -->
+  <!-- TI → IN -->
+  <!-- AC → WF -->
+  <!-- IN → CC -->
+  <!-- WF → CC -->
+  <!-- CC → CT -->
+  <!-- CC → CS -->
+  <!-- CT → EV -->
+  <!-- CS → TE -->
+  <!-- RB orthogonal indicator (horizontal dashes) -->
+  <!-- ═══════════════════════════════════════════════ -->
+  <!-- TRACE output annotation                         -->
+  <!-- ═══════════════════════════════════════════════ -->
+  <!-- Arrow from EV to Trace -->
+  <!-- ═══════════════════════════════════════════════ -->
+  <!-- CALLOUT ANNOTATIONS                             -->
+  <!-- ═══════════════════════════════════════════════ -->
+  <!-- ═══════════════════════════════════════════════ -->
+  <!-- LEGEND                                          -->
+  <!-- ═══════════════════════════════════════════════ -->
+  <!-- ═══════════════════════════════════════════════ -->
+  <!-- Orthogonality annotation between spaces         -->
+  <!-- ═══════════════════════════════════════════════ -->
+  <text
+     id="text4"
+     class="title"
+     x="1045"
+     y="136"
+     font-family="Georgia, serif"
+     font-size="32px"
+     font-weight="bold"
+     text-anchor="middle"
+     style="font-style:normal;font-variant:normal;font-weight:bold;font-stretch:normal;font-size:32px;line-height:normal;font-family:Georgia, serif"><tspan
+       style="fill:#999999"
+       id="tspan2">Protocol-Governed Systems — Dual-Space Model</tspan></text>
+  <text
+     id="text5"
+     class="section-note"
+     x="1044"
+     y="172"
+     font-family="Georgia, serif"
+     font-size="11px"
+     text-anchor="middle"
+     style="font-variant:normal;font-weight:normal;font-stretch:normal;font-size:11px;line-height:normal;font-family:Georgia, serif"><tspan
+       id="tspan90"
+       font-size="26.667px">Human Governance Space · Compilation · Machine Execution Space</tspan></text>
+  <circle
+     id="ellipse5"
+     cx="543.5"
+     cy="589.5"
+     r="348.83"
+     fill="#eef2fb"
+     stroke="#2c4f8c"
+     stroke-width="2.3365" />
+  <g
+     id="g37">
+    <rect
+       id="rect1-8"
+       x="359.6796"
+       y="824.67694"
+       width="376.62222"
+       height="56.62738"
+       rx="19.07004"
+       fill="#dce8f7"
+       stroke="#5a7fbf"
+       stroke-dasharray="6, 3"
+       stroke-width="3.35388" />
+    <text
+       id="text3-0"
+       class="fb-name-future"
+       x="546.98529"
+       y="843.04431"
+       font-family="'Courier New', monospace"
+       font-size="11.5px"
+       font-weight="bold"
+       text-anchor="middle"
+       style="font-style:normal;font-variant:normal;font-weight:bold;font-stretch:normal;font-size:11.5px;line-height:normal;font-family:'Courier New', monospace;fill:#2c4a80;stroke-width:1.00005"
+       transform="scale(1.00005,0.99995)"><tspan
+         id="tspan1-2"
+         font-size="16.0008px"
+         style="stroke-width:1.00005">Consumer Domains</tspan></text>
+    <text
+       id="text6-4"
+       class="fb-name-future"
+       x="550.98523"
+       y="863.04535"
+       font-family="'Courier New', monospace"
+       font-size="11.5px"
+       font-weight="bold"
+       text-anchor="middle"
+       style="font-style:normal;font-variant:normal;font-weight:bold;font-stretch:normal;font-size:11.5px;line-height:normal;font-family:'Courier New', monospace;fill:#2c4a80;stroke-width:1.00005"
+       transform="scale(1.00005,0.99995)"><tspan
+         id="tspan3-8"
+         font-size="12.0006px"
+         style="stroke-width:1.00005">e.g., blockchain, finance, healthcare (via structural discovery)</tspan></text>
+  </g>
+  <text
+     id="text8"
+     class="space-label"
+     x="542.08325"
+     y="220.50967"
+     font-family="Georgia, serif"
+     font-size="20px"
+     font-weight="bold"
+     text-anchor="middle"
+     style="line-height:normal">HUMAN GOVERNANCE SPACE</text>
+  <circle
+     id="circle8"
+     cx="542.9"
+     cy="593.52"
+     r="122.95"
+     fill="#fdd835"
+     stroke="#c8a000"
+     stroke-width="4.0984" />
+  <text
+     id="text9"
+     class="fb-sovereign-text"
+     x="539"
+     y="595"
+     font-family="'Courier New', monospace"
+     font-size="13px"
+     font-weight="bold"
+     text-anchor="middle"
+     style="line-height:normal"><tspan
+       id="tspan107"
+       font-size="24px">fb.constitution</tspan></text>
+  <text
+     id="text10"
+     class="fb-sovereign-sub"
+     x="542"
+     y="624"
+     font-family="Georgia, serif"
+     font-size="11px"
+     font-style="italic"
+     text-anchor="middle"
+     style="line-height:normal"><tspan
+       id="tspan108"
+       font-size="18.667px">Sovereign Authority</tspan></text>
+  <g
+     id="g112"
+     transform="translate(45,435)">
+    <rect
+       id="rect10"
+       x="412.16"
+       y="295.16"
+       width="177.67999"
+       height="57.674999"
+       rx="8.9961996"
+       fill="#2c5f9e"
+       stroke="#1a3a6e"
+       stroke-width="2.3248" />
+    <text
+       id="text11"
+       class="fb-name"
+       x="500"
+       y="316"
+       font-family="'Courier New', monospace"
+       font-size="12px"
+       font-weight="bold"
+       text-anchor="middle"
+       style="font-style:normal;font-variant:normal;font-weight:bold;font-stretch:normal;font-size:12px;line-height:normal;font-family:'Courier New', monospace"><tspan
+         id="tspan97"
+         font-size="16px">fb.topology</tspan></text>
+    <text
+       id="text12"
+       x="500"
+       y="334"
+       fill="#a8c8f0"
+       font-family="Georgia"
+       font-size="12px"
+       font-style="italic"
+       text-anchor="middle">Execution topology governance</text>
+  </g>
+  <g
+     id="g122"
+     transform="translate(51,47)">
+    <rect
+       id="rect12"
+       x="601.15997"
+       y="354.16"
+       width="177.67999"
+       height="57.674999"
+       rx="8.9961996"
+       fill="#2c5f9e"
+       stroke="#1a3a6e"
+       stroke-width="2.3248" />
+    <text
+       id="text13"
+       class="fb-name"
+       x="688"
+       y="376"
+       font-family="'Courier New', monospace"
+       font-size="12px"
+       font-weight="bold"
+       text-anchor="middle"
+       style="font-style:normal;font-variant:normal;font-weight:bold;font-stretch:normal;font-size:12px;line-height:normal;font-family:'Courier New', monospace"><tspan
+         id="tspan101"
+         font-size="16px">fb.authority</tspan></text>
+    <text
+       id="text14"
+       x="688"
+       y="394"
+       fill="#a8c8f0"
+       font-family="Georgia"
+       font-size="12px"
+       font-style="italic"
+       text-anchor="middle">Authorization &amp; permissions</text>
+  </g>
+  <g
+     id="g121"
+     transform="translate(-35,55)">
+    <rect
+       id="rect14"
+       x="719.15997"
+       y="510.16"
+       width="177.67999"
+       height="57.674999"
+       rx="8.9961996"
+       fill="#2c5f9e"
+       stroke="#1a3a6e"
+       stroke-width="2.3248" />
+    <text
+       id="text15"
+       class="fb-name"
+       x="806"
+       y="534"
+       font-family="'Courier New', monospace"
+       font-size="12px"
+       font-weight="bold"
+       text-anchor="middle"
+       style="font-style:normal;font-variant:normal;font-weight:bold;font-stretch:normal;font-size:12px;line-height:normal;font-family:'Courier New', monospace"><tspan
+         id="tspan102"
+         font-size="16px">fb.transport</tspan></text>
+    <text
+       id="text16"
+       x="806"
+       y="552"
+       fill="#a8c8f0"
+       font-family="Georgia"
+       font-size="12px"
+       font-style="italic"
+       text-anchor="middle">Ingress / egress governance</text>
+  </g>
+  <g
+     id="g123"
+     transform="translate(-31,142)">
+    <rect
+       id="rect16"
+       x="242.16"
+       y="424.16"
+       width="177.67999"
+       height="57.674999"
+       rx="8.9961996"
+       fill="#2c5f9e"
+       stroke="#1a3a6e"
+       stroke-width="2.3248" />
+    <text
+       id="text17"
+       class="fb-name"
+       x="330"
+       y="448"
+       font-family="'Courier New', monospace"
+       font-size="12px"
+       font-weight="bold"
+       text-anchor="middle"
+       style="font-style:normal;font-variant:normal;font-weight:bold;font-stretch:normal;font-size:12px;line-height:normal;font-family:'Courier New', monospace"><tspan
+         id="tspan99"
+         font-size="16px">fb.conformance</tspan></text>
+    <text
+       id="text18"
+       x="330"
+       y="466"
+       fill="#a8c8f0"
+       font-family="Georgia"
+       font-size="12px"
+       font-style="italic"
+       text-anchor="middle">Validation &amp; invariants</text>
+  </g>
+  <g
+     id="g114"
+     transform="translate(346,-253)">
+    <rect
+       id="rect18"
+       x="108.16"
+       y="511.16"
+       width="177.67999"
+       height="57.674999"
+       rx="8.9961996"
+       fill="#2c5f9e"
+       stroke="#1a3a6e"
+       stroke-width="2.3248" />
+    <text
+       id="text19"
+       class="fb-name"
+       x="194"
+       y="534"
+       font-family="'Courier New', monospace"
+       font-size="12px"
+       font-weight="bold"
+       text-anchor="middle"
+       style="font-style:normal;font-variant:normal;font-weight:bold;font-stretch:normal;font-size:12px;line-height:normal;font-family:'Courier New', monospace"><tspan
+         id="tspan100"
+         font-size="16px">fb.vocabulary</tspan></text>
+    <text
+       id="text20"
+       x="197"
+       y="550"
+       fill="#a8c8f0"
+       font-family="Georgia"
+       font-size="12px"
+       font-style="italic"
+       text-anchor="middle">Terminology &amp; Vocab closure</text>
+  </g>
+  <g
+     id="g115"
+     transform="translate(152,-309)">
+    <rect
+       id="rect20"
+       x="105.16"
+       y="709.15997"
+       width="177.67999"
+       height="57.674999"
+       rx="8.9961996"
+       fill="#2c5f9e"
+       stroke="#1a3a6e"
+       stroke-width="2.3248" />
+    <text
+       id="text21"
+       class="fb-name"
+       x="194"
+       y="734"
+       font-family="'Courier New', monospace"
+       font-size="12px"
+       font-weight="bold"
+       text-anchor="middle"
+       style="font-style:normal;font-variant:normal;font-weight:bold;font-stretch:normal;font-size:12px;line-height:normal;font-family:'Courier New', monospace"><tspan
+         id="tspan106"
+         font-size="16px">fb.identity</tspan></text>
+    <text
+       id="text22"
+       x="194"
+       y="752"
+       fill="#a8c8f0"
+       font-family="Georgia"
+       font-size="12px"
+       font-style="italic"
+       text-anchor="middle">Identity semantics</text>
+  </g>
+  <g
+     id="g120"
+     transform="translate(-265,-382)">
+    <rect
+       id="rect22"
+       x="717.15997"
+       y="710.15997"
+       width="177.67"
+       height="57.673"
+       rx="8.9961004"
+       fill="#2c5f9e"
+       stroke="#1a3a6e"
+       stroke-width="2.3248" />
+    <text
+       id="text23"
+       class="fb-name"
+       x="806"
+       y="734"
+       font-family="'Courier New', monospace"
+       font-size="12px"
+       font-weight="bold"
+       text-anchor="middle"
+       style="font-style:normal;font-variant:normal;font-weight:bold;font-stretch:normal;font-size:12px;line-height:normal;font-family:'Courier New', monospace"><tspan
+         id="tspan98"
+         font-size="16px">fb.security</tspan></text>
+    <text
+       id="text24"
+       x="806"
+       y="752"
+       fill="#a8c8f0"
+       font-family="Georgia"
+       font-size="12px"
+       font-style="italic"
+       text-anchor="middle">Classification &amp; compartments</text>
+  </g>
+  <g
+     id="g119"
+     transform="translate(-145,-462)">
+    <rect
+       id="rect24"
+       x="600.15997"
+       y="862.15997"
+       width="177.67"
+       height="57.648998"
+       rx="8.9961996"
+       fill="#2c5f9e"
+       stroke="#1a3a6e"
+       stroke-width="2.3243" />
+    <text
+       id="text25"
+       class="fb-name"
+       x="688"
+       y="891"
+       font-family="'Courier New', monospace"
+       font-size="12px"
+       font-weight="bold"
+       text-anchor="middle"
+       style="font-style:normal;font-variant:normal;font-weight:bold;font-stretch:normal;font-size:12px;line-height:normal;font-family:'Courier New', monospace"><tspan
+         id="tspan103"
+         font-size="16px">fb.trust</tspan></text>
+    <text
+       id="text26"
+       class="fb-name"
+       x="688"
+       y="908"
+       font-family="'Courier New', monospace"
+       font-size="12px"
+       font-weight="bold"
+       text-anchor="middle"
+       style="font-style:normal;font-variant:normal;font-weight:bold;font-stretch:normal;font-size:12px;line-height:normal;font-family:'Courier New', monospace"><tspan
+         id="tspan111"
+         font-size="12px">Cryptographic trust</tspan></text>
+  </g>
+  <g
+     id="g118"
+     transform="matrix(1.0001,0,0,1,-151.045,-195.998)">
+    <rect
+       id="rect26"
+       x="412.16"
+       y="925.15997"
+       width="177.64999"
+       height="57.658001"
+       rx="8.9952002"
+       fill="#2c5f9e"
+       stroke="#1a3a6e"
+       stroke-width="2.3243" />
+    <text
+       id="text27"
+       class="fb-name"
+       x="500"
+       y="951"
+       font-family="'Courier New', monospace"
+       font-size="12px"
+       font-weight="bold"
+       text-anchor="middle"
+       style="font-style:normal;font-variant:normal;font-weight:bold;font-stretch:normal;font-size:12px;line-height:normal;font-family:'Courier New', monospace"><tspan
+         id="tspan104"
+         font-size="16px">fb.placement</tspan></text>
+    <text
+       id="text28"
+       class="fb-name"
+       x="500"
+       y="968"
+       font-family="'Courier New', monospace"
+       font-size="12px"
+       font-weight="bold"
+       text-anchor="middle"
+       style="font-style:normal;font-variant:normal;font-weight:bold;font-stretch:normal;font-size:12px;line-height:normal;font-family:'Courier New', monospace"><tspan
+         id="tspan110"
+         font-size="12px">Execution placement</tspan></text>
+  </g>
+  <g
+     id="g117"
+     transform="translate(425,-136)">
+    <g
+       id="g116">
+      <rect
+         id="rect28"
+         x="230.16"
+         y="868.15997"
+         width="177.64999"
+         height="57.648998"
+         rx="8.9952002"
+         fill="#2c5f9e"
+         stroke="#1a3a6e"
+         stroke-width="2.3242" />
+      <text
+         id="text29"
+         class="fb-name"
+         x="312"
+         y="891"
+         font-family="'Courier New', monospace"
+         font-size="12px"
+         font-weight="bold"
+         text-anchor="middle"
+         style="font-style:normal;font-variant:normal;font-weight:bold;font-stretch:normal;font-size:12px;line-height:normal;font-family:'Courier New', monospace"><tspan
+           id="tspan105"
+           font-size="16px">fb.scheduling</tspan></text>
+      <text
+         id="text30"
+         class="fb-name"
+         x="312"
+         y="908"
+         font-family="'Courier New', monospace"
+         font-size="12px"
+         font-weight="bold"
+         text-anchor="middle"
+         style="font-style:normal;font-variant:normal;font-weight:bold;font-stretch:normal;font-size:12px;line-height:normal;font-family:'Courier New', monospace"><tspan
+           id="tspan109"
+           font-size="12px">Execution scheduling</tspan></text>
+    </g>
+  </g>
+  <rect
+     id="rect30"
+     x="932.06"
+     y="386.08"
+     width="225.84"
+     height="431.84"
+     rx="19.927"
+     fill="#1e2d3d"
+     stroke="#37474f"
+     stroke-width="3.156" />
+  <text
+     id="text31"
+     class="bridge-title"
+     x="1046"
+     y="436"
+     font-family="Georgia, serif"
+     font-size="19px"
+     font-weight="bold"
+     text-anchor="middle"
+     style="line-height:normal">COMPILED</text>
+  <text
+     id="text32"
+     class="bridge-title"
+     x="1046"
+     y="464"
+     font-family="Georgia, serif"
+     font-size="19px"
+     font-weight="bold"
+     text-anchor="middle"
+     style="line-height:normal">SNAPSHOT</text>
+  <text
+     id="text33"
+     class="bridge-math"
+     x="1046"
+     y="496"
+     font-family="Georgia, serif"
+     font-size="22px"
+     font-weight="bold"
+     text-anchor="middle"
+     style="line-height:normal">𝒢</text>
+  <line
+     id="line33"
+     x1="964"
+     x2="1128"
+     y1="516"
+     y2="516"
+     stroke="#37474f" />
+  <text
+     id="text34"
+     class="bridge-sub"
+     x="1046"
+     y="540"
+     font-family="Georgia, serif"
+     font-size="12px"
+     font-style="italic"
+     text-anchor="middle"
+     style="line-height:normal"><tspan
+       id="tspan123"
+       font-size="16px">Governance → Topology</tspan></text>
+  <text
+     id="text35"
+     class="bridge-sub"
+     x="1046"
+     y="558"
+     font-family="Georgia, serif"
+     font-size="12px"
+     font-style="italic"
+     text-anchor="middle"
+     style="line-height:normal"><tspan
+       id="tspan124"
+       font-size="13.333px">Deterministic · Sealed</tspan></text>
+  <circle
+     id="circle35"
+     cx="986"
+     cy="604"
+     r="7"
+     fill="#fdd835" />
+  <circle
+     id="circle36"
+     cx="1026"
+     cy="582"
+     r="7"
+     fill="#fdd835" />
+  <circle
+     id="circle37"
+     cx="1071"
+     cy="616"
+     r="7"
+     fill="#fdd835" />
+  <circle
+     id="circle38"
+     cx="1108"
+     cy="590"
+     r="7"
+     fill="#fdd835" />
+  <circle
+     id="circle39"
+     cx="1046"
+     cy="656"
+     r="7"
+     fill="#fdd835" />
+  <line
+     id="line39"
+     x1="986"
+     x2="1026"
+     y1="604"
+     y2="582"
+     stroke="#607d8b"
+     stroke-width="1.5" />
+  <line
+     id="line40"
+     x1="1026"
+     x2="1071"
+     y1="582"
+     y2="616"
+     stroke="#607d8b"
+     stroke-width="1.5" />
+  <line
+     id="line41"
+     x1="1026"
+     x2="1108"
+     y1="582"
+     y2="590"
+     stroke="#607d8b"
+     stroke-width="1.5" />
+  <line
+     id="line42"
+     x1="1071"
+     x2="1046"
+     y1="616"
+     y2="656"
+     stroke="#607d8b"
+     stroke-width="1.5" />
+  <line
+     id="line43"
+     x1="1108"
+     x2="1046"
+     y1="590"
+     y2="656"
+     stroke="#607d8b"
+     stroke-width="1.5" />
+  <text
+     id="text43"
+     class="bridge-sub"
+     x="1046"
+     y="698"
+     font-family="Georgia, serif"
+     font-size="12px"
+     font-style="italic"
+     text-anchor="middle"
+     style="line-height:normal"><tspan
+       id="tspan125"
+       font-size="16px">Admissibility Graph</tspan></text>
+  <text
+     id="text44"
+     class="bridge-sub"
+     x="1046"
+     y="716"
+     font-family="Georgia, serif"
+     font-size="12px"
+     font-style="italic"
+     text-anchor="middle"
+     style="line-height:normal"><tspan
+       id="tspan126"
+       font-size="13.333px">𝒢 = (V, E)</tspan></text>
+  <line
+     id="line44"
+     x1="964"
+     x2="1128"
+     y1="736"
+     y2="736"
+     stroke="#37474f" />
+  <text
+     id="text45"
+     class="bridge-sub"
+     x="1046"
+     y="758"
+     font-family="Georgia, serif"
+     font-size="12px"
+     font-style="italic"
+     text-anchor="middle"
+     style="line-height:normal"><tspan
+       id="tspan127"
+       font-size="13.333px">C : A_valid → 𝒢</tspan></text>
+  <text
+     id="text46"
+     class="bridge-sub"
+     x="1046"
+     y="780"
+     font-family="Georgia, serif"
+     font-size="12px"
+     font-style="italic"
+     text-anchor="middle"
+     style="line-height:normal"><tspan
+       id="tspan129"
+       font-size="13.333px">∅ if invariant violated</tspan></text>
+  <text
+     id="text47"
+     class="bridge-sub"
+     x="1046"
+     y="800"
+     font-family="Georgia, serif"
+     font-size="12px"
+     font-style="italic"
+     text-anchor="middle"
+     style="line-height:normal"><tspan
+       id="tspan130"
+       font-size="13.333px">Read-only at runtime</tspan></text>
+  <path
+     id="path48"
+     d="m1159.8 585.86h38.339"
+     fill="none"
+     marker-end="url(#arr-gold)"
+     stroke="#c8a000"
+     stroke-width="2.2526" />
+  <circle
+     id="ellipse48"
+     cx="1550.5"
+     cy="588.5"
+     r="348.74"
+     fill="#e8f5e9"
+     stroke="#2e7d32"
+     stroke-width="2.5264" />
+  <path
+     id="path72-9"
+     d="m1625.6 552.63c12.359 19.49 34.605 31.671 34.605 51.161"
+     fill="none"
+     marker-end="url(#arr-green-7)"
+     stroke="#388e3c"
+     stroke-width="1.7352" />
+  <text
+     id="text48"
+     class="space-label"
+     x="1546.3187"
+     y="221.36754"
+     font-family="Georgia, serif"
+     font-size="20px"
+     font-weight="bold"
+     text-anchor="middle"
+     style="line-height:normal">MACHINE EXECUTION SPACE</text>
+  <g
+     id="g143"
+     transform="translate(-4,-32)">
+    <rect
+       id="rect48"
+       x="1379.9"
+       y="335.93"
+       width="148.14"
+       height="58.142"
+       rx="6.8903"
+       fill="#2e7d32"
+       stroke="#1b5e20"
+       stroke-width="1.8584" />
+    <text
+       id="text49"
+       class="exec-code"
+       x="1458"
+       y="361"
+       font-family="'Courier New', monospace"
+       font-size="17px"
+       font-weight="bold"
+       text-anchor="middle"
+       style="line-height:normal">TI_</text>
+    <text
+       id="text50"
+       class="exec-name"
+       x="1458"
+       y="380"
+       font-family="Georgia, serif"
+       font-size="11px"
+       text-anchor="middle"
+       style="line-height:normal">Transport Ingress</text>
+  </g>
+  <g
+     id="g142"
+     transform="translate(-4,-32)">
+    <rect
+       id="rect50"
+       x="1579.9"
+       y="335.93"
+       width="148.14"
+       height="58.142"
+       rx="6.8903"
+       fill="#2e7d32"
+       stroke="#1b5e20"
+       stroke-width="1.8584" />
+    <text
+       id="text51"
+       class="exec-code"
+       x="1658"
+       y="361"
+       font-family="'Courier New', monospace"
+       font-size="17px"
+       font-weight="bold"
+       text-anchor="middle"
+       style="line-height:normal">AC_</text>
+    <text
+       id="text52"
+       class="exec-name"
+       x="1658"
+       y="380"
+       font-family="Georgia, serif"
+       font-size="11px"
+       text-anchor="middle"
+       style="line-height:normal">Actor Context</text>
+  </g>
+  <g
+     id="g140"
+     transform="translate(-4,-32)">
+    <rect
+       id="rect52"
+       x="1383.9"
+       y="427.93"
+       width="148.14"
+       height="58.142"
+       rx="6.8903"
+       fill="#2e7d32"
+       stroke="#1b5e20"
+       stroke-width="1.8584" />
+    <text
+       id="text53"
+       class="exec-code"
+       x="1458"
+       y="453"
+       font-family="'Courier New', monospace"
+       font-size="17px"
+       font-weight="bold"
+       text-anchor="middle"
+       style="line-height:normal">IN_</text>
+    <text
+       id="text54"
+       class="exec-name"
+       x="1458"
+       y="472"
+       font-family="Georgia, serif"
+       font-size="11px"
+       text-anchor="middle"
+       style="line-height:normal">Intent</text>
+  </g>
+  <g
+     id="g141"
+     transform="translate(-4,-32)">
+    <rect
+       id="rect54"
+       x="1581.9"
+       y="427.93"
+       width="148.14"
+       height="58.142"
+       rx="6.8903"
+       fill="#2e7d32"
+       stroke="#1b5e20"
+       stroke-width="1.8584" />
+    <text
+       id="text55"
+       class="exec-code"
+       x="1658"
+       y="453"
+       font-family="'Courier New', monospace"
+       font-size="17px"
+       font-weight="bold"
+       text-anchor="middle"
+       style="line-height:normal">WF_</text>
+    <text
+       id="text56"
+       class="exec-name"
+       x="1658"
+       y="472"
+       font-family="Georgia, serif"
+       font-size="11px"
+       text-anchor="middle"
+       style="line-height:normal">Workflow</text>
+  </g>
+  <g
+     id="g139"
+     transform="translate(-6,-18)">
+    <rect
+       id="rect56"
+       x="1481.9"
+       y="525.91"
+       width="147.68"
+       height="58.18"
+       rx="6.8688"
+       fill="#1b5e20"
+       stroke="#0a3d14"
+       stroke-width="2.3201" />
+    <text
+       id="text57"
+       class="exec-code"
+       x="1558"
+       y="551"
+       font-family="'Courier New', monospace"
+       font-size="17px"
+       font-weight="bold"
+       text-anchor="middle"
+       style="line-height:normal">CC_</text>
+    <text
+       id="text58"
+       class="exec-name"
+       x="1558"
+       y="570"
+       font-family="Georgia, serif"
+       font-size="11px"
+       text-anchor="middle"
+       style="line-height:normal">Capability Contract</text>
+  </g>
+  <rect
+     id="rect58"
+     x="1374.9"
+     y="608.93"
+     width="148.14"
+     height="58.142"
+     rx="6.8903"
+     fill="#2e7d32"
+     stroke="#1b5e20"
+     stroke-width="1.8584" />
+  <text
+     id="text59"
+     class="exec-code"
+     x="1454"
+     y="633"
+     font-family="'Courier New', monospace"
+     font-size="17px"
+     font-weight="bold"
+     text-anchor="middle"
+     style="line-height:normal">CT_</text>
+  <text
+     id="text60"
+     class="exec-name"
+     x="1454"
+     y="652"
+     font-family="Georgia, serif"
+     font-size="11px"
+     text-anchor="middle"
+     style="line-height:normal">Capability Transform</text>
+  <g
+     id="g138"
+     transform="translate(-4,-18)">
+    <rect
+       id="rect60"
+       x="1579.9"
+       y="625.93"
+       width="148.14"
+       height="58.142"
+       rx="6.8903"
+       fill="#2e7d32"
+       stroke="#1b5e20"
+       stroke-width="1.8584" />
+    <text
+       id="text61"
+       class="exec-code"
+       x="1658"
+       y="651"
+       font-family="'Courier New', monospace"
+       font-size="17px"
+       font-weight="bold"
+       text-anchor="middle"
+       style="line-height:normal">CS_</text>
+    <text
+       id="text62"
+       class="exec-name"
+       x="1658"
+       y="670"
+       font-family="Georgia, serif"
+       font-size="11px"
+       text-anchor="middle"
+       style="line-height:normal">Capability Side Effect</text>
+  </g>
+  <g
+     id="g136"
+     transform="translate(-4,-18)">
+    <rect
+       id="rect62"
+       x="1381.9"
+       y="743.93"
+       width="148.14"
+       height="58.142"
+       rx="6.8903"
+       fill="#2e7d32"
+       stroke="#1b5e20"
+       stroke-width="1.8584" />
+    <text
+       id="text63"
+       class="exec-code"
+       x="1458"
+       y="769"
+       font-family="'Courier New', monospace"
+       font-size="17px"
+       font-weight="bold"
+       text-anchor="middle"
+       style="line-height:normal">EV_</text>
+    <text
+       id="text64"
+       class="exec-name"
+       x="1458"
+       y="788"
+       font-family="Georgia, serif"
+       font-size="11px"
+       text-anchor="middle"
+       style="line-height:normal">Event</text>
+  </g>
+  <g
+     id="g137"
+     transform="translate(-4,-18)">
+    <rect
+       id="rect64"
+       x="1579.9"
+       y="743.93"
+       width="147.45"
+       height="58.146"
+       rx="6.858"
+       fill="#2e7d32"
+       stroke="#1b5e20"
+       stroke-width="1.8541" />
+    <text
+       id="text65"
+       class="exec-code"
+       x="1658"
+       y="769"
+       font-family="'Courier New', monospace"
+       font-size="17px"
+       font-weight="bold"
+       text-anchor="middle"
+       style="line-height:normal">TE_</text>
+    <text
+       id="text66"
+       class="exec-name"
+       x="1658"
+       y="788"
+       font-family="Georgia, serif"
+       font-size="11px"
+       text-anchor="middle"
+       style="line-height:normal">Transport Egress</text>
+  </g>
+  <g
+     id="g135"
+     transform="translate(-215,-307)">
+    <rect
+       id="rect66"
+       x="1480.9"
+       y="820.17"
+       width="148.14"
+       height="58.142"
+       rx="6.8903"
+       fill="#2e7d32"
+       stroke="#1b5e20"
+       stroke-width="1.8584" />
+    <text
+       id="text67"
+       class="exec-code"
+       x="1560"
+       y="845"
+       font-family="'Courier New', monospace"
+       font-size="17px"
+       font-weight="bold"
+       text-anchor="middle"
+       style="line-height:normal">RB_</text>
+    <text
+       id="text68"
+       class="exec-name"
+       x="1560"
+       y="864"
+       font-family="Georgia, serif"
+       font-size="11px"
+       text-anchor="middle"
+       style="line-height:normal">Runtime Binding</text>
+  </g>
+  <path
+     id="path68"
+     d="m1454 362v34"
+     fill="none"
+     marker-end="url(#arr-green)"
+     stroke="#388e3c"
+     stroke-width="2" />
+  <path
+     id="path69"
+     d="m1654 362v34"
+     fill="none"
+     marker-end="url(#arr-green)"
+     stroke="#388e3c"
+     stroke-width="2" />
+  <path
+     id="path70"
+     d="m1389.6 451.4c0 35.896 57.502 65.265 82.502 65.265"
+     fill="none"
+     marker-end="url(#arr-green)"
+     stroke="#388e3c"
+     stroke-width="2.8563" />
+  <path
+     id="path71"
+     d="m1692.4 457.25c0 34.002-43.144 61.822-62.755 61.822"
+     fill="none"
+     marker-end="url(#arr-green)"
+     stroke="#388e3c"
+     stroke-width="2.4621" />
+  <path
+     id="path72"
+     d="m1475.6 552.96c-8.5658 19.746-23.984 32.087-23.984 51.833"
+     fill="none"
+     marker-end="url(#arr-green)"
+     stroke="#388e3c"
+     stroke-width="1.454" />
+  <path
+     id="path74"
+     d="m1454 666v60"
+     fill="none"
+     marker-end="url(#arr-green)"
+     stroke="#388e3c"
+     stroke-width="2" />
+  <path
+     id="path75"
+     d="m1654 666v60"
+     fill="none"
+     marker-end="url(#arr-green)"
+     stroke="#388e3c"
+     stroke-width="2" />
+  <path
+     id="path76"
+     d="m1642 831h4"
+     stroke="#2e7d32"
+     stroke-dasharray="3, 2"
+     stroke-width="1.5" />
+  <g
+     id="g134"
+     transform="translate(-8,-75)">
+    <rect
+       id="rect76"
+       x="1483.4"
+       y="889.87"
+       width="148.67"
+       height="58.667"
+       rx="6.6816"
+       fill="#fff8e1"
+       stroke="#f9a825"
+       stroke-width="1.3335" />
+    <text
+       id="text76"
+       x="1563.2417"
+       y="903.3443"
+       fill="#e65100"
+       font-family="'Courier New', monospace"
+       font-size="13.333px"
+       font-weight="bold"
+       text-anchor="middle">T_evidence</text>
+    <text
+       id="text77"
+       x="1563.2417"
+       y="922.04236"
+       fill="#bf360c"
+       font-family="Georgia"
+       font-size="13.333px"
+       font-style="italic"
+       text-anchor="middle">Immutable Trace</text>
+    <text
+       id="text78"
+       x="1563.2417"
+       y="939.04236"
+       fill="#bf360c"
+       font-family="Georgia"
+       font-size="13.333px"
+       font-style="italic"
+       text-anchor="middle">Φ(𝒢, I, σ) → (R, T)</text>
+  </g>
+  <text
+     id="text79"
+     class="callout"
+     x="209.32001"
+     y="967.65002"
+     font-family="Georgia, serif"
+     font-size="13px"
+     font-style="italic"
+     style="line-height:normal"><tspan
+       id="tspan91"
+       font-size="18.667px">Governance defines the admissible possibility space.</tspan></text>
+  <text
+     id="text80"
+     class="callout"
+     x="211.32001"
+     y="992.65002"
+     font-family="Georgia, serif"
+     font-size="13px"
+     font-style="italic"
+     style="line-height:normal"><tspan
+       id="tspan92"
+       font-size="18.667px">Boundaries are open-ended — new fb.* domains emerge as governance matures.</tspan></text>
+  <text
+     id="text81"
+     class="callout"
+     x="912.7962"
+     y="877.57001"
+     font-family="Georgia, serif"
+     font-size="13px"
+     font-style="italic"
+     style="line-height:normal"><tspan
+       id="tspan93"
+       font-size="18.667px">Compilation constructs deterministic</tspan></text>
+  <text
+     id="text82"
+     class="callout"
+     x="916.7962"
+     y="900.57001"
+     font-family="Georgia, serif"
+     font-size="13px"
+     font-style="italic"
+     style="line-height:normal"><tspan
+       id="tspan94"
+       font-size="18.667px">execution topology from governance.</tspan></text>
+  <text
+     id="text83"
+     class="callout"
+     x="1495.6"
+     y="958.51001"
+     font-family="Georgia, serif"
+     font-size="13px"
+     font-style="italic"
+     style="line-height:normal"><tspan
+       id="tspan95"
+       font-size="18.667px">Runtime realizes admitted behavior only.</tspan></text>
+  <text
+     id="text84"
+     class="callout"
+     x="1495.6"
+     y="983.51001"
+     font-family="Georgia, serif"
+     font-size="13px"
+     font-style="italic"
+     style="line-height:normal"><tspan
+       id="tspan96"
+       font-size="18.667px">Semantically blind. Trace-producing. Deterministic.</tspan></text>
+  <g
+     id="g131"
+     transform="translate(-366.55,52.942)">
+    <rect
+       id="rect84"
+       x="584"
+       y="972.14"
+       width="310"
+       height="112"
+       rx="10"
+       fill="#fff"
+       stroke="#bbb"
+       stroke-width="1.5" />
+    <text
+       id="text85"
+       class="legend-title"
+       x="739.00348"
+       y="994.1358"
+       font-family="Georgia, serif"
+       font-size="12px"
+       font-weight="bold"
+       text-anchor="middle"
+       style="line-height:normal">Federation Boundary Types</text>
+    <rect
+       id="rect85"
+       x="604"
+       y="1007.1"
+       width="20"
+       height="14"
+       rx="3"
+       fill="#2c5f9e" />
+    <text
+       id="text86"
+       class="legend-text"
+       x="634.00342"
+       y="1019.1359"
+       font-family="'Courier New', monospace"
+       font-size="11.5px"
+       style="line-height:normal">Current (implemented)</text>
+    <rect
+       id="rect86"
+       x="604"
+       y="1034.1"
+       width="20"
+       height="14"
+       rx="3"
+       fill="#dce8f7"
+       stroke="#5a7fbf"
+       stroke-dasharray="5, 2"
+       stroke-width="1.5" />
+    <text
+       id="text87"
+       class="legend-text"
+       x="634.00342"
+       y="1046.1359"
+       font-family="'Courier New', monospace"
+       font-size="11.5px"
+       style="line-height:normal">Future (seeded doctrine)</text>
+    <circle
+       id="circle87"
+       cx="614"
+       cy="1068.1"
+       r="9"
+       fill="#fdd835"
+       stroke="#c8a000"
+       stroke-width="1.5" />
+    <text
+       id="text88"
+       class="legend-text"
+       x="634.00342"
+       y="1073.1359"
+       font-family="'Courier New', monospace"
+       font-size="11.5px"
+       style="line-height:normal">Sovereign (fb.constitution)</text>
+  </g>
+  <text
+     id="text89"
+     x="1043.1716"
+     y="337.02942"
+     fill="#607d8b"
+     font-family="Georgia"
+     font-size="26.667px"
+     font-style="italic"
+     text-anchor="middle">Compiler Layer</text>
+  <text
+     id="text90"
+     x="1046"
+     y="370"
+     fill="#607d8b"
+     font-family="Georgia"
+     font-size="18.667px"
+     font-style="italic"
+     text-anchor="middle">(enforcement boundary)</text>
+  <path
+     id="path123-6"
+     d="m894.14 585.23h36.293"
+     fill="none"
+     marker-end="url(#arr-gold-7)"
+     stroke="#c8a000"
+     stroke-width="2.1917" />
+  <text
+     id="text127"
+     transform="translate(-4,-32)"
+     fill="#000000"
+     font-size="13.333px"
+     style="shape-inside:url(#rect127);white-space:pre"
+     xml:space="preserve" />
+  <g
+     id="g1"
+     transform="translate(-4,-32)">
+    <text
+       id="text1"
+       fill="#000000"
+       font-size="18.667px"
+       style="shape-inside:url(#rect1);white-space:pre"
+       xml:space="preserve" />
+  </g>
+  <text
+     id="text2"
+     transform="translate(-4,-32)"
+     fill="#000000"
+     font-size="18.667px"
+     style="shape-inside:url(#rect2);white-space:pre"
+     xml:space="preserve" />
+  <g
+     id="g6"
+     transform="matrix(1.0001,0,0,1,-151.045,-195.998)">
+    <rect
+       id="rect1"
+       x="412.16"
+       y="925.15997"
+       width="177.64999"
+       height="57.658001"
+       rx="8.9952002"
+       fill="#2c5f9e"
+       stroke="#1a3a6e"
+       stroke-width="2.3243" />
+    <text
+       id="text3"
+       class="fb-name"
+       x="500"
+       y="951"
+       font-family="'Courier New', monospace"
+       font-size="12px"
+       font-weight="bold"
+       text-anchor="middle"
+       style="font-style:normal;font-variant:normal;font-weight:bold;font-stretch:normal;font-size:12px;line-height:normal;font-family:'Courier New', monospace"><tspan
+         id="tspan1"
+         font-size="16px">fb.placement</tspan></text>
+    <text
+       id="text6"
+       class="fb-name"
+       x="500"
+       y="968"
+       font-family="'Courier New', monospace"
+       font-size="12px"
+       font-weight="bold"
+       text-anchor="middle"
+       style="font-style:normal;font-variant:normal;font-weight:bold;font-stretch:normal;font-size:12px;line-height:normal;font-family:'Courier New', monospace"><tspan
+         id="tspan3"
+         font-size="12px">Execution placement</tspan></text>
+  </g>
+  <g
+     id="g36"
+     transform="translate(45,435)">
+    <rect
+       id="rect6"
+       x="412.16"
+       y="295.16"
+       width="177.67999"
+       height="57.674999"
+       rx="8.9961996"
+       fill="#2c5f9e"
+       stroke="#1a3a6e"
+       stroke-width="2.3248" />
+    <text
+       id="text7"
+       class="fb-name"
+       x="500"
+       y="316"
+       font-family="'Courier New', monospace"
+       font-size="12px"
+       font-weight="bold"
+       text-anchor="middle"
+       style="font-style:normal;font-variant:normal;font-weight:bold;font-stretch:normal;font-size:12px;line-height:normal;font-family:'Courier New', monospace"><tspan
+         id="tspan6"
+         font-size="16px">fb.topology</tspan></text>
+    <text
+       id="text36"
+       x="500"
+       y="334"
+       fill="#a8c8f0"
+       font-family="Georgia"
+       font-size="12px"
+       font-style="italic"
+       text-anchor="middle">Execution topology governance</text>
+  </g>
+</svg>

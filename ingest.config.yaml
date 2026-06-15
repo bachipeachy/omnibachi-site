@@ -1,0 +1,130 @@
+# Ingest configuration — maps canonical markdown (in pgs_workspace) into the Hugo site.
+# ingest.py only READS source_root and WRITES into the site. It never mutates sources.
+
+source_root: /Users/bp/pgs/pgs_workspace
+
+# Synthesized publish dates (ascending) when an entry has no explicit `date`.
+date_base: 2026-01-15
+date_step_days: 7
+
+sections:
+  blog:
+    target: content/blog
+    series: "Protocol-Governed Systems"
+    default_tags: ["PGS"]
+    # Header image per post is assets/blog_NN.<ext> by position (NN = series number).
+    # Missing images are skipped (build stays green) until the asset is added.
+    header_image: true
+    # Prefix each post title with "#NN — " to orient the reader (sort stays ascending by weight).
+    number_titles: true
+    entries:
+      - src: blogs/pgs_01_pgs.md
+        slug: pgs-why-architecture-must-change
+        title: "Why Software Architecture Must Change in the AI Era"
+      - src: blogs/pgs_02_Protocol_to_Platform.md
+        slug: from-protocol-governance-to-platform
+        title: "From Protocol Governance to Platform: Defining PGS and OmniBachi"
+      - src: blogs/pgs_03_Agentic_AI.md
+        slug: agentic-ai-needs-a-constitution
+        title: "Agentic AI Needs a Constitution, Not Just Guardrails"
+      - src: blogs/pgs_04_Governing_Agentic_AI.md
+        slug: governing-agentic-ai-for-production
+        title: "Governing Agentic AI for Production: OpenClaw Meets Its Constitution"
+      - src: blogs/pgs_05_agenic_AI_quiet_privilege_escalation.md
+        slug: the-quiet-privilege-escalation
+        title: "The Quiet Privilege Escalation in Enterprise AI"
+      - src: blogs/pgs_06_different_way_to_build_governance.md
+        slug: ai-governance-domain-in-a-day
+        title: "I Built an AI Governance Domain in a Day"
+      - src: blogs/pgs_07_from_serverless_guardrails_to_structured_governance.md
+        slug: from-serverless-guardrails-to-structural-governance
+        title: "From Serverless Guardrails to Structural Governance"
+      - src: blogs/pgs_08_three_dividends.md
+        slug: three-dividends-of-pgs
+        title: "The Three Dividends of Protocol-Governed Systems"
+      - src: blogs/pgs_09_smart_coding.md
+        slug: why-smart-coding-is-a-double-edged-sword
+        title: "Why Smart Coding Is a Double-Edged Sword"
+      - src: blogs/pgs_10_AI_did_not_solve_governance.md
+        slug: ai-accelerated-implementation-not-governance
+        title: "AI Accelerated Implementation. Not Governance."
+      - src: blogs/pgs_11_the_EU_AI_act_is_here.md
+        slug: the-eu-ai-act-is-here
+        title: "The EU AI Act Is Here. Your Governance Architecture Isn't Ready."
+      - src: blogs/pgs_12_inside_pgs_execution.md
+        slug: inside-a-protocol-governed-execution
+        title: "What Actually Happens Inside a Protocol-Governed Execution"
+      - src: blogs/blog_13_AI_changed_velocity_pgs_architecture.md
+        slug: ai-changed-velocity-pgs-changes-architecture
+        title: "AI Changed Software Velocity. PGS Changes Software Architecture"
+      - src: "blogs/blog_14 AI_Didnot_Break_Your_Software.md"
+        slug: ai-didnt-break-your-software
+        title: "AI Didn't Break Your Software. It Broke the Assumptions Underneath It"
+      - src: blogs/blog_15_My_Backyard_Taught_Me_To_Build_Safer_Software.md
+        slug: my-backyard-taught-me-to-build-safer-software
+        title: "My Backyard Taught Me To Build Safer Software"
+      - src: "blogs/blog_16_human_insight_became_architectural_inversion..md"
+        slug: the-human-insight-that-became-an-architectural-inversion
+        title: "The Human Insight That Became an Architectural Inversion"
+      - src: blogs/blog_17_Protocol-Governed_Systems_Your_Governed_Path_To_Risk_Management.md
+        slug: your-governed-path-to-risk-management
+        title: "Protocol-Governed Systems: Your Governed Path to Risk Management"
+
+  papers:
+    target: content/papers
+    default_tags: ["PGS", "paper"]
+    # Per-paper `doi:` and `pdf:` may be added later (Phase 7 / Zenodo); when present
+    # the ingest renders a DOI link + PDF download line at the top of the page.
+    entries:
+      - src: doc/techpaper_protocol-governed_systems_v2.md
+        slug: pgs-constitutionally-constrained-architecture
+        title: "Protocol-Governed Systems: A Constitutionally Constrained Architecture for Autonomous and AI-Generated Software"
+      - src: doc/pgs_architecture_inversion_concepts_v0.md
+        slug: architecture-inversion-concepts
+        title: "Protocol-Governed Systems: Architecture Inversion Concepts"
+      - src: doc/pgs_conceptual_model_v0.md
+        slug: conceptual-model
+        title: "Protocol-Governed Systems: A Conceptual Model"
+      - src: doc/pgs_compiler_conceptual_model_v0.md
+        slug: compiler-conceptual-model
+        title: "Protocol-Governed Systems: Compiler Conceptual Model"
+      - src: doc/pgs_runtime_conceptual_model_v0.md
+        slug: runtime-conceptual-model
+        title: "Protocol-Governed Systems: Runtime Conceptual Model"
+      - src: doc/pgs_change_management_conceptual_model_v0.md
+        slug: change-management-conceptual-model
+        title: "Protocol-Governed Systems: Closed-Loop Governed Evolution"
+      - src: doc/pgs_field_manual_v0.md
+        slug: field-manual
+        title: "PGS Field Manual"
+
+  book:
+    target: content/book
+    entries:
+      - src: doc/pgs_practioner_guide_all_chapters.md
+        # Split the 844 KB practitioner guide into one page per top-level `# ` heading.
+        split:
+          by_heading: "# "
+          skip_titles: ["Table of Contents"]
+
+  learn:
+    target: content/learn
+    default_tags: ["PGS", "tutorial"]
+    entries:
+      - src: doc/onboarding_build_first_workflow.md
+        slug: onboarding-first-workflow
+        title: "Onboarding: Build Your First Workflow"
+      - src: doc/pgs_worked_example.md
+        slug: pgs-by-example
+        title: "PGS by Example"
+
+  # Info pages under /about/ (landing lives in content/about/_index.md, preserved).
+  about:
+    target: content/about
+    entries:
+      - src: doc/about_bachi.md
+        slug: bachi
+        title: "About Bachi"
+      - src: doc/about_omnibachi.md
+        slug: omnibachi
+        title: "About OmniBachi"
