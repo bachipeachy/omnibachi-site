@@ -50,7 +50,7 @@ jobs:
           hugo \
             --minify \
             --gc \
-            --baseURL "${{ steps.pages.outputs.base_url }}/"
+            --baseURL "https://omnibachi.org/"
       - name: Upload artifact
         uses: actions/upload-pages-artifact@v3
         with:
