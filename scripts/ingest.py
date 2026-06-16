@@ -39,6 +39,9 @@ STRAY_BACKSLASH_RE = re.compile(r"(?m)^\\\s*$")
 # Pandoc Word-export artifacts: {.class}/{#anchor} attribute spans and [[x]]() double brackets.
 PANDOC_SPAN_RE = re.compile(r"\{[#.][^}]*\}")
 DOUBLE_BRACKET_RE = re.compile(r"\[\[([^\]]+)\]\]\(")
+# Pandoc Word/LaTeX export artifact: <figure>…</figure> blocks whose <img> was lost,
+# leaving an orphan caption. Stripped when they carry no <img>.
+FIGURE_BLOCK_RE = re.compile(r"<figure\b.*?</figure>", re.DOTALL | re.IGNORECASE)
 
 # Single leading lines that make up a title block (stripped from body).
 # The series tagline is handled globally by SERIES_TAGLINE_RE (wrap-aware).
@@ -170,8 +173,17 @@ def find_header_image(asset_src_dir: Path, weight: int) -> Path | None:
     return matches[0] if matches else None
 
 
+def strip_empty_figures(body: str) -> str:
+    """Drop <figure>…</figure> blocks that carry no <img> (orphan captions left by
+    the original Word/LaTeX → Markdown conversion)."""
+    def repl(m: re.Match) -> str:
+        return "" if "<img" not in m.group(0).lower() else m.group(0)
+    return FIGURE_BLOCK_RE.sub(repl, body)
+
+
 def clean_body(body: str) -> str:
     body = PANDOC_SPAN_RE.sub("", body)
+    body = strip_empty_figures(body)
     body = DOUBLE_BRACKET_RE.sub(r"[\1](", body)
     body = SERIES_TAGLINE_RE.sub("", body)
     body = STRAY_BACKSLASH_RE.sub("", body)
@@ -233,11 +245,33 @@ def run(config_path: Path) -> int:
         section_url = "/" + sec["target"].replace("content/", "", 1).rstrip("/")
         clean_section_dir(target)
 
+        # Generated section landing page. Needed for nested sections (e.g.
+        # papers/working_papers) whose _index.md is otherwise wiped by the parent
+        # section's clean — so it is regenerated from config every run.
+        idx_cfg = sec.get("index")
+        if idx_cfg:
+            ifm = {"title": idx_cfg["title"], "draft": False}
+            for k in ("weight", "description"):
+                if idx_cfg.get(k) is not None:
+                    ifm[k] = idx_cfg[k]
+            (target / "_index.md").write_text(
+                yaml_front_matter(ifm) + str(idx_cfg.get("body", "")).rstrip() + "\n",
+                encoding="utf-8")
+
         part_to_slug = {i + 1: e["slug"] for i, e in enumerate(entries) if e.get("slug")}
         default_tags = sec.get("default_tags", [])
         series = sec.get("series")
         use_header_convention = bool(sec.get("header_image"))
         number_titles = bool(sec.get("number_titles"))
+        notice = sec.get("notice")
+        # When set, the canonical PDF is the source's sibling (same stem) — copied
+        # into static/<section-rel>/ and surfaced as a download link.
+        pdf_sibling = bool(sec.get("pdf_sibling"))
+        pdf_static = SITE_ROOT / "static" / sec["target"].replace("content/", "", 1).rstrip("/")
+        if pdf_sibling:
+            if pdf_static.exists():
+                shutil.rmtree(pdf_static)
+            pdf_static.mkdir(parents=True, exist_ok=True)
 
         log(f"section '{section_name}': {len(entries)} entries -> {target}")
         for idx, entry in enumerate(entries, start=1):
@@ -303,7 +337,7 @@ def run(config_path: Path) -> int:
                 body = fix_placeholder_links(body, part_to_slug, section_url)
             body = process_asset_links(body, src.parent, fig_static, "/figures")
 
-            # DOI / PDF placeholders for papers (filled in Phase 7).
+            # DOI / PDF surfacing for papers.
             extra = {}
             badge = []
             if entry.get("doi"):
@@ -312,8 +346,23 @@ def run(config_path: Path) -> int:
             if entry.get("pdf"):
                 extra["pdf"] = entry["pdf"]
                 badge.append(f"[Download PDF]({entry['pdf']})")
+            elif pdf_sibling:
+                sib = src.with_suffix(".pdf")
+                if sib.is_file():
+                    shutil.copy2(sib, pdf_static / sib.name)
+                    pdf_href = f"{section_url}/{sib.name}"
+                    extra["pdf"] = pdf_href
+                    badge.append(
+                        f"[Download PDF (canonical, with figures)]({pdf_href})")
+                else:
+                    log(f"  no sibling PDF for {src.name}")
+            blocks = []
+            if notice:
+                blocks.append(str(notice).rstrip())
             if badge:
-                body = " · ".join(badge) + "\n\n" + body
+                blocks.append(" · ".join(badge))
+            if blocks:
+                body = "\n\n".join(blocks) + "\n\n" + body
 
             # Filename carries the series number (blog_NN_) so it lines up with
             # assets/blog_NN.<ext>; the URL is still governed by front-matter `slug`.

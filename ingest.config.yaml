@@ -69,6 +69,9 @@ sections:
       - src: blogs/blog_17_Protocol-Governed_Systems_Your_Governed_Path_To_Risk_Management.md
         slug: your-governed-path-to-risk-management
         title: "Protocol-Governed Systems: Your Governed Path to Risk Management"
+      - src: blogs/pgs_18_vacation_planning_sparked_pgs_architecture.md
+        slug: vacation-planning-sparked-pgs-architecture
+        title: "How Vacation Planning Sparked the Ideas Behind PGS Architecture"
 
   papers:
     target: content/papers
@@ -97,6 +100,66 @@ sections:
       - src: doc/pgs_field_manual_v0.md
         slug: field-manual
         title: "PGS Field Manual"
+
+  # Historic working papers (DOI-published). They predate the enhanced PGS compiler
+  # and runtime architecture and are superseded by the `papers` corpus above —
+  # preserved for reference. Nested at /papers/working_papers/. Each page links its
+  # canonical PDF (the source's sibling .pdf, which still carries the figures).
+  # MUST be listed AFTER `papers` so the parent section's clean runs first.
+  working_papers:
+    target: content/papers/working_papers
+    default_tags: ["PGS", "paper", "working-paper"]
+    number_titles: true
+    pdf_sibling: true
+    notice: |
+      > **Historic working paper.** An early, DOI-published draft preserved for
+      > historical reference. Its implementation terminology predates the current
+      > PGS compiler and runtime architecture and is **superseded by the
+      > [current Papers](/papers/)**. Figures survive only in the canonical PDF below.
+    index:
+      title: "Working Papers (Historic Archive)"
+      weight: 100
+      description: "Early DOI-published working papers, preserved for reference. Superseded by the current Papers."
+      body: |
+        These are the original Protocol-Governed Systems working papers, each
+        published with a DOI. They **predate the enhanced PGS compiler and runtime
+        architecture**, so some implementation terminology is dated. The
+        [current Papers](/papers/) supersede them as the authoritative corpus.
+
+        They are preserved here for historical reference and for the insight they
+        still offer. Each page renders the readable text; the **canonical PDF
+        (with figures)** is linked at the top of every paper.
+    entries:
+      - src: doc/cannonical_doc/working_papers/techpaper_1_v0.md
+        slug: motivation-why-pgs-inevitable
+        title: "Motivation: Why Protocol-Governed Architecture is Inevitable"
+      - src: doc/cannonical_doc/working_papers/techpaper_2_v0.md
+        slug: constitutional-realization-turing-complete
+        title: "A Constitutional Realization of Turing-Complete Systems"
+      - src: doc/cannonical_doc/working_papers/techpaper_3_v0.md
+        slug: layer-concern-constitutional-model
+        title: "The Layer-Concern Constitutional Model: A Formal Structural Taxonomy"
+      - src: doc/cannonical_doc/working_papers/techpaper_4_v0.md
+        slug: governance-and-authoring
+        title: "Governance and Authoring: The Legislative Process of Behavioral Law"
+      - src: doc/cannonical_doc/working_papers/techpaper_5_v0.md
+        slug: protocol-as-law
+        title: "Protocol as Law: Behavioral Specification and Versioned Authority"
+      - src: doc/cannonical_doc/working_papers/techpaper_6_v0.md
+        slug: deterministic-enforcement
+        title: "Deterministic Enforcement: Runtime Binding, Execution, and Trace Conformance"
+      - src: doc/cannonical_doc/working_papers/techpaper_7_v0.md
+        slug: pure-computation-and-governed-mutation
+        title: "Pure Computation and Governed Mutation: Capability Transforms and Side Effects"
+      - src: doc/cannonical_doc/working_papers/techpaper_8_v0.md
+        slug: inversion-of-trust
+        title: "The Inversion of Trust: Vocabulary-Bounded Security"
+      - src: doc/cannonical_doc/working_papers/techpaper_9_v0.md
+        slug: three-dividends
+        title: "The Three Dividends: Governance, Protocol, and Architecture Economics"
+      - src: doc/cannonical_doc/working_papers/techpaper_10_v0.md
+        slug: generation-governance-impedance-mismatch
+        title: "The Generation-Governance Impedance Mismatch: PGS in the AI Era"
 
   book:
     target: content/book
