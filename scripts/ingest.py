@@ -42,6 +42,10 @@ DOUBLE_BRACKET_RE = re.compile(r"\[\[([^\]]+)\]\]\(")
 # Pandoc Word/LaTeX export artifact: <figure>…</figure> blocks whose <img> was lost,
 # leaving an orphan caption. Stripped when they carry no <img>.
 FIGURE_BLOCK_RE = re.compile(r"<figure\b.*?</figure>", re.DOTALL | re.IGNORECASE)
+# Author-block "ORCID Profile: <url>" line — redundant now that /papers/ carries a
+# single canonical ORCID reference; stripped so it stays out of card summaries.
+ORCID_LINE_RE = re.compile(
+    r"(?im)^[ \t]*\*{0,2}ORCID Profile:\*{0,2}[ \t]*<?https?://orcid\.org/[^\s>]*>?[ \t]*$\n?")
 
 # Single leading lines that make up a title block (stripped from body).
 # The series tagline is handled globally by SERIES_TAGLINE_RE (wrap-aware).
@@ -184,6 +188,7 @@ def strip_empty_figures(body: str) -> str:
 def clean_body(body: str) -> str:
     body = PANDOC_SPAN_RE.sub("", body)
     body = strip_empty_figures(body)
+    body = ORCID_LINE_RE.sub("", body)
     body = DOUBLE_BRACKET_RE.sub(r"[\1](", body)
     body = SERIES_TAGLINE_RE.sub("", body)
     body = STRAY_BACKSLASH_RE.sub("", body)

@@ -11,8 +11,6 @@ tags:
 
 Contact: [mailto:bachipeachy@gmail.com](mailto:bachipeachy@gmail.com)
 
-ORCID Profile: <https://orcid.org/0009-0007-3810-6520>
-
 ## Preface
 
 This paper is part of PGS technical paper series. The paper, [*Protocol-Governed Systems: Conceptual Model*](https://doi.org/10.5281/zenodo.20300611), established the architectural foundations: constitutional governance, the separation of governance from execution, and the four-layer stack that makes governed execution possible. This paper focuses on one component of that stack: the PGS compiler.

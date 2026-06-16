@@ -11,8 +11,6 @@ tags:
 
 Contact: [mailto:bachipeachy@gmail.com](mailto:bachipeachy@gmail.com)
 
-ORCID Profile: <https://orcid.org/0009-0007-3810-6520>
-
 ## Preface
 
 This paper is part of the PGS technical paper series. The paper [*Protocol-Governed Systems: Conceptual Model*](https://doi.org/10.5281/zenodo.20300611) established the architectural foundations: constitutional governance, the four-layer stack, and the separation of governance from execution. The paper [*Protocol-Governed Systems: Compiler Conceptual Model*](https://doi.org/10.5281/zenodo.20471804) described how the compiler converts protocol declarations into a governed execution boundary called the Protocol Snapshot. Together, those two papers establish that behavior is fully determined before execution begins. This paper focuses on the component that consumes that boundary: the PGS runtime.

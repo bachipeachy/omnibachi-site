@@ -11,8 +11,6 @@ tags:
 
 Contact: [mailto:bachipeachy@gmail.com](mailto:bachipeachy@gmail.com)
 
-ORCID Profile: <https://orcid.org/0009-0007-3810-6520>
-
 ## Preface
 
 This paper is part of the PGS technical paper series. The paper [*Protocol-Governed Systems: Conceptual Model*](https://doi.org/10.5281/zenodo.20300611) established the architectural foundations: constitutional governance, the four-layer stack, and the separation of governance from execution. The paper [*Protocol-Governed Systems: Compiler Conceptual Model*](https://doi.org/10.5281/zenodo.20471804) described how the compiler converts protocol declarations into a governed execution boundary called the Protocol Snapshot. The paper [*Protocol-Governed Systems: Runtime Conceptual Model*](https://doi.org/10.5281/zenodo.20478471) described how the runtime consumes that snapshot and executes workflow instances without any domain knowledge. The paper [*Protocol-Governed Systems: Architecture Inversion Concepts*](https://doi.org/10.5281/zenodo.20497732) established why inverting the traditional relationship between specification and implementation is a structural requirement, not a design preference. Together, those four papers establish that behavior is fully determined before execution begins and that the protocol is the sole source of behavioral truth.
