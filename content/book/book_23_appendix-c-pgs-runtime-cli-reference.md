@@ -1,6 +1,6 @@
 ---
 title: Appendix C — pgs_runtime CLI Reference
-date: '2026-06-15'
+date: '2026-06-18'
 draft: false
 weight: 23
 slug: appendix-c-pgs-runtime-cli-reference

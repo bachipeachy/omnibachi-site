@@ -9,7 +9,7 @@ tags:
 - paper
 ---
 
-**Status:** Public Reference Artifact — v0 · Baseline: PGS v0.5.0
+**Status:** Public Reference Artifact — v1 · Baseline: PGS v0.6.1 · revised for the all-structured change-management pipeline and the authority-invariance result. The v0 edition is the published DOI record.
 
 **Canonical Repository:** [bachipeachy/pgs_workspace](https://github.com/bachipeachy/pgs_workspace)
 
@@ -407,6 +407,8 @@ fb.constitution::STRUCTURE_BUILD_PLATFORM_CONFIG_V0
 | 8 | `authoring_manifest_<sub>_v0.md` | Evidence closure: deviations, discoveries, conformance, lessons | Baseline created at Gate 2; populated with actual execution data only |
 | 9 | (manifest status → APPROVED) | CR Closure | Completion criterion met, never aspirational |
 
+Every dossier stage (1–7) is a **structured register document**: the actor emits register rows, a deterministic renderer owns the document, and a **structural oracle** validates it mechanically (well-formed FQDNs, controlled vocabularies, per-row traceability, cross-stage code reconciliation) before human review. The dossier pipeline ends at Stage 7; artifact authoring, compilation, runtime testing, and the Stage 8 manifest are the post-Gate-2 **authoring tier**.
+
 **Discovery Saturation (Stage 3 stop condition)** — all three simultaneously: no unresolved CRITICAL gaps · no open analyst questions · no dependency expansion in the last pass.
 
 ### 4.2 Purity Ladder
@@ -453,6 +455,23 @@ Agent context is declared in `pgs_change_mgmt/change_mgmt/templates/0_agent_cont
 ### 4.5 Governance Dividend in Practice
 
 Each cycle's manifest carries methodology lessons forward into the stage templates. Templates are the accumulation vehicle: every future CR (and agent) inherits prior failures as enforced rules, not folklore. Seven CRs executed to date (consensus_pos · block · data_model · consensus_propose · mempool · orchestration · chain) — the conceptual model is documented in the change-management concept paper (fifth in the series).
+
+### 4.6 Authoring Protocol — Machine-Block Artifacts
+
+When the change agent (human or automated) authors a machine-block artifact (CC / WF / IN / RB / CT / CS / STRUCTURE), three rules govern *how*:
+
+- **Structured Contract → Renderer.** The agent emits a validated **structured contract object**, never free-form machine syntax; a deterministic renderer converts that object into the artifact's machine block. Free-form machine-syntax authoring is non-conformant — the experiment showed the representation, not the model, was the ceiling. (Reference impl: `contract_renderer.py`.)
+- **Generate, Never Patch (b′).** The agent *generates* an artifact from the mandate; it never patches an existing one. On compiler rejection it regenerates fresh from the mandate plus the compiler diagnostics — diagnostics are context, not a diff to apply. Artifacts are disposable output; the **mandate is authoritative**. Authority stays upstream.
+- **Agent Role.** The agent drafts; `pi` and the compiler govern; the human approves and commits. The worker is replaceable and authority never resides in it — this is what makes `COMPILER_VALIDATED_CLOSURE` (change-mgmt constitution §3) sound: artifacts are correct only when the compiler admits them, human review advisory.
+- **Authority Invariance.** The pipeline is *authority-invariant with respect to the authoring actor* — the same templates, projection contracts, structural oracle, and compiler rules govern a human, a local model, or a frontier model identically (shown empirically by running one CR under Qwen 3.5 and Claude Opus 4.8 against an identical governance scaffold: drafts and convergence differed, governance did not). The actor possesses **no governing authority**: it cannot unilaterally alter governed state and cannot admit a change — only the compiler admits, only the oracle clears a stage, only a human closes a gate. *The actor proposes; governance disposes.* Authoring is interchangeable; authority is not.
+
+### 4.7 Evaluation Doctrine — Judging Authored Output
+
+How authored output (and the agent producing it) is judged is itself governed — the evaluator is not exempt from rigor:
+
+- **Identity-Preserving Taxonomy.** Classify every artifact reference by resolving its identity against `artifact_index/index.json` before judging: **A** exact · **B** typo-alias · **C** wrong-domain · **D** proposed-new · **E** fabrication. Only **E** (no identity anywhere) is a hallucination; A–D all preserve identity. Aggregate not-found counts are inadmissible — they over-flag legitimate new-design FQDNs. (Reference impl: `grounding_audit.py`; mirrors constitution rule `IDENTITY_PRESERVING_REFERENCE_VALIDATION`.)
+- **Trace Beats Aggregates.** A load-bearing claim requires end-to-end artifact-identity tracing. Aggregate counts, query tallies, and regex matches are insufficient evidence for any conclusion doctrine will rest on.
+- **System Boundary.** The harness and the evaluator are part of the system under test. Distinguish **worker** vs **harness** vs **evaluator** variation before attributing a finding — e.g. ollama silently front-truncating at the ~4k default `num_ctx` is a harness fault, not a worker failure. Never encode worker-specific traits (verbosity, discovery depth, run-to-run variance) as doctrine — see *Research Classification* below.
 
 ---
 
@@ -1301,6 +1320,22 @@ grep '"artifact_id": "blockchain::CC_<NAME>"' \
 # Check snapshot validity marker
 grep "status" protocol_snapshot/artifacts/workflows/*.json | head -5
 ```
+
+## Research Classification
+
+Doctrine must never be contaminated by unvalidated claims. Every statement derived from an experiment carries a standing classification, and only the first two grades may harden into doctrine:
+
+| Grade | Meaning | May enter doctrine? |
+|-------|---------|---------------------|
+| **Validated Finding** | Reproduced; mechanism understood; survives adversarial check | Yes — as doctrine |
+| **Candidate Invariant** | Holds so far; not yet reproduced across domains (n=1) | Yes — flagged provisional |
+| **Hypothesis** | Plausible, untested | No — track only |
+| **Retracted Finding** | Was believed, now disproven | No — record the retraction, not the claim |
+| **Worker Observation** | A trait of the specific worker/harness, not the system | No — benchmark fact, never governance |
+
+A claim is promoted only by re-grading, never by repetition. Worker Observations (e.g. a given model's verbosity, discovery weakness, or run-to-run variance) are explicitly out of permanent scope — see §4.7 System Boundary.
+
+---
 
 ## Manual Evolution Rule
 

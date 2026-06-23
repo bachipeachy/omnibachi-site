@@ -40,7 +40,7 @@ Discussions — sign in with GitHub to join the conversation.
 
 The site is built with [Hugo](https://gohugo.io) (extended) + the
 [PaperMod](https://github.com/adityatelange/hugo-PaperMod) theme and deploys to GitHub Pages via
-GitHub Actions ($0 hosting).
+GitHub Actions.
 
 Content authoring is **single-sourced**: the canonical markdown lives in a separate `pgs_workspace`
 repo; a one-way adapter (`scripts/ingest.py`) copies it here and adds Hugo front matter, so the

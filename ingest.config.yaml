@@ -94,10 +94,10 @@ sections:
       - src: doc/pgs_runtime_conceptual_model_v0.md
         slug: runtime-conceptual-model
         title: "Protocol-Governed Systems: Runtime Conceptual Model"
-      - src: doc/pgs_change_management_conceptual_model_v0.md
+      - src: doc/pgs_change_management_conceptual_model_v1.md
         slug: change-management-conceptual-model
         title: "Protocol-Governed Systems: Closed-Loop Governed Evolution"
-      - src: doc/pgs_field_manual_v0.md
+      - src: doc/pgs_field_manual_v1.md
         slug: field-manual
         title: "PGS Field Manual"
 
