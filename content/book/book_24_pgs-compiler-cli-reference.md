@@ -1,6 +1,6 @@
 ---
 title: pgs_compiler CLI Reference
-date: '2026-06-23'
+date: '2026-06-25'
 draft: false
 weight: 24
 slug: pgs-compiler-cli-reference

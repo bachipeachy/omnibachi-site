@@ -17,6 +17,11 @@ pagination.pagerSize = 10
   env = "production"
   description = "Protocol-Governed Systems — blogs, papers, and a practitioner guide by Bhash Ganti."
   author = "Bhash Ganti"
+  # Home page shows only the high-level PGS hero (homeInfoParams) — no post feed.
+  # Empty mainSections suppresses the home list (otherwise Hugo defaults to the
+  # largest section, 'book', flooding the home page with chapter links).
+  # Navigation to Blog/Papers/Book/Learn lives in the top menu.
+  mainSections = []
   # Fallback social-share image for pages without their own cover (home, about, etc.).
   images = ["og-default.png"]
   defaultTheme = "auto"
@@ -82,13 +87,7 @@ It is not a low-code workflow builder, a BPM engine, an orchestration DSL, a rul
 
 Engineers building high-integrity systems · teams integrating AI-generated code safely · architects exploring deterministic execution models · technical leaders and investors evaluating where AI-era software governance is heading.
 
-This site is the primary knowledge hub for the PGS ecosystem — the conceptual foundations, reference architecture, technical papers, the practitioner's guide, and runnable examples:
-
-- **[Blog](/blog/)** — essays, architectural insights, project updates, and design explorations.
-- **[Papers](/papers/)** — peer-reviewed and technical publications, including DOI-backed reference papers.
-- **[Book](/book/)** — the practitioner's guide to Protocol-Governed Systems.
-- **[Learn](/learn/)** — tutorials, walkthroughs, examples, and hands-on learning resources.
-- **[Open Source](https://github.com/bachipeachy)** — repositories, tooling, reference implementations, and project documentation.
+Explore the ecosystem from the menu above — **Blog**, **Papers**, **Book**, **Learn**, and **Open Source**.
 """
 
   [params.profileMode]

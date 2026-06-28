@@ -1,6 +1,6 @@
 ---
 title: Appendix D — Artifact Schema Reference
-date: '2026-06-23'
+date: '2026-06-28'
 draft: false
 weight: 25
 slug: appendix-d-artifact-schema-reference
