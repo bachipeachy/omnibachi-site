@@ -46,9 +46,43 @@ pagination.pagerSize = 10
     Content = """
 The home of **Protocol-Governed Systems (PGS)** — an open-source architecture for building trustworthy software, AI agents, autonomous systems, and digital ecosystems through explicit protocol, governance, and verifiable execution.
 
-Rather than embedding behavior in opaque code paths or runtime discretion, PGS treats **governance, authority, intent, workflow, capability, and execution** as first-class declarative artifacts that can be authored, compiled, validated, and executed deterministically.
+> Governed by Protocol. Constructed by Compiler. Proven by Trace.
 
-This site is the primary knowledge hub for the PGS ecosystem — bringing together the conceptual foundations, reference architecture, technical specifications, implementation guidance, research publications, and practical examples that demonstrate how complex systems can be governed by protocol rather than convention.
+#### The problem
+
+Modern software has a governance problem. As systems become distributed, event-driven, AI-assisted, and increasingly machine-generated, the gap keeps widening between what engineers *intended* and what software is actually *allowed to do*. Behavior hides in orchestration code, runtime conditionals, framework conventions, implicit routing, service glue — and, increasingly, in AI-generated implementation details no human reviewed.
+
+PGS starts from a different question: **what if behavior were governed *before* execution instead of inferred *during* it?**
+
+#### What PGS is
+
+PGS is a **Protocol-Governed Execution Architecture**, where:
+
+- behavior is declared in governed protocol artifacts,
+- admissible execution paths are compiled ahead of time,
+- runtime traversal is deterministic,
+- undeclared behavior is simply unreachable,
+- and every execution produces structured, immutable evidence.
+
+The runtime does not "figure out" what to do — it traverses a precompiled execution graph. The compiler constrains what the runtime is even *capable* of doing. This is not another framework abstraction; it is a different execution model.
+
+#### Two spaces, cleanly separated
+
+PGS splits software into a **Human Governance Space** that defines what behavior is admissible, and a **Machine Execution Space** that executes only what has already been declared and compiled. The runtime is never trusted to "do the right thing" — it is structurally incapable of doing anything else.
+
+#### Why this matters in the AI era
+
+AI can now generate software faster than humans can reliably govern it. PGS is built on a simple premise: **AI-generated behavior should not bypass architectural admissibility.** Execution legality is compiled before runtime, side effects are explicitly declared, routing surfaces are closed, and traces are immutable — so the system cannot invent undeclared behavior at execution time. PGS even governs *how the system itself changes*: every change travels a gated pipeline from a plain-language Change Request to an Authoring Mandate. *The actor proposes; governance disposes.*
+
+#### What PGS is *not*
+
+It is not a low-code workflow builder, a BPM engine, an orchestration DSL, a rules engine, an agent framework, or another event-bus abstraction. It is a **governed execution substrate**.
+
+#### Who it's for
+
+Engineers building high-integrity systems · teams integrating AI-generated code safely · architects exploring deterministic execution models · technical leaders and investors evaluating where AI-era software governance is heading.
+
+This site is the primary knowledge hub for the PGS ecosystem — the conceptual foundations, reference architecture, technical papers, the practitioner's guide, and runnable examples:
 
 - **[Blog](/blog/)** — essays, architectural insights, project updates, and design explorations.
 - **[Papers](/papers/)** — peer-reviewed and technical publications, including DOI-backed reference papers.
