@@ -87,7 +87,7 @@ PGS separates software into two distinct spaces:
 
 This inversion matters. The runtime is not trusted to "do the right thing." The compiler constrains what the runtime is even capable of doing.
 
-## What happens when you run this?
+## What happens when you run PGS?
 
 You will execute real workflows against persistent state.
 
