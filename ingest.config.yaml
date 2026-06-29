@@ -72,6 +72,9 @@ sections:
       - src: blogs/pgs_18_vacation_planning_sparked_pgs_architecture.md
         slug: vacation-planning-sparked-pgs-architecture
         title: "How Vacation Planning Sparked the Ideas Behind PGS Architecture"
+      - src: blogs/pgs_19_why_software_implementation_is_becoming_disposable.md
+        slug: why-software-implementation-is-becoming-disposable
+        title: "Why Software Implementation is Becoming Disposable"
 
   papers:
     target: content/papers
