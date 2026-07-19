@@ -9,7 +9,7 @@ tags:
 - paper
 ---
 
-**Status:** Public Reference Artifact — v1 · Baseline: PGS v0.6.1 · revised for the all-structured change-management pipeline and the authority-invariance result. The v0 edition is the published DOI record.
+**Status:** Public Reference Artifact — v2 · Baseline: PGS v0.8.0 · revised for the full change-management **lifecycle** (Authoring → Construction → Admission → Execution Validation → Promotion), the unified `pgs_change` CLI, and the Governance-Impact / Promotion≠Adoption result (§4). The v0 edition is the published DOI record.
 
 **Canonical Repository:** [bachipeachy/pgs_workspace](https://github.com/bachipeachy/pgs_workspace)
 
@@ -385,11 +385,11 @@ fb.constitution::STRUCTURE_BUILD_PLATFORM_CONFIG_V0
 
 ## 4. Authoring Model — Governed Evolution (Change Management)
 
-**One-line summary:** Evolution is itself a governed protocol concern — every protocol change travels a staged pipeline from Change Request to Authoring Mandate, leaving a complete evidence chain (the dossier).
+**One-line summary:** Evolution is itself a governed protocol concern — every protocol change travels a governed **lifecycle** from Change Request through Authoring, Construction, Admission, Execution Validation, and Promotion, leaving a complete evidence chain (the dossier). The Authoring Mandate is a milestone in that lifecycle, not its end.
 
-**Governing boundary:** `FB_CHANGE_MGMT` (delegated, in `pgs_governance/registry/`). **Implementation:** `pgs_change_mgmt` repo — stage templates in `change_mgmt/templates/`, dossiers in `change_mgmt/dossiers/<domain>/<subdomain>/`.
+**Governing boundary:** `FB_CHANGE_MGMT` (delegated, in `pgs_governance/registry/`). **Implementation:** `pgs_change_mgmt` repo — stage templates in `change_mgmt/templates/`, dossiers in `change_mgmt/dossiers/<domain>/<subdomain>/`, lifecycle engine in `pgs_change_mgmt/engine/` fronted by one CLI, `pgs_change` (§4.11).
 
-**The closing of the loop:** PGS governs construction (compiler) and execution (runtime). The change pipeline governs change itself. If the Protocol Snapshot does not change, the system is invariant by definition — the pipeline is complete only when a new snapshot is compiled, attested, and valid.
+**The closing of the loop:** PGS governs construction (compiler) and execution (runtime). The change pipeline governs change itself. If the Protocol Snapshot does not change, the system is invariant by definition — the loop closes only when a new snapshot is **admitted, execution-validated, promoted into the owning source registries, and recompiled to VALID**. Change-management output is not code; it is an **admitted protocol delta** whose promotion the compiler gates.
 
 ### 4.1 The Pipeline (one CR = one dossier)
 
@@ -404,12 +404,34 @@ fb.constitution::STRUCTURE_BUILD_PLATFORM_CONFIG_V0
 | 6 | `governance_intent_<sub>_v0.md` | WHERE — domain/subdomain, ownership, dependencies | No new artifact codes; cross-subdomain writes forbidden |
 | 6b | `design_intent_<sub>_v0.md` | HOW — FQDNs, topology, schemas, stores, module paths, RBs | **Gate 1 — Design Approval** (full dossier reviewed as a body) |
 | 7 | `authoring_mandate_<sub>_v0.md` | IN WHAT ORDER — topologically sorted build waves | Mechanical derivation; must reconcile with 6b exactly. **Gate 2 — Mandate Approval** (dossier locked) |
-| 8 | `authoring_manifest_<sub>_v0.md` | Evidence closure: deviations, discoveries, conformance, lessons | Baseline created at Gate 2; populated with actual execution data only |
-| 9 | (manifest status → APPROVED) | CR Closure | Completion criterion met, never aspirational |
+| 8 | `build_sheet_<sub>_v0.md` | Construction projection — governed design assembled into a per-artifact Build Sheet Set (no new design) | Assembled not authored; governed by `CONSTITUTION_CONSTRUCTION_V0` |
+| 9 | `construction_record_<sub>_v0.md` | Construction evidence: built artifacts, compiler/runtime results, deviations, discoveries | Evidence only; CR closes after the Record is complete and artifacts compile clean |
 
-Every dossier stage (1–7) is a **structured register document**: the actor emits register rows, a deterministic renderer owns the document, and a **structural oracle** validates it mechanically (well-formed FQDNs, controlled vocabularies, per-row traceability, cross-stage code reconciliation) before human review. The dossier pipeline ends at Stage 7; artifact authoring, compilation, runtime testing, and the Stage 8 manifest are the post-Gate-2 **authoring tier**.
+Every dossier stage (1–7) is a **structured register document**: the actor emits register rows, a deterministic renderer owns the document, and a **structural oracle** validates it mechanically (well-formed FQDNs, controlled vocabularies, per-row traceability, cross-stage code reconciliation) before human review. The **design/authoring pipeline (Stages 1–7)** ends at Stage 7. Everything after Gate 2 — Stage 8 Build Sheet Set → **construct** → **admit** → **execution-validate** → **promote** → Stage 9 Construction Record — is a *distinct governance authority*, governed by `fb.change_mgmt::CONSTITUTION_CONSTRUCTION_V0` (rationale: `pgs_change_mgmt/doc/CONSTRUCTION_MODEL_V0.md`). Design is open and human-gated; construction is non-authorial transcription in which the builder decides nothing. The dossier stages (1–9) are the *authored artifacts*; the **lifecycle states** below are the *governed status* a change passes through — a separate axis (§4.1a).
 
 **Discovery Saturation (Stage 3 stop condition)** — all three simultaneously: no unresolved CRITICAL gaps · no open analyst questions · no dependency expansion in the last pass.
+
+### 4.1a Lifecycle States — the status axis
+
+The dossier stages record *what was authored*; the lifecycle records *how far the change has travelled toward a promoted snapshot*. A change is never "done" because a document exists — it is done when it reaches `PROMOTED` and the recompiled snapshot is VALID. Each transition is gated and emits evidence that lives **outside** the read-only snapshot.
+
+```
+DRAFT ──author (S1–S7)──▶ (mandate locked, Gate 2)
+      ──construct (S8)──▶ CONSTRUCTION_COMPLETE   design lowered to a candidate protocol delta
+      ──admit───────────▶ ADMITTED_UNVALIDATED    Compilation Unit compiles; impls may not yet exist
+      ──validate────────▶ EXECUTION_VALIDATED      CR's acceptance scenario runs + observes = PASS
+      ──promote (S9)────▶ PROMOTED                 delta copied to owning registries; compiler is the gate
+```
+
+| State | Reached by | Gate to leave it | Evidence |
+|-------|-----------|------------------|----------|
+| `DRAFT` | opening a CR | Gate 1 (Design) · Gate 2 (Mandate) — human-closed | the dossier (Stages 1–7) |
+| `CONSTRUCTION_COMPLETE` | `construct` (build) | Construction-Completeness: zero gap census | Build Sheet Set + `cr_ir/` |
+| `ADMITTED_UNVALIDATED` | `construct` (admit) | Admission: the **Compilation Unit** (Baseline ∪ Generated Delta ∪ Supplementary) compiles clean | `placement_manifest.json`, `governance_impact.json` |
+| `EXECUTION_VALIDATED` | `validate` | Execution Validation: the CR's declared `acceptance_scenario` executes and every observation matches | `validation_report.json` |
+| `PROMOTED` | `promote --confirm` | the compiler admits the promoted registries (rollback-all-on-red) | `promotion_report.json` |
+
+**Admission is a first-class stage, distinct from execution.** A change can be *admissible* (its protocol delta compiles) long before its CT/CS implementations exist — that snapshot is marked `ADMITTED_UNVALIDATED`, never `VALID`. Admission proves **Protocol Completeness**; Execution Validation proves the behaviour actually runs. Conflating the two is the classic "it compiles, ship it" error the lifecycle refuses to make.
 
 ### 4.2 Purity Ladder
 
@@ -472,6 +494,73 @@ How authored output (and the agent producing it) is judged is itself governed �
 - **Identity-Preserving Taxonomy.** Classify every artifact reference by resolving its identity against `artifact_index/index.json` before judging: **A** exact · **B** typo-alias · **C** wrong-domain · **D** proposed-new · **E** fabrication. Only **E** (no identity anywhere) is a hallucination; A–D all preserve identity. Aggregate not-found counts are inadmissible — they over-flag legitimate new-design FQDNs. (Reference impl: `grounding_audit.py`; mirrors constitution rule `IDENTITY_PRESERVING_REFERENCE_VALIDATION`.)
 - **Trace Beats Aggregates.** A load-bearing claim requires end-to-end artifact-identity tracing. Aggregate counts, query tallies, and regex matches are insufficient evidence for any conclusion doctrine will rest on.
 - **System Boundary.** The harness and the evaluator are part of the system under test. Distinguish **worker** vs **harness** vs **evaluator** variation before attributing a finding — e.g. ollama silently front-truncating at the ~4k default `num_ctx` is a harness fault, not a worker failure. Never encode worker-specific traits (verbosity, discovery depth, run-to-run variance) as doctrine — see *Research Classification* below.
+
+### 4.8 Authoring Transports — the Trifecta
+
+The actor-invariance of §4.6 is realized as **three interchangeable transports over one worker interface** (`execute_stage(StageInput) → StageOutput`). Only the transport between stage-prompt and worker differs; validation, handoff, gates, and figure-of-merit are identical.
+
+| Transport | Worker | How |
+|-----------|--------|-----|
+| **Automated** | a model (local or frontier) | drives the stage in a tool-loop, grounding via `pi` |
+| **Guided** | a human — or Claude Code, a *grounding-capable* worker with `pi`/Bash in-session | export a governed **Stage Package** (`run_interactive --export`), paste the reply into `response.md`, `--import`; the engine ingress-validates at the **Human Mutation Boundary**, then runs the identical engine |
+| **Offline replay** | a recorded response | re-run deterministically |
+
+Two rules keep the transports honest:
+- **Worker Isolation.** A worker authors from the Stage Package + prior handoffs + `pi` + gate feedback **only** — never from platform (oracle/gate/compiler) source. Worker Mode is binary: *Package-only* (valid) vs *Used platform internals* (contaminates the interchangeability measurement).
+- **Worker Conformance ≠ model quality.** A worker that emits an invalid governed projection or skips required grounding is *correctly rejected* by the compiler/oracle — a **Worker Conformance** failure, not evidence "the model is weak." The compiler is the stable component; the worker is the variable one. *The actor proposes; governance disposes.*
+
+**Knowledge Partition** (the framing that makes this sound): **PI = what is · CR = what is desired · Worker = how to transform what-is into what-is-desired.** The worker owns *disposition* (how); it never owns *evidence* (what-is, supplied by the platform) or *desire* (what-is-desired, supplied by the human through the seed).
+
+### 4.9 Governed Authoring Properties
+
+Each is a mechanically-checked property, not a review convention — the pipeline can no longer silently lose it:
+- **Authoring Completeness (Boundary 2 — "you cannot compute authority from meaning").** A human-owned, non-derivable input (e.g. a subdomain's Purpose) must be supplied by a human *before its first use*, or the stage halts `AUTHORING_INCOMPLETE` — the pre-stage dual of ingress `NACK`. A seed gap *is* an authoring gap, caught at the earliest phase.
+- **Belief Preservation = k/N.** A worker cannot silently drop a previously-VERIFIED belief between stages: the oracle detects the omission → the worker re-queries `pi` and re-establishes evidence → the oracle confirms closure. Belief continuity is governed.
+- **Projection Fidelity.** Each stage's authoritative JSON handoff must project *identically* to its markdown (no dropped rows, no missing required register). The gate that would have caught the original lossy baseline stands permanently.
+- **Design Review Contract.** Every stage certifies **Part A** (engine-certified readiness, classified unknowns) and advertises a bounded **Part B** (human-engagement — decisions `pi`/governance genuinely cannot answer; questions only). A human's Part-B answer re-enters *only* through the seed (business truth), after which the pipeline replays forward; the agent never injects it mid-pipeline.
+- **Execution Validity (post-construction).** A promoted change must not merely *compile* — its declared `acceptance_scenario` must *execute and observe as expected*. This is enforced as the `EXECUTION_VALIDATED` lifecycle gate (§4.11), the mechanical dual of admission: Admission proves Protocol Completeness, Execution Validation proves the behaviour runs.
+
+### 4.10 The Construction Compiler (Stage 8)
+
+Construction is a **second compiler** — deterministic, no worker, no authorship — that lowers the locked mandate into protocol artifacts. Its input is the **`cr_ir/`** set: the per-stage governed handoffs (`cr_ir/<stage>.json`), the authoritative **Construction Projection** S8 consumes (the stage markdown is human-facing; the JSON is the source of truth downstream).
+
+- **Contracts own semantics; exactly one authority.** New capabilities enter as *candidate capability contracts* in a single **Compilation Unit** beside canonical ones — the compiler cannot tell candidate from canonical and applies identical rules (the former "D4" second authority dissolves rather than relocating).
+- **Pipeline:** Project → Lower (execution expansion · binding propagation · store join · type propagation) → Validate → Serialize. The constraints are the gap census; the renderer only formats.
+- **Propagate, never invent (`TYPED_PORT` as forcing function).** A port type is either declared on a contract Interface or propagated from one; an unresolved port is reported `TYPED_PORT / GAP_DOSSIER`, never guessed. The fix belongs at the authoring source — regenerate the stage, never patch the artifact.
+- **Persistence is a binding, not a port.** A `CS` store access is a Store-Join `ACCESSES` edge (from the capability's `storage_type` + STRUCTURE), never a typed dataflow port; `TYPED_PORT` never models storage. (Full model + rationale: `pgs_change_mgmt/doc/CONSTRUCTION_MODEL_V0.md`.)
+
+The construct step ends at **admission**: the generated delta is assembled with the canonical surface into a single **Compilation Unit** — `Baseline ∪ Generated Delta ∪ Supplementary Artifacts` (origin-agnostic; the compiler cannot tell generated from canonical) — and handed to the compiler. If it compiles, the change reaches `ADMITTED_UNVALIDATED` and the ownership decision is frozen once as a `placement_manifest.json` beside the finale set. Admission is *compile-time* completeness; it does not require the CT/CS implementations to exist yet.
+
+### 4.11 Execution Validation (the `validate` stage)
+
+Admission proves a delta *compiles*; Execution Validation proves it *runs as the CR intended*. It is **generic and CR-transparent**: the CR owns the *expectation*, the engine owns the *mechanism*.
+
+- **The CR declares an `acceptance_scenario`** in its dossier (a business objective + its executable realization). The validation engine has **zero domain knowledge** — it never guesses a workflow, payload, or success criterion.
+- **Mechanism:** build a fresh candidate snapshot → execute the declared scenario's workflow steps → observe → compare against declared expectations → emit `validation_report.json`. An observation may only *resolve an address and compare a value* over the **protocol surface only** — `$.steps.<id>.surface.<path>` (a field of a step's result surface) or `$.steps.<id>.store.<store>.<path>` (state of a declared store after a step; `.count` on a list). No trace parsing, no internals.
+- **Verdict gates the next stage:** `EXECUTION_VALIDATED` on PASS, `EXECUTION_INVALID` otherwise. Promotion refuses without PASS evidence. The scenario itself is admissibility-checked (`VALIDATION_SCENARIO_SCHEMA`) before it runs — a malformed expectation is rejected, not silently passed.
+
+### 4.12 Promotion, and Governance Impact (the `promote` stage — Promotion ≠ Adoption)
+
+Promotion (Stage 9) is the only step that writes governed source. It is deliberate and hard to reverse, so it is gated three ways and is **all-or-nothing**:
+
+- **Validation gate.** Refuses unless the change is `EXECUTION_VALIDATED`.
+- **Governance-Impact gate.** During construction the CR *discovers* the exact surface additions it needs and records them descriptively in `governance_impact.json` — **discovery, not authority**. At promotion, if the canonical surface does not yet admit every required addition, promotion is **BLOCKED** with the missing FQDNs named. *A CR discovers the governance changes it needs; it never performs them.* The governance authority approves them separately by adding them to the canonical surface. **Promotion never writes governance.**
+- **Compiler gate.** With `--confirm`, the finale artifact set is copied into each **owning source registry** (routed by the Placement Manifest — a cross-repo delta lands in each owning repo; **never** the read-only `protocol_snapshot/`), then the compiler recompiles. Red ⇒ rollback-all, registries unchanged. Green ⇒ `promotion_report.json` (the S9 closure certificate, symmetric with the validation report).
+
+**Promotion ≠ Adoption.** Promotion makes a delta part of the governed source. *Adoption* — a platform deciding to evolve onto a promoted capability — is a separate, upstream authority (`platform_delta_approved.json`) that governance approves and that sits ahead of promotion. The CR surfaces impact; governance disposes; promotion only gates. This keeps a single rule intact end-to-end: **the actor proposes, governance disposes.**
+
+### 4.13 The `pgs_change` CLI — one executable, the lifecycle as verbs
+
+The whole lifecycle is fronted by a single executable whose four verbs *are* the state transitions of §4.1a. The CLI contains no authoring, construction, validation, or promotion logic — only dispatch — which is exactly what lets the mechanics stay governed and interchangeable. Compiler mechanics (`build` / `admit` / `persist`) are internal to `construct`, not user verbs.
+
+| Verb | Transition | What it does |
+|------|-----------|--------------|
+| `pgs_change author   [--guided] --worker … [--stage N]` | `DRAFT` → mandate (S1–S7) | drives the dossier stages over the trifecta transports (§4.8) → `cr_ir/` |
+| `pgs_change construct --projection … --domain … --subdomain … [--persist DIR]` | → `ADMITTED_UNVALIDATED` | lowers `cr_ir/` to a delta (build), then forms the Compilation Unit and asks the compiler (admit) |
+| `pgs_change validate  --dossier <domain>/<sub>` | → `EXECUTION_VALIDATED` | runs the CR's `acceptance_scenario` against a fresh candidate snapshot |
+| `pgs_change promote   --dossier … [--from DIR] [--registry-root DIR] [--confirm]` | → `PROMOTED` (S9) | validation + governance-impact gated; copies the finale set into owning registries; compiler is the gate |
+
+`PGS_WORKSPACE` (absolute) is required — the lifecycle never guesses it from cwd. Without `--confirm`, `promote` is a dry-run that reports readiness and stops short of writing any registry.
 
 ---
 
@@ -868,6 +957,8 @@ Understanding why the architecture looks as it does prevents re-introducing solv
 | Closed-loop governed evolution (v0.5.0) | Change management became a governed concern: `FB_CHANGE_MGMT` boundary, `pgs_change_mgmt` repo, staged CR→Mandate pipeline with dossiers, gates, and purity ladder (§4) | Construction and execution were governed; evolution was not. An ungoverned change process accumulates the same rationale decay PGS eliminates elsewhere — the pipeline closes the loop |
 | Orchestration substrate | Workflow composition gained governed primitives: `CS_WORKFLOW_GATEWAY_V0`, `CS_WORKFLOW_LOOP_V0`, `CS_CONCURRENT_WORKFLOWS_V0`; events confirmed as facts, never triggers | Workflow-to-workflow engagement, iteration, and parallelism are declared side effects — not runtime orchestration logic, not event subscriptions |
 | Subdomain store ownership | A store is written only by its owning subdomain's CCs; peer writes are dependency-gap CCs owned by the peer | Store ownership is a governance boundary; cross-subdomain writes were never legal — the doctrine is now explicit and template-enforced |
+| Trifecta authoring + Construction Compiler | Authoring became transport-invariant (automated · guided · offline over one worker interface, §4.8); Stage 8 gained a deterministic Construction Compiler that lowers `cr_ir/` mandates into artifacts under contract authority — candidate capability contracts, propagate-never-invent, `TYPED_PORT` gaps (§4.10) | Proved the *pipeline*, not the model, carries the intelligence: a weaker worker needs more gate iterations but converges on the same governed output. Governed authoring properties — Authoring Completeness, Belief Preservation, Projection Fidelity — are now mechanically enforced, not review conventions (§4.9) |
+| Full change-management lifecycle + unified CLI (v0.8.0) | The pipeline gained an explicit lifecycle — `DRAFT → CONSTRUCTION_COMPLETE → ADMITTED_UNVALIDATED → EXECUTION_VALIDATED → PROMOTED` — fronted by one executable, `pgs_change` (author · construct · validate · promote, §4.11–4.13); admission and execution validation are distinct gates, and Governance Impact / Promotion≠Adoption separate discovery from authority | Change-management output is an **admitted protocol delta**, not code — and "it compiles" is not "it runs." Admission proves Protocol Completeness; Execution Validation proves the behaviour runs; Promotion is compiler-gated and rollback-all-on-red. A CR *discovers* the governance changes it needs but never performs them (§4.12) |
 
 ---
 
@@ -1284,7 +1375,7 @@ If runtime behavior diverges from expected: recompile and sync. Never patch `pro
 | `pgs_capabilities` | Capability Substrate | Shared CT_ and CS_ implementations; reusable capability library |
 | `pgs_blockchain` | Domain | Blockchain workflows: identity, wallet, transaction, mempool, consensus_pos, orchestration (chain in flight) |
 | `pgs_ai_governance` | Domain | AI governance workflows: licensing, agent action, agent admission, reclaim |
-| `pgs_change_mgmt` | Governed Evolution | Change-management pipeline (§4): stage templates, dossiers, agent context manifest |
+| `pgs_change_mgmt` | Governed Evolution | Change-management lifecycle (§4): stage templates, dossiers, agent context manifest, `engine/` lifecycle services + the `pgs_change` CLI (author · construct · validate · promote, §4.11–4.13) |
 | `pgs_workspace` | Entry Point | Compiled snapshot + operational scripts; public developer entry |
 
 **Dependency direction:** `pgs_workspace` → domains → capabilities → runtime ← compiler ← governance

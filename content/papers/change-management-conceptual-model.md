@@ -11,8 +11,6 @@ tags:
 
 Contact: [mailto:bachipeachy@gmail.com](mailto:bachipeachy@gmail.com)
 
-**Status:** v1 --- revised for the all-structured pipeline and the authority-invariance result (PGS 0.6.1). The v0 edition is the published DOI record; this revision supersedes it as the working source.
-
 ## Preface
 
 This paper is part of the PGS technical paper series. The paper [*Protocol-Governed Systems: Conceptual Model*](https://doi.org/10.5281/zenodo.20300611) established the architectural foundations: constitutional governance, the four-layer stack, and the separation of governance from execution. The paper [*Protocol-Governed Systems: Compiler Conceptual Model*](https://doi.org/10.5281/zenodo.20471804) described how the compiler converts protocol declarations into a governed execution boundary called the Protocol Snapshot. The paper [*Protocol-Governed Systems: Runtime Conceptual Model*](https://doi.org/10.5281/zenodo.20478471) described how the runtime consumes that snapshot and executes workflow instances without any domain knowledge. The paper [*Protocol-Governed Systems: Architecture Inversion Concepts*](https://doi.org/10.5281/zenodo.20497732) established why inverting the traditional relationship between specification and implementation is a structural requirement, not a design preference. Together, those four papers establish that behavior is fully determined before execution begins and that the protocol is the sole source of behavioral truth.
@@ -398,7 +396,7 @@ The dividend has three components:
 
 ### Empirical Basis: Completed Change Requests
 
-As of this writing the governed pipeline has carried seven Change Requests in the blockchain domain --- six executed through authoring into the compiled snapshot (consensus_pos, block, data_model, consensus_propose, mempool, orchestration) and the seventh (chain) at design approval. The first three established the pipeline's foundational rules and are described here; the later cycles are the source of the doctrinal discoveries reported in Section 8.
+As of this writing the governed pipeline has carried seven Change Requests in the blockchain domain --- six executed through authoring into the compiled snapshot (consensus_pos, block, data_model, consensus_propose, mempool, orchestration) and the seventh (chain) since carried through authoring into a compiled, validated candidate, not yet promoted into the baseline. The first three established the pipeline's foundational rules and are described here; the later cycles are the source of the doctrinal discoveries reported in Section 8.
 
 **blockchain::consensus_pos** --- governed the Proof-of-Stake consensus mechanism: validator registration, staking and unstaking, reward and slashing policies, pool management, and the full block formation path from mempool transaction to proposed block. This was the first complete governance cycle and the one from which the pipeline's foundational rules --- GI Purity, BI Purity, Authoring Manifest --- were discovered and formalized.
 
@@ -419,7 +417,7 @@ The first complete PGS governance cycle --- the blockchain::consensus_pos Change
 
 The three additional artifacts --- produced because the governance process discovered gaps not in the CR --- are the observable Governance Dividend from the first cycle. They were not additional scope added by engineering judgment. They were architectural requirements that the governed process surfaced and captured.
 
-Since the consensus_pos CR, five additional Change Requests have been executed through the pipeline, and a seventh is at design approval. Across these cycles the Governance Dividend is accumulating in observable forms: the purity rules are internalized, the canonical documentation set is richer, and the stage definitions themselves have absorbed each cycle's methodology lessons --- so that a change agent entering the pipeline today inherits, as enforced structure, everything earlier cycles learned the hard way.
+Since the consensus_pos CR, five additional Change Requests have been executed through the pipeline, and a seventh (chain) has since been carried through authoring into a validated candidate, not yet promoted. Across these cycles the Governance Dividend is accumulating in observable forms: the purity rules are internalized, the canonical documentation set is richer, and the stage definitions themselves have absorbed each cycle's methodology lessons --- so that a change agent entering the pipeline today inherits, as enforced structure, everything earlier cycles learned the hard way.
 
 The comparison to traditional SDLC KPIs is instructive. Traditional methodologies measure governance cost as overhead: the cost of review meetings, approval cycles, and documentation. The Governance Dividend inverts this framing: **governance is not a cost center for change. It is an investment in the quality of the next change.**
 
@@ -515,6 +513,22 @@ Whether that agent is powered by an LLM is an implementation detail. The pipelin
 
 > **The pipeline is LLM-agnostic by design and agent-suited by structure. These are not the same thing.**
 
+### 11.1 Execution Modes --- The Authoring Trifecta
+
+Authority invariance is a claim about *who* authors a stage. The **authoring trifecta** is the mechanism that makes the claim operational: three execution modes that share one worker interface, one validation path, one set of projection contracts, and one figure of merit. Only the *transport* between a stage's governed prompt and the actor changes.
+
+- **Automated** --- an in-loop model worker (a local model over a daemon, or a frontier model over an API) grounds itself through a tool loop and emits the stage's registers. The API/CI path.
+- **Guided Authoring Mode** --- the actor is a human, or a human operating a conversational assistant that can ground (for example a coding agent with the Protocol-Inspection surface, `pi`, in its session). PGS exports a governed **Stage Package**; the actor runs it through the assistant, reviews, and pastes the response back; PGS imports and validates. Zero API cost, the human stays in the governance loop, and every stage becomes a permanent, hash-linked artifact.
+- **Offline replay** --- a recorded response replays deterministically for regression. Same interface.
+
+The unit of export is the **Stage Package**: a directory of machine-contract artifacts, not human-readable prose the validator cannot reason about. Its canonical, hashed `prompt_bundle.json` --- the serialization of a structured **Prompt Execution IR** (system mandate, user task, and a typed grounding constraint) --- is the source of truth; the Markdown `system_prompt`/`user_prompt` files are rendered *views* of it, hash-linked back. The package also carries the stage's bounded upstream handoff, its register schema (with a `schema_hash`), and a typed `grounding_spec` declaring the stage's grounding *frontier*: the protocol code-tokens the actor must confirm before asserting them. The frontier is derived from the stage's bounded scope --- its consumed handoff plus, for the first stage, the elicitation seed's vocabulary --- never the domain at large; it is a frontier to verify, never an answer key. This resolves a recurring failure of ungoverned prompting --- the actor querying with natural-language phrases instead of protocol identifiers --- *by declaration rather than heuristic*.
+
+Guided Mode introduces exactly one new structural risk: the human is a **mutation layer between stages**, and an untyped paste would be the one place the pipeline could bypass the compiler, the semantic-preservation gate, and the structural oracle. The **Human Mutation Boundary** is closed by a transport-specific ingress validator that runs *before* the engine sees a pasted response: it parses the response against the package's register schema and grounding constraint, rejecting an undeclared register, a malformed row, an ungrounded assertion, or a protocol identifier smuggled into a business-language column. The accepted response carries provenance metadata --- origin, the boundary marker, the validating gate, the prompt hash, and a model label --- so a guided stage is as auditable and reproducible as an automated one. The engine's downstream oracle still runs; the ingress validator is an *additional*, fail-fast gate, not a replacement.
+
+Worker Observability extends to the new transport honestly. A guided stage's grounding happens out-of-band, in the actor's own session, and is therefore not visible in a PGS tool loop. The Worker Protocol Trace records this for what it is --- a terminus at the human mutation boundary, gated by the ingress validator --- rather than fabricating an in-loop grounding failure. Observation stops where observability ends, and says so.
+
+The consequence is the deployment claim that completes the authority-invariance argument. The same registers produce the same governance verdict whether they arrive from an automated worker or a guided paste; the modes differ only in transport. **The protocol is the system of record; automation is an optimization layered on top of it, not a prerequisite for it.** Any conversational model --- a local model, a frontier API, a coding assistant, a future open model, or a human expert --- is just another worker conforming to the same governed contract. That is worker independence realized, not merely asserted.
+
 ## 12. Future Direction
 
 The governed pipeline currently operates as a governed human-agent process with external tooling. The pipeline stages are document artifacts in a dossier. The Authoring Mandate is the compiler's input. The Authoring Manifest closes the evidence record.
@@ -595,6 +609,18 @@ The Protocol Snapshot is the governed artifact that construction produces. The g
 
 **Agent Engagement**: The design property that the governed pipeline provides a structured, bounded, evidence-bearing interface for any change agent --- human, automated, or hybrid --- to execute each stage with the same governance authority.
 
+**Authoring Trifecta**: The three execution modes that share one worker interface, validation path, and figure of merit --- Automated (in-loop model), Guided Authoring Mode (human/assistant with a Stage Package), and Offline replay (recorded response). Only the transport between the governed prompt and the actor differs.
+
+**Guided Authoring Mode**: The execution mode in which a human --- optionally operating a grounding-capable assistant --- is the synchronization point between stages. PGS exports a Stage Package; the actor authors the response and pastes it back; PGS ingress-validates and imports. Deployable now, with no automation prerequisite.
+
+**Stage Package**: The governed export artifact of Guided Mode: a directory whose canonical, hashed `prompt_bundle.json` (a serialized Prompt Execution IR) is the contract, with Markdown prompt files as hash-linked rendered views, plus the bounded handoff, the register schema, and a typed grounding constraint. Machine-verifiable, reproducible forever.
+
+**Prompt Execution IR**: The structured, hashable prompt object behind a Stage Package --- system mandate, user task, and grounding constraint --- making a stage's prompt diffable, testable, and stable under a `prompt_hash`.
+
+**Grounding Frontier**: The typed set of protocol code-tokens a stage's actor must confirm (via the inspection surface) before asserting them, derived from the stage's bounded scope. A frontier to verify, never an answer key; a zero-result search is a final answer.
+
+**Human Mutation Boundary**: The point at which a human injects a pasted response between stages. Closed by a transport-specific ingress validator that checks the response against the package schema and grounding constraint before the engine sees it, and by provenance metadata that keeps a guided stage as auditable and reproducible as an automated one.
+
 ## Appendix B: Reference Implementation Notes
 
 The conceptual model presented in this paper has been realized in the open-source Protocol-Governed Systems (PGS) reference implementation available on GitHub:
@@ -603,7 +629,7 @@ The conceptual model presented in this paper has been realized in the open-sourc
 
 The governed change pipeline is implemented as `FB_CHANGE_MGMT` --- a first-class governance boundary within `pgs_governance`, with its own constitution, dossier artifact templates, and lifecycle declarations. The `pgs_change_mgmt` repository contains the pipeline implementation: stage templates, dossier directory structure, and the pipeline execution tooling.
 
-Seven Change Requests have entered the pipeline as of the time of publication --- six executed through authoring into the compiled snapshot, one at design approval:
+Seven Change Requests have entered the pipeline as of the time of publication --- six executed through authoring into the compiled snapshot, one (chain) carried through authoring into a validated candidate not yet promoted:
 
 1.  **blockchain::consensus_pos** --- the first and most extensively documented cycle; produced 16 mandated authoring actions, 77/77 conformance PASS, and VALID snapshot status
 2.  **blockchain::block** --- peer subdomain declared during consensus_pos GI stage; governed independently as a CR
@@ -611,7 +637,7 @@ Seven Change Requests have entered the pipeline as of the time of publication --
 4.  **blockchain::consensus_propose** --- governed block proposal: proposer selection, block formation, and consensus round recording
 5.  **blockchain::mempool** --- governed staging of pending transactions; authoring manifest approved with full end-to-end regression
 6.  **blockchain::orchestration** --- governed simulation and consensus-loop coordination; the source of the workflow-invocation and dedicated-storage-structure precedents
-7.  **blockchain::chain** --- canonical chain and genesis bootstrap; executed as a deliberate agent stress test of the pipeline (Section 11) and at design approval as of this writing
+7.  **blockchain::chain** --- canonical chain and genesis bootstrap; executed as a deliberate agent stress test of the pipeline (Section 11), and since carried through authoring into a compiled, validated candidate --- not yet promoted into the baseline --- as of this writing
 
 The examples, governance rules, and architectural properties in this paper reflect the state of the project at the time of publication. The pipeline has been validated empirically. The conceptual model has remained materially stable across all completed cycles. The governance rules that emerged from the first cycle --- GI Purity, BI Purity, Discovery Saturation, Authoring Manifest --- have held across all subsequent cycles; the stage templates that operationalize them continue to absorb each cycle's methodology lessons.
 

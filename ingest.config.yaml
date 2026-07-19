@@ -75,6 +75,9 @@ sections:
       - src: blogs/pgs_19_why_software_implementation_is_becoming_disposable.md
         slug: why-software-implementation-is-becoming-disposable
         title: "Why Software Implementation is Becoming Disposable"
+      - src: blogs/pgs_20_AI_writes_the_code_who_owns_software.md
+        slug: ai-writes-the-code-who-owns-software
+        title: "When AI Writes the Code, Who Owns the Software?"
 
   papers:
     target: content/papers
@@ -97,12 +100,18 @@ sections:
       - src: doc/pgs_runtime_conceptual_model_v0.md
         slug: runtime-conceptual-model
         title: "Protocol-Governed Systems: Runtime Conceptual Model"
-      - src: doc/pgs_change_management_conceptual_model_v1.md
+      - src: doc/pgs_change_management_conceptual_model_v3.md
         slug: change-management-conceptual-model
         title: "Protocol-Governed Systems: Closed-Loop Governed Evolution"
-      - src: doc/pgs_field_manual_v1.md
+      - src: doc/pgs_field_manual_v2.md
         slug: field-manual
         title: "PGS Field Manual"
+      - src: doc/pgs_architecture_closed-loop_governed_transformation_v0.md
+        slug: architecture-closed-loop-governed-transformation
+        title: "Protocol-Governed Systems: An Architecture for Closed-Loop Governed Transformation"
+      - src: doc/pgs_architecture_deterministic_declarative_execution_v0.md
+        slug: architecture-deterministic-declarative-execution
+        title: "Protocol-Governed Systems: An Architecture for Deterministic Declarative Execution"
 
   # Historic working papers (DOI-published). They predate the enhanced PGS compiler
   # and runtime architecture and are superseded by the `papers` corpus above —

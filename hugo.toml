@@ -59,14 +59,15 @@ pagination.pagerSize = 10
   # comments.html renders nothing — so the site is safe to deploy beforehand.
   [params.giscus]
     repo = "bachipeachy/omnibachi-site"
-    repoId = "REPLACE_WITH_REPO_ID"
-    category = "Comments"
-    categoryId = "REPLACE_WITH_CATEGORY_ID"
+    repoId = "R_kgDOS7ou0Q"
+    category = "Announcements"
+    categoryId = "DIC_kwDOS7ou0c4C_N1P"
     mapping = "pathname"
     strict = "0"
     reactionsEnabled = "1"
     emitMetadata = "0"
     inputPosition = "bottom"
+    theme = "preferred_color_scheme"
     lang = "en"
 
 [outputs]
