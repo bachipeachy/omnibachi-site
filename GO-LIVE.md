@@ -3,8 +3,8 @@
 Sequential. Everything above the line is built; this is the part that needs you + GitHub.
 
 ## 0. Pre-flight (local)
-- [ ] `make ingest && make preview` → eyeball http://localhost:1313 one last time
-- [ ] Add the 5 missing covers `static/assets/blog_01..05.<ext>` (optional) → re-`make ingest`
+- [ ] `make preview` → eyeball http://localhost:1313 one last time
+- [ ] Add the 5 missing covers `static/assets/blog_01..05.<ext>` (optional)
 - [ ] `git add -A && git commit -m "Initial omnibachi.org site"` (you do the commit)
 
 ## 1. Create the repo (public)
@@ -24,7 +24,8 @@ Sequential. Everything above the line is built; this is the part that needs you 
 - [ ] At <https://giscus.app>: enter `bachipeachy/omnibachi-site`, pick the Comments category,
       `pathname` mapping → copy `data-repo-id` and `data-category-id`
 - [ ] Put them in `hugo.toml [params.giscus]` (`repoId`, `categoryId`) → commit + push
-- [ ] Confirm a comment box appears at the bottom of a blog post (not on book chapters)
+- [ ] Confirm a comment box appears at the bottom of an article page (every page except the
+      section indexes, the home page and search)
 
 ## 4. Custom domain (DNS cutover)
 - [ ] Namecheap → confirm **Namecheap BasicDNS** (not WordPress.com nameservers)
@@ -38,13 +39,13 @@ Sequential. Everything above the line is built; this is the part that needs you 
 
 ## 5. After go-live
 - [ ] Retire the WordPress.com subscription
-- [ ] (Phase 7) Mint **Zenodo** DOIs per paper → add `doi:`/`pdf:` to `ingest.config.yaml`
-      → `make ingest` → commit + push
-- [ ] Retrofit real Medium publish dates into `ingest.config.yaml` (`date:` per blog entry)
+- [ ] Mint **Zenodo** DOIs per paper → add the DOI line to that paper's page in `content/papers/`
+- [ ] Retrofit real Medium publish dates into `content/blog/*.md` (`date:` in the front matter)
+- [ ] Decide whether `#21` (in `parkinglot/`, with its cover) gets published here
 
 ## Daily authoring loop (after go-live)
 ```bash
-make ingest                                   # pull latest from pgs_workspace
+# edit content/ directly — this repo is the source of truth
 make preview                                  # test at localhost:1313
 git add -A && git commit -m "update" && git push   # → live, fully replaced
 ```

@@ -31,8 +31,10 @@ projects at **[github.com/bachipeachy](https://github.com/bachipeachy)**.
 
 ## Comments & discussion
 
-Each post supports comments via [giscus](https://giscus.app), backed by this repository's GitHub
-Discussions — sign in with GitHub to join the conversation.
+Every article page — blog posts, papers, working papers, book chapters, tutorials, use cases and
+the about pages — carries a comment thread via [giscus](https://giscus.app), backed by this
+repository's GitHub Discussions. Sign in with GitHub to join the conversation. Section index pages
+deliberately have none: a discussion belongs against something specific.
 
 ---
 
@@ -42,24 +44,37 @@ The site is built with [Hugo](https://gohugo.io) (extended) + the
 [PaperMod](https://github.com/adityatelange/hugo-PaperMod) theme and deploys to GitHub Pages via
 GitHub Actions.
 
-Content authoring is **single-sourced**: the canonical markdown lives in a separate `pgs_workspace`
-repo; a one-way adapter (`scripts/ingest.py`) copies it here and adds Hugo front matter, so the
-source is never mutated. CI builds from the **committed** `content/` + `static/` (it does not run
-the adapter).
+**This repository is the source of truth for everything published here.** Markdown in `content/`
+is edited directly — there is no upstream copy and no generation step. Edit, commit, push to
+`main`, and GitHub Actions builds and deploys. Nothing else is involved.
 
 ```bash
 git clone --recurse-submodules <this-repo>     # PaperMod is a submodule
-make ingest     # pull canonical markdown → content/ + static/   (needs pgs_workspace alongside)
-make preview    # hugo server → http://localhost:1313 (live reload)
+make preview    # hugo server → http://localhost:1313 (live reload, includes drafts)
 make build      # production build into public/
 ```
 
+- **`content/`** — every page, with its Hugo front matter. The only place text is edited.
+- **`static/`** — images, figures, paper PDFs, favicons, `CNAME`.
 - **`hugo.toml`** — site config (menus, theme params, giscus).
-- **`ingest.config.yaml`** — content manifest (source paths, titles, slugs, order).
-- **`scripts/ingest.py`** — the markdown → Hugo adapter.
-- **`layouts/`** — PaperMod overrides (book ToC, series box, comments, styles).
+- **`layouts/`** — PaperMod overrides (book ToC, blog order, series box, comments, styles).
 - **`.github/workflows/deploy.yml`** — build + deploy to Pages.
 - **`GO-LIVE.md`** — full setup / deployment checklist.
+- **`parkinglot/`** — work in progress: draft papers and unpublished posts, with any images they
+  need. Gitignored and outside `content/`, so nothing here is committed and Hugo never sees it.
+  Move a document into `content/` (and its images into `static/`) when it is ready to publish.
+
+### Adding a blog post
+
+Copy an existing post in `content/blog/` and edit its front matter. Two fields carry meaning:
+
+- **`date`** — the real publication date. The blog index is sorted newest first by date.
+- **`weight`** — the permanent series number, ascending from `#01`. It sets the order of the
+  series box at the foot of every post, and never changes once assigned. The cover image is
+  `static/assets/blog_NN.jpg`, matching that number.
+
+So the index counts down (`#20`, `#19`, `#18` …) while the series reads up. A post that is not
+ready lives in `parkinglot/` with its cover image, not in `content/`.
 
 ## License & contact
 

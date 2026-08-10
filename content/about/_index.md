@@ -4,7 +4,7 @@ description: "OmniBachi — the reference implementation of Protocol-Governed Sy
 ShowReadingTime: false
 ShowToc: false
 cascade:
-  comments: false
+  comments: true
   ShowReadingTime: false
 ---
 

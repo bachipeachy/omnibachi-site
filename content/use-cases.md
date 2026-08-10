@@ -1,7 +1,7 @@
 ---
 title: "Use Cases"
 description: "Where Protocol-Governed Systems applies: agentic AI governance, regulatory compliance, AI-generated software, high-assurance domains, and enterprise risk."
-comments: false
+comments: true
 ShowReadingTime: false
 ShowToc: true
 ---
