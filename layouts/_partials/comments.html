@@ -1,3 +1,19 @@
+{{- /* Discussion on an article page.
+
+       Two routes, deliberately: a threaded comment box for readers who have a GitHub
+       account, and a plain email link for readers who do not. giscus writes into this
+       repository's GitHub Discussions through the GitHub API, so it can only accept a
+       comment it can attribute to an account — sign-in is structural, not a setting.
+       Rather than swap in a third-party backend to avoid that, the note below gives
+       everyone else a way in that needs no account, no cookie and no service. */ -}}
+
+<div class="comment-alt">
+  <strong>Join the discussion.</strong>
+  Comments below are backed by GitHub Discussions and need a GitHub account.
+  Without one, reply by email — <a href="mailto:bachipeachy@gmail.com?subject={{ printf "omnibachi.org — %s" .Title | urlquery }}">bachipeachy@gmail.com</a>
+  — and say whether you would like it quoted here.
+</div>
+
 {{- /* giscus comments (GitHub Discussions). Renders only once repoId is filled in
        hugo.toml [params.giscus]; until then this is a no-op so the site deploys cleanly. */ -}}
 {{- $g := site.Params.giscus }}

@@ -29,6 +29,21 @@
   }
   .series-current::marker { font-weight: 700; }
 
+  /* No-account route into the discussion, shown above the giscus thread. */
+  .comment-alt {
+    margin: 36px 0 12px;
+    padding: 14px 18px;
+    border: 1px solid var(--border);
+    border-left: 3px solid var(--secondary);
+    border-radius: var(--radius);
+    background: var(--code-bg);
+    color: var(--secondary);
+    font-size: 15px;
+    line-height: 1.6;
+  }
+  .comment-alt strong { color: var(--primary); }
+  .comment-alt a { color: var(--primary); text-decoration: underline; }
+
   .book-toc { margin-top: 24px; }
   .book-toc ol { line-height: 1.9; padding-left: 1.4em; }
   .book-toc a { color: var(--primary); }
