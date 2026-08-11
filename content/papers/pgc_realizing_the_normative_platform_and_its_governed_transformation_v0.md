@@ -10,8 +10,6 @@ tags:
 - paper
 ---
 
-# Protocol-Governed Computing: Realizing the Normative Platform and Its Governed Transformation
-
 © 2026 Bhash Ganti. All rights reserved.
 
 *Bhash Ganti (aka Bachi)*

@@ -9,8 +9,6 @@ tags:
 - paper
 ---
 
-# Protocol-Governed Computing: An Architecture for Deterministic Declarative Execution
-
 **© 2026 Bhash Ganti**
 
 Contact: bachipeachy@gmail.com
