@@ -1,19 +1,31 @@
 ---
 title: 'Protocol-Governed Systems: Compiler Conceptual Model'
-date: '2026-02-05'
+date: '2026-08-11'
 draft: false
-weight: 4
-slug: compiler-conceptual-model
+weight: 9
+slug: Compiler Conceptual Model
 tags:
 - PGS
 - paper
 ---
 
+**(c) 2026 Bhash Ganti**
+
 Contact: [mailto:bachipeachy@gmail.com](mailto:bachipeachy@gmail.com)
+
+ORCID Profile: <https://orcid.org/0009-0007-3810-6520>
+
+> **Revision v1.** Two changes, neither altering a claim of the paper. A forward reference to
+> "Paper 6 in this series" was repointed: the authoring pipeline it promised is now developed in
+> *An Architecture for Closed-Loop Governed Transformation*, which supersedes the earlier
+> treatment of governed change. A note on the change of name from Protocol-Governed Systems to
+> Protocol-Governed Computing was added. The compiler model itself is unchanged from v0.
 
 ## Preface
 
 This paper is part of PGS technical paper series. The paper, [*Protocol-Governed Systems: Conceptual Model*](https://doi.org/10.5281/zenodo.20300611), established the architectural foundations: constitutional governance, the separation of governance from execution, and the four-layer stack that makes governed execution possible. This paper focuses on one component of that stack: the PGS compiler.
+
+> **A note on naming.** This paper was written when the architecture was developed under the name **Protocol-Governed Systems (PGS)**, now developed as **Protocol-Governed Computing (PGC)**. The name changed; the substrate did not. In the current formulation this paper describes 𝒞 — the compilation of a governed baseline into a sealed snapshot — one of three functions, alongside transformation and execution. Current papers are indexed at <https://github.com/protocol-governed-computing>.
 
 The compiler is the mechanism that converts governance declarations into a structure that execution can consume. Understanding what the compiler does, what it produces, and what it guarantees is essential to understanding how PGS works. No prior knowledge of compilers is assumed. The paper is written for readers who understand the PGS conceptual model and want to understand how its central promise --- governance before execution --- is actually delivered.
 
@@ -175,7 +187,7 @@ The Protocol Projection Surface (PPS) is an authoring-oriented index of the comp
 
 The PPS is produced from the same semantic graph as every other projection, which means it reflects the current compiled state of the protocol exactly. An author consulting the PPS is consulting the compiler's own verified model of the governance surface. This makes the PPS the correct input to governed authoring workflows: the human or agent constructing a new protocol artifact begins from a view that the compiler itself has certified as accurate.
 
-This property enables a structured authoring strategy built around two explicitly defined concepts. The first is *Business Intent*: a human-authored statement of what a new subdomain or capability should do, expressed in governance terms without reference to implementation. The second is *Governance Intent*: the machine-assisted translation of that business goal into governed protocol structure --- the intermediate artifact between human goals and compiled canonical artifacts. An author working from the PPS can move from Business Intent to Governance Intent without needing to understand the full protocol implementation, because the PPS provides a complete, compiler-verified surface of what already exists. The authoring steps require only an understanding of what the new artifact should do and where in the governance surface it belongs. The protocol's full implementation complexity is already resolved. The author works only at the governance boundary. This authoring pipeline is the subject of Paper 6 in this series.
+This property enables a structured authoring strategy built around two explicitly defined concepts. The first is *Business Intent*: a human-authored statement of what a new subdomain or capability should do, expressed in governance terms without reference to implementation. The second is *Governance Intent*: the machine-assisted translation of that business goal into governed protocol structure --- the intermediate artifact between human goals and compiled canonical artifacts. An author working from the PPS can move from Business Intent to Governance Intent without needing to understand the full protocol implementation, because the PPS provides a complete, compiler-verified surface of what already exists. The authoring steps require only an understanding of what the new artifact should do and where in the governance surface it belongs. The protocol's full implementation complexity is already resolved. The author works only at the governance boundary. This authoring pipeline is developed in full as *An Architecture for Closed-Loop Governed Transformation*, which supersedes the earlier treatment of governed change in this series.
 
 ### 7.8 Execution Graph Before Execution
 
