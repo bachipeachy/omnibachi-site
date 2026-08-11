@@ -1,4 +1,14 @@
-# Protocol-Governed Systems: A Conceptual Model
+---
+title: 'Protocol-Governed Systems: A Conceptual Model'
+date: '2026-01-29'
+draft: false
+weight: 3
+slug: conceptual-model
+tags:
+- PGS
+- paper
+---
+
 
 (c) 2026 Bhash Ganti
 
