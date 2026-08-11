@@ -1,12 +1,8 @@
 ---
-title: 'Protocol-Governed Systems: An Architecture for Closed-Loop Governed Transformation'
+title: 'Protocol-Governed Computing: An Architecture for Closed-Loop Governed Transformation'
 date: '2026-08-11'
-draft: false
-weight: 8
+weight: 70
 slug: architecture-closed-loop-governed-transformation
-tags:
-- PGS
-- paper
 ---
 
 **© 2026 Bhash Ganti**

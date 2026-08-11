@@ -1,12 +1,8 @@
 ---
 title: 'Protocol-Governed Systems: Architecture Inversion Concepts'
 date: '2026-08-11'
-draft: false
-weight: 9
-slug: Architecture Inversion Concepts
-tags:
-- PGS
-- paper
+weight: 10
+slug: architecture-inversion-concepts-v1
 ---
 
 **(c) 2026 Bhash Ganti**

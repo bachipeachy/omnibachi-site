@@ -1,15 +1,16 @@
 ---
-title: Working Papers (Historic Archive)
+title: Superseded — DOI-Published, Replaced by Current Papers
 draft: false
-weight: 100
-description: Early DOI-published working papers, preserved for reference. Superseded
-  by the current Papers.
+weight: 200
+description: Papers a later paper has replaced. DOI-published and permanently citable;
+  kept for lineage, not as a guide to the current architecture.
 ---
 
-These are the original Protocol-Governed Systems working papers, each
-published with a DOI. They **predate the enhanced PGS compiler and runtime
-architecture**, so some implementation terminology is dated. The
-[current Papers](/papers/) supersede them as the authoritative corpus.
+Every paper here is DOI-published and permanently citable, and every one has been
+replaced by a named successor. Most **predate the enhanced compiler and runtime
+architecture**, so some implementation terminology is dated — notably *stage* where the
+implementation now says *phase*. The [current Papers](/papers/) are the authoritative
+corpus.
 
 They are preserved here for historical reference and for the insight they
 still offer. Each page renders the readable text; the **canonical PDF

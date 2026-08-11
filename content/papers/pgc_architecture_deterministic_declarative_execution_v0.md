@@ -1,12 +1,8 @@
 ---
-title: 'Protocol-Governed Systems: An Architecture for Deterministic Declarative Execution'
+title: 'Protocol-Governed Computing: An Architecture for Deterministic Declarative Execution'
 date: '2026-08-11'
-draft: false
-weight: 9
+weight: 60
 slug: architecture-deterministic-declarative-execution
-tags:
-- PGS
-- paper
 ---
 
 **© 2026 Bhash Ganti**

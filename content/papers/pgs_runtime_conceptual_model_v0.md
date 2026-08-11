@@ -1,12 +1,8 @@
 ---
 title: 'Protocol-Governed Systems: Runtime Conceptual Model'
 date: '2026-02-12'
-draft: false
-weight: 5
+weight: 50
 slug: runtime-conceptual-model
-tags:
-- PGS
-- paper
 ---
 
 **(c) 2026 Bhash Ganti**

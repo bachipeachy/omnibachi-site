@@ -1,13 +1,8 @@
-
 ---
-title: 'Protocol-Governed Systems: Realizing the Normative Platform and Its Governed Transformation'
+title: 'Protocol-Governed Computing: Realizing the Normative Platform and Its Governed Transformation'
 date: '2026-08-11'
-draft: false
-weight: 9
-slug: architecture realization
-tags:
-- PGS
-- paper
+weight: 80
+slug: realizing-the-normative-platform
 ---
 
 © 2026 Bhash Ganti. All rights reserved.

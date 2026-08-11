@@ -1,12 +1,10 @@
 ---
 title: 'Protocol-Governed Systems: Architecture Inversion Concepts'
 date: '2026-01-22'
-draft: false
-weight: 2
+weight: 12
 slug: architecture-inversion-concepts
-tags:
-- PGS
-- paper
+aliases:
+- /papers/architecture-inversion-concepts/
 ---
 
 Contact: [mailto:bachipeachy@gmail.com](mailto:bachipeachy@gmail.com)

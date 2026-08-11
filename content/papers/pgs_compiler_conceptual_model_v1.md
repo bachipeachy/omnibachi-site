@@ -1,12 +1,8 @@
 ---
 title: 'Protocol-Governed Systems: Compiler Conceptual Model'
 date: '2026-08-11'
-draft: false
-weight: 9
-slug: Compiler Conceptual Model
-tags:
-- PGS
-- paper
+weight: 40
+slug: compiler-conceptual-model
 ---
 
 **(c) 2026 Bhash Ganti**

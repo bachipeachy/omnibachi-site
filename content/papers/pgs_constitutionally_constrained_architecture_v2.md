@@ -2,12 +2,8 @@
 title: 'Protocol-Governed Systems: A Constitutionally Constrained Architecture for
   Autonomous and AI-Generated Software'
 date: '2026-01-15'
-draft: false
-weight: 1
+weight: 30
 slug: pgs-constitutionally-constrained-architecture
-tags:
-- PGS
-- paper
 ---
 
 © 2026 Bhash Ganti. All rights reserved.

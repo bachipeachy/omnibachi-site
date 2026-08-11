@@ -1,12 +1,10 @@
 ---
 title: 'Protocol-Governed Systems: Closed-Loop Governed Evolution'
 date: '2026-02-19'
-draft: false
-weight: 6
+weight: 13
 slug: change-management-conceptual-model
-tags:
-- PGS
-- paper
+aliases:
+- /papers/change-management-conceptual-model/
 ---
 
 Contact: [mailto:bachipeachy@gmail.com](mailto:bachipeachy@gmail.com)
