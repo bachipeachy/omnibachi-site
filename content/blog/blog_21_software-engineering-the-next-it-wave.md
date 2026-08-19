@@ -1,7 +1,6 @@
 ---
 title: '#21 — Software Engineering — The Next IT Wave in the Making'
 date: '2026-08-10'
-draft: true
 weight: 21
 slug: software-engineering-the-next-it-wave
 series:
@@ -68,4 +67,4 @@ Curious what is Protocol-Governed computing is? Read all about it at:
 
 Now you want see what it looks like? Go to:
 
-- [PGS Reference Implementation](https://github.com/bachipeachy/pgs_workspace)
+- [PGS Reference Implementation](https://github.com/protocol-governed-computing)

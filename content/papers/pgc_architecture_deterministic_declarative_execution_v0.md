@@ -1,7 +1,7 @@
 ---
 title: 'Protocol-Governed Computing: An Architecture for Deterministic Declarative Execution'
 date: '2026-08-11'
-weight: 60
+weight: 10
 slug: architecture-deterministic-declarative-execution
 ---
 

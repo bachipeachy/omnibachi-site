@@ -1,7 +1,6 @@
 ---
 title: Chapter 1 — Why Software Breaks at Scale
 date: '2026-01-29'
-draft: false
 weight: 3
 slug: chapter-1-why-software-breaks-at-scale
 ---

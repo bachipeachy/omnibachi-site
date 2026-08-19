@@ -1,7 +1,6 @@
 ---
 title: Chapter 3 — Constitutional Authoring
 date: '2026-02-12'
-draft: false
 weight: 5
 slug: chapter-3-constitutional-authoring
 ---

@@ -1,6 +1,5 @@
 ---
 title: Superseded — DOI-Published, Replaced by Current Papers
-draft: false
 weight: 200
 description: Papers a later paper has replaced. DOI-published and permanently citable;
   kept for lineage, not as a guide to the current architecture.

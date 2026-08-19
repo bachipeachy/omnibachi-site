@@ -1,7 +1,6 @@
 ---
 title: '#04 — Governing Agentic AI for Production: OpenClaw Meets Its Constitution'
 date: '2026-02-05'
-draft: false
 weight: 4
 slug: governing-agentic-ai-for-production
 series:

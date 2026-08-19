@@ -1,7 +1,6 @@
 ---
 title: '#01 — Motivation: Why Protocol-Governed Architecture is Inevitable'
 date: '2026-01-15'
-draft: false
 weight: 1
 slug: motivation-why-pgs-inevitable
 tags:

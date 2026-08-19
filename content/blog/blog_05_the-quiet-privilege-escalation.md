@@ -1,7 +1,6 @@
 ---
 title: '#05 — The Quiet Privilege Escalation in Enterprise AI'
 date: '2026-02-12'
-draft: false
 weight: 5
 slug: the-quiet-privilege-escalation
 series:

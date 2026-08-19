@@ -1,7 +1,6 @@
 ---
 title: '#16 — The Human Insight That Became an Architectural Inversion'
 date: '2026-04-30'
-draft: false
 weight: 16
 slug: the-human-insight-that-became-an-architectural-inversion
 series:
@@ -120,7 +119,7 @@ Silent witness versus active participant. Same impulse.
 
 The paper is accompanied by a working reference implementation — reproducible locally, fully open:
 
-**[github.com/bachipeachy/pgs_workspace](https://github.com/bachipeachy/pgs_workspace)**
+**[github.com/protocol-governed-computing](https://github.com/protocol-governed-computing)**
 *(Apache-2.0)*
 
 It includes a compiled protocol snapshot, a generic runtime that executes governed DAGs, blockchain and AI governance domain examples, and execution traces with structured admissibility evidence. The demo workflow runs in under ten minutes.
@@ -149,5 +148,5 @@ I chose to start building — and that Sunday evening is where it began.
 
 *Blog 16 in the Protocol-Governed Systems series.*
 *PGS v0.4.0 — June 2026*
-*Apache-2.0 — [github.com/bachipeachy/pgs_workspace](https://github.com/bachipeachy/pgs_workspace)*
+*Apache-2.0 — [github.com/protocol-governed-computing](https://github.com/protocol-governed-computing)*
 *Concept paper — [doi.org/10.5281/zenodo.20497732](https://doi.org/10.5281/zenodo.20497732)*

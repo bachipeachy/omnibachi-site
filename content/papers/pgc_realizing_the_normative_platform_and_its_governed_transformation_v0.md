@@ -1,7 +1,7 @@
 ---
 title: 'Protocol-Governed Computing: Realizing the Normative Platform and Its Governed Transformation'
 date: '2026-08-11'
-weight: 80
+weight: 30
 slug: realizing-the-normative-platform
 ---
 

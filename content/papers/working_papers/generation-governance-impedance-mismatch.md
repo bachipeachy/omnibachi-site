@@ -1,7 +1,6 @@
 ---
 title: '#10 — The Generation-Governance Impedance Mismatch: PGS in the AI Era'
 date: '2026-03-19'
-draft: false
 weight: 10
 slug: generation-governance-impedance-mismatch
 tags:

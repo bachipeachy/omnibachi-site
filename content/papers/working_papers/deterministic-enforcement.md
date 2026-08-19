@@ -1,7 +1,6 @@
 ---
 title: '#06 — Deterministic Enforcement: Runtime Binding, Execution, and Trace Conformance'
 date: '2026-02-19'
-draft: false
 weight: 6
 slug: deterministic-enforcement
 tags:

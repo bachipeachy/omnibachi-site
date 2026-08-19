@@ -1,7 +1,6 @@
 ---
 title: '#08 — The Three Dividends of Protocol-Governed Systems'
 date: '2026-03-05'
-draft: false
 weight: 8
 slug: three-dividends-of-pgs
 series:

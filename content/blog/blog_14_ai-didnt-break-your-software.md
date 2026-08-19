@@ -2,7 +2,6 @@
 title: '#14 — AI Didn''t Break Your Software. It Broke the Assumptions Underneath
   It'
 date: '2026-04-16'
-draft: false
 weight: 14
 slug: ai-didnt-break-your-software
 series:
@@ -180,7 +179,7 @@ PGS is not a framework. It is not a workflow engine, policy system, or service m
 The architecture is now publicly available for inspection, experimentation, and criticism.
 
 **Reference implementation (Apache-2.0):**
-[https://github.com/bachipeachy/pgs_workspace](https://github.com/bachipeachy/pgs_workspace)
+[https://github.com/protocol-governed-computing](https://github.com/protocol-governed-computing)
 
 This is an early-stage but functional reference implementation. It is reproducible locally in under ten minutes. The workspace contains:
 
@@ -213,4 +212,4 @@ Whether that attempt succeeds is for the engineering community to evaluate.
 The rest is your call.
 
 *PGS v0.3.0 — May 2026*
-*Apache-2.0 — [github.com/bachipeachy/pgs_workspace](https://github.com/bachipeachy/pgs_workspace)*
+*Apache-2.0 — [github.com/protocol-governed-computing](https://github.com/protocol-governed-computing)*

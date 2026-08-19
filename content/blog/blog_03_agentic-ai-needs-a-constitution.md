@@ -1,7 +1,6 @@
 ---
 title: '#03 — Agentic AI Needs a Constitution, Not Just Guardrails'
 date: '2026-01-29'
-draft: false
 weight: 3
 slug: agentic-ai-needs-a-constitution
 series:

@@ -1,7 +1,6 @@
 ---
 title: '#17 — Protocol-Governed Systems: Your Governed Path to Risk Management'
 date: '2026-05-07'
-draft: false
 weight: 17
 slug: your-governed-path-to-risk-management
 series:

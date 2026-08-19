@@ -1,7 +1,6 @@
 ---
 title: Chapter 6 — Capability Transforms and Composition
 date: '2026-03-05'
-draft: false
 weight: 8
 slug: chapter-6-capability-transforms-and-composition
 ---

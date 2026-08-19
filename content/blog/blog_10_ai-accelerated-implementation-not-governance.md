@@ -1,7 +1,6 @@
 ---
 title: '#10 — AI Accelerated Implementation. Not Governance.'
 date: '2026-03-19'
-draft: false
 weight: 10
 slug: ai-accelerated-implementation-not-governance
 series:
@@ -375,7 +374,7 @@ Because governance systems themselves should remain governable.
 
 Reference implementation, runtime, and publications:
 
-**GitHub** [PGS Workspace Repository](https://github.com/bachipeachy/pgs_workspace)\
+**GitHub** [PGS Workspace Repository](https://github.com/protocol-governed-computing)\
 It consists of seven more repositories to complete a full system
 
 1.  **Technical Paper** Protocol-Governed Systems: A Constitutionally Constrained Architecture for Autonomous and AI-Generated Software (34 pages)\

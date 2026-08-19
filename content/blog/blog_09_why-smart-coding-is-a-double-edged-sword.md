@@ -1,7 +1,6 @@
 ---
 title: '#09 — Why Smart Coding Is a Double-Edged Sword'
 date: '2026-03-12'
-draft: false
 weight: 9
 slug: why-smart-coding-is-a-double-edged-sword
 series:

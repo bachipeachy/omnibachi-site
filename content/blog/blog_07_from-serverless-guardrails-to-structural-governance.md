@@ -1,7 +1,6 @@
 ---
 title: '#07 — From Serverless Guardrails to Structural Governance'
 date: '2026-02-26'
-draft: false
 weight: 7
 slug: from-serverless-guardrails-to-structural-governance
 series:

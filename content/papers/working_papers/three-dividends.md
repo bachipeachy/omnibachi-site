@@ -1,7 +1,6 @@
 ---
 title: '#09 — The Three Dividends: Governance, Protocol, and Architecture Economics'
 date: '2026-03-12'
-draft: false
 weight: 9
 slug: three-dividends
 tags:

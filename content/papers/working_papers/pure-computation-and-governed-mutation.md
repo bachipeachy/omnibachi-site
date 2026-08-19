@@ -2,7 +2,6 @@
 title: '#07 — Pure Computation and Governed Mutation: Capability Transforms and Side
   Effects'
 date: '2026-02-26'
-draft: false
 weight: 7
 slug: pure-computation-and-governed-mutation
 tags:

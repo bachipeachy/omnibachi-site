@@ -1,7 +1,6 @@
 ---
 title: Chapter 10 — Inverted Security Architecture
 date: '2026-04-02'
-draft: false
 weight: 12
 slug: chapter-10-inverted-security-architecture
 ---

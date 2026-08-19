@@ -1,7 +1,6 @@
 ---
 title: '#03 — The Layer-Concern Constitutional Model: A Formal Structural Taxonomy'
 date: '2026-01-29'
-draft: false
 weight: 3
 slug: layer-concern-constitutional-model
 tags:

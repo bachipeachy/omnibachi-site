@@ -1,7 +1,7 @@
 ---
 title: 'Protocol-Governed Computing: Field Manual'
 date: '2026-08-11'
-weight: 90
+weight: 40
 slug: field-manual
 ---
 **Author:** Bhash Ganti (aka Bachi)

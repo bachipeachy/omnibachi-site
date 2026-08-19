@@ -1,7 +1,6 @@
 ---
 title: Chapter 12 — Linear Scalability Through Compositional Isolation
 date: '2026-04-16'
-draft: false
 weight: 14
 slug: chapter-12-linear-scalability-through-compositional-isolation
 ---

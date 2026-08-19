@@ -1,7 +1,6 @@
 ---
 title: 'Chapter 14 — Use Case: AI Agent Governance Domain'
 date: '2026-04-30'
-draft: false
 weight: 16
 slug: chapter-14-use-case-ai-agent-governance-domain
 ---

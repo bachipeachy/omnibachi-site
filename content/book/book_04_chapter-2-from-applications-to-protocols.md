@@ -1,7 +1,6 @@
 ---
 title: Chapter 2 — From Applications to Protocols
 date: '2026-02-05'
-draft: false
 weight: 4
 slug: chapter-2-from-applications-to-protocols
 ---

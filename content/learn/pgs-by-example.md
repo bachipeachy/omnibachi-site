@@ -1,7 +1,6 @@
 ---
 title: PGS by Example
 date: '2026-01-22'
-draft: false
 weight: 2
 slug: pgs-by-example
 tags:

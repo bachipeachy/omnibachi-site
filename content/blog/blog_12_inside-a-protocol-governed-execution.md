@@ -1,7 +1,6 @@
 ---
 title: '#12 — What Actually Happens Inside a Protocol-Governed Execution'
 date: '2026-04-02'
-draft: false
 weight: 12
 slug: inside-a-protocol-governed-execution
 series:

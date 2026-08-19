@@ -1,15 +1,20 @@
 # OmniBachi
 
-**The home of Protocol-Governed Systems (PGS).** → **[omnibachi.org](https://omnibachi.org)**
+**The home of Protocol-Governed Computing (PGC).** → **[omnibachi.org](https://omnibachi.org)**
 
-Protocol-Governed Systems (PGS) is an open-source architecture for building trustworthy
+Protocol-Governed Computing (PGC) is an open-source architecture for building trustworthy
 software, AI agents, autonomous systems, and digital ecosystems through explicit protocol,
 governance, and verifiable execution. Rather than embedding behavior in opaque code paths or
-runtime discretion, PGS treats **governance, authority, intent, workflow, capability, and
+runtime discretion, PGC treats **governance, authority, intent, workflow, capability, and
 execution** as first-class declarative artifacts that can be authored, compiled, validated, and
 executed deterministically.
 
-This repository builds the **OmniBachi** website — the primary knowledge hub for the PGS
+> **PGC and PGS.** Work predating the PGC name describes the same substrate as **Protocol-Governed
+> Systems (PGS)**. The name changed; the architecture did not. PGS also names the implementation in
+> which the architecture was first developed and validated, now **frozen** and retained for lineage.
+> Papers and pages still carrying the PGS name are current unless marked otherwise.
+
+This repository builds the **OmniBachi** website — the primary knowledge hub for the PGC
 ecosystem, bringing together the conceptual foundations, reference architecture, technical
 specifications, implementation guidance, research publications, and practical examples that
 demonstrate how complex systems can be governed by protocol rather than convention.
@@ -20,14 +25,17 @@ demonstrate how complex systems can be governed by protocol rather than conventi
 |---|---|
 | **[Blog](https://omnibachi.org/blog/)** | Essays, architectural insights, project updates, and design explorations. |
 | **[Papers](https://omnibachi.org/papers/)** | Technical publications, including DOI-backed reference papers. |
-| **[Book](https://omnibachi.org/book/)** | The practitioner's guide to Protocol-Governed Systems. |
+| **[Book](https://omnibachi.org/book/)** | The practitioner's guide to protocol-governed architecture. |
 | **[Learn](https://omnibachi.org/learn/)** | Tutorials, walkthroughs, examples, and hands-on resources. |
-| **[Use Cases](https://omnibachi.org/use-cases/)** | Where PGS applies: agentic AI, compliance, autonomous software, and more. |
-| **[About](https://omnibachi.org/about/)** | What PGS is, and OmniBachi as its reference implementation. |
+| **[Use Cases](https://omnibachi.org/use-cases/)** | Where PGC applies: agentic AI, compliance, autonomous software, and more. |
+| **[About](https://omnibachi.org/about/)** | What PGC is, and how this site relates to it. |
 
-**OmniBachi** is the reference implementation of PGS — organized as an open-source, multi-repo
-ecosystem (compiler, runtime, governed capabilities, inspection tooling, and more). Browse the
-projects at **[github.com/bachipeachy](https://github.com/bachipeachy)**.
+**This site is the knowledge hub, not the implementation.** The reference implementation of PGC is
+the multi-repo ecosystem — governance surface, compiler, assembler, runtime, transport, inspection,
+and the transformation lifecycle — at
+**[github.com/protocol-governed-computing](https://github.com/protocol-governed-computing)**. The
+earlier PGS implementation at [github.com/bachipeachy](https://github.com/bachipeachy) is frozen and
+kept for lineage.
 
 ## Comments & discussion
 
@@ -50,7 +58,7 @@ is edited directly — there is no upstream copy and no generation step. Edit, c
 
 ```bash
 git clone --recurse-submodules <this-repo>     # PaperMod is a submodule
-make preview    # hugo server → http://localhost:1313 (live reload, includes drafts)
+make preview    # hugo server → http://localhost:1313 (live reload)
 make build      # production build into public/
 ```
 
@@ -79,5 +87,5 @@ ready lives in `parkinglot/` with its cover image, not in `content/`.
 ## License & contact
 
 Licensed under the **Apache License 2.0** — see [LICENSE](LICENSE) and [NOTICE](NOTICE).
-© 2026 Bhash Ganti (aka Bachi). Part of the open-source PGS ecosystem.
+© 2026 Bhash Ganti (aka Bachi). Part of the open-source PGC ecosystem.
 Questions or collaboration: [bachipeachy@gmail.com](mailto:bachipeachy@gmail.com).

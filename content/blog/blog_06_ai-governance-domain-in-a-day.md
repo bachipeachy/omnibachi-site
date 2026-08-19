@@ -1,7 +1,6 @@
 ---
 title: '#06 — I Built an AI Governance Domain in a Day'
 date: '2026-02-19'
-draft: false
 weight: 6
 slug: ai-governance-domain-in-a-day
 series:

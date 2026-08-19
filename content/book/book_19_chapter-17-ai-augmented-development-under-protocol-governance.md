@@ -1,7 +1,6 @@
 ---
 title: Chapter 17 — AI-Augmented Development Under Protocol Governance
 date: '2026-05-21'
-draft: false
 weight: 19
 slug: chapter-17-ai-augmented-development-under-protocol-governance
 ---

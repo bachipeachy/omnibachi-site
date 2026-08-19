@@ -1,7 +1,6 @@
 ---
 title: '#18 — How Vacation Planning Sparked the Ideas Behind PGS Architecture'
 date: '2026-05-14'
-draft: false
 weight: 18
 slug: vacation-planning-sparked-pgs-architecture
 series:
@@ -107,7 +106,7 @@ That one opens the box and follows a live execution end to end. Think of this po
 
 The architecture is not a slide deck. There is a working reference implementation — reproducible locally, fully open:
 
-**[github.com/bachipeachy/pgs_workspace](https://github.com/bachipeachy/pgs_workspace)**
+**[github.com/protocol-governed-computing](https://github.com/protocol-governed-computing)**
 *(Apache-2.0)*
 
 It includes a compiled protocol snapshot, a generic runtime that executes governed DAGs, blockchain and AI governance domain examples, and execution traces with structured admissibility evidence. The demo workflow runs in under ten minutes.
@@ -132,4 +131,4 @@ Both of those are the same decision, made twice. And we made the summit at sunri
 
 *Blog 18 in the Protocol-Governed Systems series.*
 *PGS v0.5.1 — June 2026*
-*Apache-2.0 — [github.com/bachipeachy/pgs_workspace](https://github.com/bachipeachy/pgs_workspace)*
+*Apache-2.0 — [github.com/protocol-governed-computing](https://github.com/protocol-governed-computing)*

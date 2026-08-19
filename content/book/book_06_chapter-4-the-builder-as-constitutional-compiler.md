@@ -1,7 +1,6 @@
 ---
 title: Chapter 4 — The Builder as Constitutional Compiler
 date: '2026-02-19'
-draft: false
 weight: 6
 slug: chapter-4-the-builder-as-constitutional-compiler
 ---

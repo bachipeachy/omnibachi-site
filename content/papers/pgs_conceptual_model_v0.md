@@ -1,7 +1,7 @@
 ---
 title: 'Protocol-Governed Systems: A Conceptual Model'
 date: '2026-01-29'
-weight: 20
+weight: 60
 slug: conceptual-model
 ---
 
@@ -1361,7 +1361,7 @@ Ganti, B. (2026c). *Protocol-Governed Systems Field Manual v0*. DOI:
 
 PGS Workspace v0.2.0 --- eight-repository ecosystem, Apache-2.0
 licensed. OmniBachi runtime published on PyPI. GitHub:
-[bachipeachy/pgs_workspace](https://github.com/bachipeachy/pgs_workspace)
+[protocol-governed-computing](https://github.com/protocol-governed-computing)
 
 ### Foundational Works
 

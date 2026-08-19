@@ -1,7 +1,6 @@
 ---
 title: '#05 — Protocol as Law: Behavioral Specification and Versioned Authority'
 date: '2026-02-12'
-draft: false
 weight: 5
 slug: protocol-as-law
 tags:

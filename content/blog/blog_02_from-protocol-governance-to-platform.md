@@ -1,7 +1,6 @@
 ---
 title: '#02 — From Protocol Governance to Platform: Defining PGS and OmniBachi'
 date: '2026-01-22'
-draft: false
 weight: 2
 slug: from-protocol-governance-to-platform
 series:

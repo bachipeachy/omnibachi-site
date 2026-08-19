@@ -1,7 +1,6 @@
 ---
 title: '#08 — The Inversion of Trust: Vocabulary-Bounded Security'
 date: '2026-03-05'
-draft: false
 weight: 8
 slug: inversion-of-trust
 tags:

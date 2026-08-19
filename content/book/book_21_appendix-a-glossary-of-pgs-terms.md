@@ -1,7 +1,6 @@
 ---
 title: Appendix A — Glossary of PGS Terms
 date: '2026-06-04'
-draft: false
 weight: 21
 slug: appendix-a-glossary-of-pgs-terms
 ---

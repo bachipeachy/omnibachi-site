@@ -1,7 +1,6 @@
 ---
 title: Chapter 7 — Capability Side Effects and Isolation
 date: '2026-03-12'
-draft: false
 weight: 9
 slug: chapter-7-capability-side-effects-and-isolation
 ---

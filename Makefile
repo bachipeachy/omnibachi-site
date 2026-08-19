@@ -1,6 +1,6 @@
 .PHONY: preview build clean
 
-# Local preview at http://localhost:1313 (includes drafts)
+# Local preview at http://localhost:1313
 preview:
 	hugo server -D --disableFastRender
 

@@ -1,7 +1,6 @@
 ---
 title: '#19 — Why Software Implementation is Becoming Disposable'
 date: '2026-05-21'
-draft: false
 weight: 19
 slug: why-software-implementation-is-becoming-disposable
 series:
@@ -346,4 +345,4 @@ And that is the journey PGS is exploring.
 
 Check it out for youself.
 
-[github.com/bachipeachy/pgs_workspace](https://github.com/bachipeachy/pgs_workspace)
+[github.com/protocol-governed-computing](https://github.com/protocol-governed-computing)

@@ -623,7 +623,7 @@ The Protocol Snapshot is the governed artifact that construction produces. The g
 
 The conceptual model presented in this paper has been realized in the open-source Protocol-Governed Systems (PGS) reference implementation available on GitHub:
 
-[PGS Workspace Repository](https://github.com/bachipeachy/pgs_workspace)
+[PGS Workspace Repository](https://github.com/protocol-governed-computing)
 
 The governed change pipeline is implemented as `FB_CHANGE_MGMT` --- a first-class governance boundary within `pgs_governance`, with its own constitution, dossier artifact templates, and lifecycle declarations. The `pgs_change_mgmt` repository contains the pipeline implementation: stage templates, dossier directory structure, and the pipeline execution tooling.
 

@@ -1,7 +1,6 @@
 ---
 title: '#02 — A Constitutional Realization of Turing-Complete Systems'
 date: '2026-01-22'
-draft: false
 weight: 2
 slug: constitutional-realization-turing-complete
 tags:

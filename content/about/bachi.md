@@ -1,7 +1,6 @@
 ---
 title: About Bachi
 date: '2026-01-15'
-draft: false
 weight: 1
 slug: bachi
 ---

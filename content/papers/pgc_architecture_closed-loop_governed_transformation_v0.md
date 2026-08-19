@@ -1,7 +1,7 @@
 ---
 title: 'Protocol-Governed Computing: An Architecture for Closed-Loop Governed Transformation'
 date: '2026-08-11'
-weight: 70
+weight: 20
 slug: architecture-closed-loop-governed-transformation
 ---
 

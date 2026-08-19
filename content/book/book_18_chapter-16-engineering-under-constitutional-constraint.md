@@ -1,7 +1,6 @@
 ---
 title: Chapter 16 — Engineering Under Constitutional Constraint
 date: '2026-05-14'
-draft: false
 weight: 18
 slug: chapter-16-engineering-under-constitutional-constraint
 ---

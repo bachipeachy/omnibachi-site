@@ -1,7 +1,6 @@
 ---
 title: Appendix B — Protocol Snapshot Reference
 date: '2026-06-11'
-draft: false
 weight: 22
 slug: appendix-b-protocol-snapshot-reference
 ---

@@ -1,7 +1,6 @@
 ---
 title: 'Onboarding: Build Your First Workflow'
 date: '2026-01-15'
-draft: false
 weight: 1
 slug: onboarding-first-workflow
 tags:

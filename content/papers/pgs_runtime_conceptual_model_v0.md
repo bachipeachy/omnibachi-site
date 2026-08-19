@@ -1,7 +1,7 @@
 ---
 title: 'Protocol-Governed Systems: Runtime Conceptual Model'
 date: '2026-02-12'
-weight: 50
+weight: 90
 slug: runtime-conceptual-model
 ---
 
@@ -665,7 +665,7 @@ The runtime is the execution contract. The Protocol Snapshot is the governed art
 
 The conceptual model presented in this paper has been realized in the open-source Protocol-Governed Systems (PGS) reference implementation available on GitHub:
 
-[PGS Workspace Repository](https://github.com/bachipeachy/pgs_workspace)
+[PGS Workspace Repository](https://github.com/protocol-governed-computing)
 
 The implementation serves as a practical realization of the concepts discussed throughout this paper, demonstrating how a domain-ignorant runtime can execute governed protocol behavior across multiple domains --- blockchain identity, wallet management, transaction submission, AI agent governance, and AI licensing --- from a single compiled snapshot.
 

@@ -1,7 +1,6 @@
 ---
 title: '#04 — Governance and Authoring: The Legislative Process of Behavioral Law'
 date: '2026-02-05'
-draft: false
 weight: 4
 slug: governance-and-authoring
 tags:

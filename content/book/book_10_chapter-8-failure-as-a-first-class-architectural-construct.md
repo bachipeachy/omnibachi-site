@@ -1,7 +1,6 @@
 ---
 title: Chapter 8 — Failure as a First-Class Architectural Construct
 date: '2026-03-19'
-draft: false
 weight: 10
 slug: chapter-8-failure-as-a-first-class-architectural-construct
 ---

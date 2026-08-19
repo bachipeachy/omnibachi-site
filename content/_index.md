@@ -133,7 +133,7 @@ It is a governed execution substrate.
 - Protocol-first system evolution
 - FQDN-based artifact identity
 - Governance-constrained compiler behavior
-- Governance-first change management — every change is a governed Change Request → Authoring Mandate dossier; authoring is interchangeable, authority is not ([`pgs_change_mgmt`](https://github.com/bachipeachy/pgs_change_mgmt#readme))
+- Governance-first change management — every change is a governed Change Request → Authoring Mandate dossier; authoring is interchangeable, authority is not ([`pgs_change_mgmt`](https://github.com/protocol-governed-computing/transformation#readme))
 
 ## Open source
 

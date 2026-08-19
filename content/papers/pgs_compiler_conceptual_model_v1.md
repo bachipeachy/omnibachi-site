@@ -1,7 +1,7 @@
 ---
 title: 'Protocol-Governed Systems: Compiler Conceptual Model'
 date: '2026-08-11'
-weight: 40
+weight: 80
 slug: compiler-conceptual-model
 ---
 
@@ -283,7 +283,7 @@ This is the mechanism behind PGS's central claim. Governance before execution is
 
 The conceptual model presented in this paper has been realized in the open-source Protocol-Governed Systems (PGS) reference implementation available on GitHub:
 
-[PGS Workspace Repository](https://github.com/bachipeachy/pgs_workspace)
+[PGS Workspace Repository](https://github.com/protocol-governed-computing)
 
 The implementation serves as a practical realization of the concepts discussed throughout this paper, demonstrating how governance declarations can be compiled into executable protocol artifacts and enforced through a deterministic runtime. The examples, terminology, and architectural discussions in this paper are based on **PGS v0.4.0**, which represents the state of the project at the time of publication.
 

@@ -1,7 +1,6 @@
 ---
 title: Chapter 15 — Structural Economics of Governance
 date: '2026-05-07'
-draft: false
 weight: 17
 slug: chapter-15-structural-economics-of-governance
 ---

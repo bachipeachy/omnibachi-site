@@ -697,7 +697,7 @@ This is the architectural claim of Protocol-Governed Systems. It is not a theore
 
 The fifteen inversions and the Governance Dividend described in this paper are not theoretical claims. They are demonstrated in the open-source Protocol-Governed Systems reference implementation:
 
-[PGS Workspace Repository](https://github.com/bachipeachy/pgs_workspace)
+[PGS Workspace Repository](https://github.com/protocol-governed-computing)
 
 The reference implementation validates each inversion as follows:
 

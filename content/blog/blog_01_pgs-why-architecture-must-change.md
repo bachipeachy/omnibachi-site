@@ -1,7 +1,6 @@
 ---
 title: '#01 — Why Software Architecture Must Change in the AI Era'
 date: '2026-01-15'
-draft: false
 weight: 1
 slug: pgs-why-architecture-must-change
 series:

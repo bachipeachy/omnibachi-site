@@ -1,7 +1,6 @@
 ---
 title: '#20 — When AI Writes the Code, Who Owns the Software?'
 date: '2026-05-28'
-draft: false
 weight: 20
 slug: ai-writes-the-code-who-owns-software
 series:
@@ -334,9 +333,9 @@ That is the architectural journey explored by Protocol-Governed Systems.
 
 ## Architecture Papers
 
-- [Paper 1 — An Architecture for Closed-Loop Governed Transformation](https://github.com/bachipeachy/pgs_workspace/blob/main/doc/pgs_architecture_closed-loop_governed_transformation_v0.md)
-- [Paper 2 — An Architecture for Deterministic Declarative Execution](https://github.com/bachipeachy/pgs_workspace/blob/main/doc/pgs_architecture_deterministic_declarative_execution_v0.md)
+- [Paper 1 — An Architecture for Closed-Loop Governed Transformation](https://omnibachi.org/papers/architecture-closed-loop-governed-transformation/)
+- [Paper 2 — An Architecture for Deterministic Declarative Execution](https://omnibachi.org/papers/architecture-deterministic-declarative-execution/)
 
 ## Reference Implementation
 
-- [PGS Reference Implementation](https://github.com/bachipeachy/pgs_workspace)
+- [PGS Reference Implementation](https://github.com/protocol-governed-computing)

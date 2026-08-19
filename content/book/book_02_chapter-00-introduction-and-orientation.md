@@ -1,7 +1,6 @@
 ---
 title: Chapter 00 — Introduction and Orientation
 date: '2026-01-22'
-draft: false
 weight: 2
 slug: chapter-00-introduction-and-orientation
 ---

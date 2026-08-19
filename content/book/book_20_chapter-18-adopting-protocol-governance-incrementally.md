@@ -1,7 +1,6 @@
 ---
 title: Chapter 18 — Adopting Protocol Governance Incrementally
 date: '2026-05-28'
-draft: false
 weight: 20
 slug: chapter-18-adopting-protocol-governance-incrementally
 ---

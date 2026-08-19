@@ -1,7 +1,6 @@
 ---
 title: Chapter 13 — Building a Protocol-Governed Domain
 date: '2026-04-23'
-draft: false
 weight: 15
 slug: chapter-13-building-a-protocol-governed-domain
 ---

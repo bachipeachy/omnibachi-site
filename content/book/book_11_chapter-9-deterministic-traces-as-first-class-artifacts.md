@@ -1,7 +1,6 @@
 ---
 title: Chapter 9 — Deterministic Traces as First-Class Artifacts
 date: '2026-03-26'
-draft: false
 weight: 11
 slug: chapter-9-deterministic-traces-as-first-class-artifacts
 ---

@@ -1,7 +1,6 @@
 ---
 title: Chapter 5 — Semantic-Agnostic Execution
 date: '2026-02-26'
-draft: false
 weight: 7
 slug: chapter-5-semantic-agnostic-execution
 ---

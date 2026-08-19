@@ -1,7 +1,6 @@
 ---
 title: '#13 — AI Changed Software Velocity. PGS Changes Software Architecture'
 date: '2026-04-09'
-draft: false
 weight: 13
 slug: ai-changed-velocity-pgs-changes-architecture
 series:
@@ -534,7 +533,7 @@ available:
 
 GitHub repositories:
 
-- pgs_workspace (anchor repo) <https://github.com/bachipeachy/pgs_workspace>
+- pgs_workspace (anchor repo) <https://github.com/protocol-governed-computing>
 
 - pgs_runtime
 

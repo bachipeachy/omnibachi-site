@@ -1,7 +1,6 @@
 ---
 title: Protocol-Governed Systems
 date: '2026-01-15'
-draft: false
 weight: 1
 slug: protocol-governed-systems
 ---
@@ -18,7 +17,7 @@ Contact: bachipeachy@gmail.com
 
 © 2026 Bhash Ganti. All rights reserved. Released under the Apache-2.0 License.
 
-Reference Implementation GitHub: [bachipeachy/pgs_workspace](https://github.com/bachipeachy/pgs_workspace)
+Reference Implementation GitHub: [protocol-governed-computing](https://github.com/protocol-governed-computing)
 
 ## Abstract
 

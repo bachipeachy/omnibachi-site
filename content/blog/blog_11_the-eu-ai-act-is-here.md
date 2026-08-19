@@ -1,7 +1,6 @@
 ---
 title: '#11 — The EU AI Act Is Here. Your Governance Architecture Isn''t Ready.'
 date: '2026-03-26'
-draft: false
 weight: 11
 slug: the-eu-ai-act-is-here
 series:
@@ -349,7 +348,7 @@ The PGS reference implementation --- OmniBachi v0.2.0 --- is available
 now under Apache-2.0:
 
 - **Workspace**:
-  [github.com/bachipeachy/pgs_workspace](https://github.com/bachipeachy/pgs_workspace)
+  [github.com/protocol-governed-computing](https://github.com/protocol-governed-computing)
 - **Runtime**: `pip install omnibachi`
 
 Published documentation:

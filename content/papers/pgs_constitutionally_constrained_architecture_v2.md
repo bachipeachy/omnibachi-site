@@ -2,7 +2,7 @@
 title: 'Protocol-Governed Systems: A Constitutionally Constrained Architecture for
   Autonomous and AI-Generated Software'
 date: '2026-01-15'
-weight: 30
+weight: 70
 slug: pgs-constitutionally-constrained-architecture
 ---
 
@@ -1456,8 +1456,8 @@ architectural role:
   ------------------------------------------------------------------------
 
 All repositories are publicly available under the GitHub organization
-bachipeachy. The pgs_workspace repository serves as the single
-operational entry point for running the system.
+protocol-governed-computing. The earlier implementation this paper was
+written against remains under bachipeachy, frozen and kept for lineage.
 
 The implementation directly realizes the four-layer architecture and the
 Dual-Space operational model described in Section 3. Human Governance
@@ -1601,7 +1601,7 @@ inference is permitted anywhere within the execution model.
 
 Clone pgs_workspace from:
 
-https://github.com/bachipeachy/pgs_workspace
+https://github.com/protocol-governed-computing
 
 and follow the bootstrap instructions. The workspace bootstrap process
 installs all sibling repositories as editable packages and wires the

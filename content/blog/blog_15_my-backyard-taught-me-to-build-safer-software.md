@@ -1,7 +1,6 @@
 ---
 title: '#15 — My Backyard Taught Me To Build Safer Software'
 date: '2026-04-23'
-draft: false
 weight: 15
 slug: my-backyard-taught-me-to-build-safer-software
 series:
@@ -115,7 +114,7 @@ There is no bare ground. Every path is claimed before the season begins.
 
 The reference implementation is public, functional, and reproducible locally:
 
-**[github.com/bachipeachy/pgs_workspace](https://github.com/bachipeachy/pgs_workspace)**
+**[github.com/protocol-governed-computing](https://github.com/protocol-governed-computing)**
 *(Apache-2.0)*
 
 It includes a compiled protocol snapshot, a generic runtime that executes governed DAGs, blockchain and AI governance domain examples, and execution traces with structured admissibility evidence. You can run the demo workflow in under ten minutes.
@@ -144,4 +143,4 @@ The other 90% was gardening.
 
 *Blog 15 in the Protocol-Governed Systems series.*
 *PGS v0.3.0 — May 2026*
-*Apache-2.0 — [github.com/bachipeachy/pgs_workspace](https://github.com/bachipeachy/pgs_workspace)*
+*Apache-2.0 — [github.com/protocol-governed-computing](https://github.com/protocol-governed-computing)*

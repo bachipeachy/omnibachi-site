@@ -1,7 +1,6 @@
 ---
 title: Chapter 11 — Declarative Package Federation
 date: '2026-04-09'
-draft: false
 weight: 13
 slug: chapter-11-declarative-package-federation
 ---
