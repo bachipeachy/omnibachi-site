@@ -1,6 +1,6 @@
 ---
 title: 'Protocol-Governed Computing: Field Manual'
-date: '2026-08-11'
+date: '2026-08-22'
 weight: 40
 slug: field-manual
 ---
@@ -26,6 +26,11 @@ and a compiled artifact disagree, the artifact wins.
 
 **Reading rule.** When something is ambiguous, governance overrides implementation convenience. That
 single rule settles most decisions correctly.
+
+**This revision.** v1 supersedes v0. It corrects the identity model — governance namespaces no
+longer carry an `fb.` prefix, and authority and concern are declared fields rather than parts of a
+name — and adds *The human block* (§4), which states what the prose beside a machine block is for
+and what it may not become. v0 remains archived under its own DOI as the superseded record.
 
 **PGC is not** workflow orchestration with governance wrappers · a policy engine · a runtime
 authorization framework · a service mesh · a BPM engine.
@@ -221,13 +226,32 @@ heuristic flexibility. Growing the ontology without governance necessity is debt
 
   blockchain::WF_REGISTER_ACTOR_UNVERIFIED_V0
   capability_side_effects::CS_MUTABLE_JSON_V0
-  fb.transport::CONSTITUTION_TRANSPORT_EGRESS_V0
+  transport::CONSTITUTION_TRANSPORT_EGRESS_V0
   inspection::TI_SI_STORE_CONSUMERS_V0
 ```
 
-Governance namespaces are `fb.<concern>` — one per governed concern (`fb.workflow`, `fb.execution`,
-`fb.transport`, `fb.structure`, …). Capability declarations live in `capability_transforms` and
-`capability_side_effects`. Business and tool domains use their own name.
+Governance namespaces are the concern itself — `workflow`, `execution`, `transport`, `structure`.
+Capability declarations live in `capability_transforms` and `capability_side_effects`. Business and
+tool domains use their own name.
+
+**A namespace resolves names and carries nothing else.** It is not an authority, not a jurisdiction,
+and not an ownership boundary. Governance namespaces once carried an `fb.` prefix denoting a
+*federation boundary* — a claim of distinct sovereignty. Measured against the composition, all
+twenty-six of them were one authority's concerns, and the six candidates for genuinely distinct
+authorities carried no prefix at all: the marker for "separate sovereign" sat on everything that was
+not one. The prefix is retired.
+
+**What it was carrying is now declared.** Two fields in every machine block:
+
+```yaml
+authority: pgc.platform     # from whom jurisdiction derives — CA-1, CA-2
+concern:   transport        # the semantic subject — a classification, conferring nothing
+```
+
+`authority` must be constituted by a declared constituting act, and no value may be both an
+authority and a concern. Both are refused at compile time, and neither could be checked while one
+identifier carried both — a check could refuse an *unlisted* namespace but never an *illegitimate*
+one, because the two were the same string.
 
 **Folders are discovery; identity is declared.** An artifact's namespace comes from the `fqdn:` key
 in its own `## Machine` block, never from the directory it sits in. A file may move without changing
@@ -236,6 +260,65 @@ what the artifact *is*.
 **Never a short name.** `::` in an identity becomes `__` in a filename. Resolve an artifact through
 `artifact_index/index.json` — never by deriving a path from an FQDN, because a namespace is not a
 directory.
+
+### The human block
+
+An artifact has two parts and they answer different questions. The `## Machine` block is what the
+implementation consumes and the only surface that determines anything. Everything else is prose for
+a reader, and **it declares nothing.**
+
+That prose has a job, and it is a job neither neighbour can do:
+
+```
+Normative Standard              what PGC requires
+        ↓                       cited in the prose, never restated
+Human-Consumable Realization    how this artifact realizes it
+        ↓                       the prose — this is its whole purpose
+Machine Block                   what the implementation actually consumes
+```
+
+The standard says what must be true of any realization and deliberately names no mechanism. The
+machine block names the mechanism and says nothing about why. A reader holding both still cannot see
+how one becomes the other, and reconstructs it every time.
+
+**The failure to guard against is the middle layer growing into the top one.** Prose that explains a
+mechanism drifts into prose that requires it; the requirement is then stated twice, once ungoverned,
+and readers trust the copy they can read. Three rules keep it in place:
+
+**Cite, never restate.** Every normative claim in the prose is a citation to a named document and
+invariant. *"A transport ingress must have a verified, static invocation target"* is a requirement
+with no authority behind it and no way to be wrong. *"`5a` IB-5 requires operation-to-target
+resolution to be determined before interaction time; this artifact realizes that by…"* points at
+something checkable and then explains a mechanism.
+
+**Never restate a machine-block value.** Two copies can disagree; one cannot. This is not
+hypothetical: 216 artifacts once carried a `## Header (Mandatory)` block restating artifact code,
+kind, governing constitution, version, status and supersession — about 1,265 duplicated lines — and
+the copies were already the weaker ones. `**Governed By:** CONSTITUTION_WORKFLOW_V0` sat beside a
+machine block declaring `governed_by: workflow::CONSTITUTION_WORKFLOW_V0`: a short name where the
+declaration carried an identity. A reader who trusted the prose had a name that resolves to nothing.
+Status lines and prose version histories go the same way — supersession is a declared relation, and
+a second record of a governed fact is a record that can already be wrong.
+
+**Say what is not claimed.** The strongest guard against over-claiming is an explicit bound, and the
+surface contains the model. `INVARIANT_TRANSPORT_TARGET_EXISTS_V0` distinguishes what its check
+enforces per handler kind, then writes: *"for those kinds the enforced check is that the target is
+declared and static; nothing stronger is claimed."* That sentence does more for a reader than any
+restatement of the rule, and it is the sentence a specification never contains — a specification
+states what must be true and has no reason to bound its own enforcement.
+
+**Section names must not read as normative.** `Rule Statement`, `Validation Rules` and
+`Enforcement Scope` announce that a rule is being stated, in a document that states none. Use *What
+this realizes*, *How*, *What is not claimed*. `Intent`, `Purpose`, `Rationale` and `Scope` are fine
+where they carry content — `Rationale` especially, since why a shape was chosen is exactly what
+neither other layer records.
+
+**Where each part lives.** The policy — the closed sets of forbidden section names and restated keys
+— is a governed artifact, `vocabulary::VOCAB_HUMAN_BLOCK_CONSTRAINTS_V0`, compiled and sealed like
+any other. `human_block_fidelity.py` reads it from the sealed composition and carries no copy, so
+adding a forbidden name is an authoring act rather than an edit to a script. What the check cannot
+decide is whether a sentence cites or restates — that is a reading, not a pattern, and it is a review
+obligation stated as one.
 
 ---
 
