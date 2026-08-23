@@ -20,5 +20,5 @@ where the standard turned out to be wrong and the implementation turned out to b
 The draft standard is open and unfinished, which is the point. The strongest test of a specification
 is whether someone who did not build the reference implementation can implement it anyway.
 
-- [PGC Open Standard — GitHub](https://github.com/protocol-governed-computing)
+- [PGC Open Standard — GitHub](https://github.com/protocol-governed-computing/standards)
 - [PGC technical papers](/papers/)

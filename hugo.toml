@@ -86,6 +86,11 @@ pagination.pagerSize = 10
     url = "/papers/"
     weight = 20
   [[menu.main]]
+    identifier = "open-standards"
+    name = "Open Standards"
+    url = "/open-standards/"
+    weight = 25
+  [[menu.main]]
     identifier = "book"
     name = "Book"
     url = "/book/"
