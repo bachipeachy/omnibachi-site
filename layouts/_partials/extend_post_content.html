@@ -1,0 +1,21 @@
+{{- /* Context-aware PGS series navigation, shown at the end of every blog post.
+       Lists all parts in series order (by weight); the current part is highlighted. */ -}}
+{{- if eq .Section "blog" }}
+{{- $posts := sort (where site.RegularPages "Section" "blog") "Weight" }}
+{{- if gt (len $posts) 1 }}
+<aside class="series-box">
+  <div class="series-box-title">Protocol-Governed Systems — the series</div>
+  <ol class="series-list">
+    {{- range $posts }}
+    <li class="{{ if eq .Permalink $.Permalink }}series-current{{ end }}">
+      {{- if eq .Permalink $.Permalink }}
+      <span>{{ .Title }}</span>
+      {{- else }}
+      <a href="{{ .Permalink }}">{{ .Title }}</a>
+      {{- end }}
+    </li>
+    {{- end }}
+  </ol>
+</aside>
+{{- end }}
+{{- end }}

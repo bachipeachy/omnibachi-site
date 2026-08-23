@@ -1,0 +1,570 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<svg
+   id="svg34"
+   version="1.1"
+   viewBox="0 0 360 648"
+   sodipodi:docname="figure2_protocol_governed_abstract_machine_execution_flow_v2.svg"
+   inkscape:version="1.4.3 (0d15f75, 2025-12-25)"
+   xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
+   xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
+   xmlns="http://www.w3.org/2000/svg"
+   xmlns:svg="http://www.w3.org/2000/svg">
+  <sodipodi:namedview
+     id="namedview1"
+     pagecolor="#ffffff"
+     bordercolor="#000000"
+     borderopacity="0.25"
+     inkscape:showpageshadow="2"
+     inkscape:pageopacity="0.0"
+     inkscape:pagecheckerboard="0"
+     inkscape:deskcolor="#d1d1d1"
+     inkscape:zoom="1.4142136"
+     inkscape:cx="217.08178"
+     inkscape:cy="587.60574"
+     inkscape:window-width="1102"
+     inkscape:window-height="691"
+     inkscape:window-x="168"
+     inkscape:window-y="44"
+     inkscape:window-maximized="0"
+     inkscape:current-layer="svg34" />
+  <!-- 5" wide x 9" tall at 72dpi, with 18pt (1/4") margins -->
+  <defs
+     id="defs3">
+    <style
+       id="style1">.title { font-family: Arial, sans-serif; font-size: 14px; font-weight: bold; }
+      .label { font-family: Arial, sans-serif; font-size: 11px; }
+      .small { font-family: Arial, sans-serif; font-size: 9px; }
+      .tiny { font-family: Arial, sans-serif; font-size: 8px; }
+      .ingress-box { fill: #e8f5e9; stroke: #2e7d32; stroke-width: 2; }
+      .authority-box { fill: #fff3e0; stroke: #ef6c00; stroke-width: 2; }
+      .capability-box { fill: #e3f2fd; stroke: #1565c0; stroke-width: 2; }
+      .event-box { fill: #f3e5f5; stroke: #6a1b9a; stroke-width: 2; }
+      .egress-box { fill: #ffebee; stroke: #c62828; stroke-width: 2; }
+      .flow-arrow { stroke: #424242; stroke-width: 2; fill: none; marker-end: url(#arrow); }
+      .feedback-arrow { stroke: #6a1b9a; stroke-width: 1.5; fill: none; stroke-dasharray: 3,3; marker-end: url(#arrowpurple); }</style>
+    <marker
+       id="arrow"
+       markerHeight="10"
+       markerWidth="10"
+       orient="auto"
+       refX="5"
+       refY="3">
+      <path
+         id="path1"
+         d="m0 0v6l9-3z"
+         fill="#424242" />
+    </marker>
+    <marker
+       id="arrowpurple"
+       markerHeight="8"
+       markerWidth="8"
+       orient="auto"
+       refX="4"
+       refY="2.5">
+      <path
+         id="path2"
+         d="m0 0v5l7-2.5z"
+         fill="#6a1b9a" />
+    </marker>
+    <marker
+       id="arrow-small"
+       markerHeight="6"
+       markerWidth="6"
+       orient="auto"
+       refX="3"
+       refY="2">
+      <path
+         id="path3"
+         d="m0 0v4l5-2z"
+         fill="#666" />
+    </marker>
+  </defs>
+  <!-- Background -->
+  <rect
+     id="rect3"
+     x="1"
+     width="360"
+     height="648"
+     fill="#fff" />
+  <!-- Title -->
+  <text
+     id="text3"
+     class="title"
+     x="173.942"
+     y="22.840544"
+     font-size="13.333px"
+     text-anchor="middle"><tspan
+       id="tspan34"
+       x="173.942"
+       y="22.840544">Figure 2: Protocol-Governed Abstract Machine</tspan><tspan
+       id="tspan35"
+       x="173.942"
+       y="39.507172">Execution Flow</tspan></text>
+  <!-- External World (Top) -->
+  <g
+     id="g6">
+    <rect
+       id="rect4"
+       x="60"
+       y="46.696"
+       width="240"
+       height="35"
+       rx="5"
+       fill="#e0e0e0"
+       stroke="#757575"
+       stroke-width="1.5" />
+    <text
+       id="text4"
+       class="label"
+       x="180.55072"
+       y="62.840546"
+       font-weight="bold"
+       text-anchor="middle">External World</text>
+    <text
+       id="text5"
+       class="tiny"
+       x="180.55072"
+       y="74.289818"
+       text-anchor="middle">(Interfaces, Users, Systems)</text>
+  </g>
+  <!-- Flow Arrow Down -->
+  <path
+     id="path5"
+     class="flow-arrow"
+     d="m180 82.797v15" />
+  <!-- TI - Transport Ingress -->
+  <g
+     id="g5">
+    <rect
+       id="rect5"
+       class="ingress-box"
+       x="99.906"
+       y="103.76"
+       width="160.19"
+       height="36.918"
+       rx="3.0035" />
+    <text
+       id="text6"
+       class="label"
+       x="180"
+       y="118"
+       font-weight="bold"
+       text-anchor="middle">TI - Transport Ingress</text>
+    <text
+       id="text7"
+       class="tiny"
+       x="180"
+       y="133"
+       text-anchor="middle">External → Canonical Input</text>
+  </g>
+  <path
+     id="path7"
+     class="flow-arrow"
+     d="m180 142.79v14.886" />
+  <!-- Authority Core (AC, IN, WF) -->
+  <g
+     id="authority-core"
+     transform="translate(4.4102)">
+    <rect
+       id="rect7"
+       class="authority-box"
+       x="80"
+       y="165"
+       width="200"
+       height="120"
+       rx="5" />
+    <text
+       id="text8"
+       class="label"
+       x="180"
+       y="182"
+       font-weight="bold"
+       text-anchor="middle">Authority Core</text>
+    <!-- AC -->
+    <rect
+       id="rect8"
+       x="90"
+       y="190"
+       width="180"
+       height="25"
+       rx="2"
+       fill="#fff"
+       stroke="#ef6c00" />
+    <text
+       id="text9"
+       class="small"
+       x="100"
+       y="205"
+       font-weight="bold">AC</text>
+    <text
+       id="text10"
+       class="tiny"
+       x="180"
+       y="205"
+       text-anchor="middle">Actor Context (Authority Principal)</text>
+    <!-- IN -->
+    <rect
+       id="rect10"
+       x="90"
+       y="220"
+       width="180"
+       height="25"
+       rx="2"
+       fill="#fff"
+       stroke="#ef6c00" />
+    <text
+       id="text11"
+       class="small"
+       x="100"
+       y="235"
+       font-weight="bold">IN</text>
+    <text
+       id="text12"
+       class="tiny"
+       x="180"
+       y="235"
+       text-anchor="middle">Intent (Admission Gate: ACK/NACK)</text>
+    <!-- WF -->
+    <rect
+       id="rect12"
+       x="90"
+       y="250"
+       width="180"
+       height="25"
+       rx="2"
+       fill="#fff"
+       stroke="#ef6c00" />
+    <text
+       id="text13"
+       class="small"
+       x="100"
+       y="265"
+       font-weight="bold">WF</text>
+    <text
+       id="text14"
+       class="tiny"
+       x="180"
+       y="265"
+       text-anchor="middle">Workflow (Admissibility Graph 𝒢)</text>
+  </g>
+  <path
+     id="path14"
+     class="flow-arrow"
+     d="m180 285v13.7" />
+  <!-- ACK/NACK labels at admission boundary -->
+  <text
+     id="text-ack"
+     class="tiny"
+     x="195"
+     y="297"
+     fill="#2e7d32"
+     font-weight="bold">ACK ↓</text>
+  <text
+     id="text-nack"
+     class="tiny"
+     x="140"
+     y="297"
+     fill="#c62828"
+     font-weight="bold">NACK ✕</text>
+  <!-- Capability Surface (CC, CT, CS) -->
+  <path
+     id="path25"
+     class="flow-arrow"
+     d="m180 450v14.881" />
+  <!-- EV - Events / Trace -->
+  <g
+     id="g2">
+    <rect
+       id="rect25"
+       class="event-box"
+       transform="matrix(1 -.0017138 -.021811 .99976 0 0)"
+       x="95.621"
+       y="471.34"
+       width="194.31"
+       height="52.11"
+       rx="2.6497" />
+    <text
+       id="text26"
+       class="label"
+       transform="skewY(-1.2563)"
+       x="182.75638"
+       y="493.66174"
+       font-weight="bold"
+       text-anchor="middle">EV - Events &amp; Trace</text>
+    <text
+       id="text27"
+       class="tiny"
+       transform="skewY(-1.2563)"
+       x="182.75638"
+       y="507.66174"
+       text-anchor="middle">Execution Evidence (T_evidence)</text>
+    <text
+       id="text28"
+       class="tiny"
+       transform="skewY(-1.2563)"
+       x="182.75638"
+       y="519.66174"
+       text-anchor="middle">Immutable · Append-only · Trace-producing</text>
+  </g>
+  <path
+     id="path30"
+     class="flow-arrow"
+     d="m180 523.9v20" />
+  <!-- TE - Transport Egress -->
+  <g
+     id="g3">
+    <rect
+       id="rect30"
+       class="egress-box"
+       x="99.355"
+       y="550.42"
+       width="160.19"
+       height="36.918"
+       rx="3.0035" />
+    <text
+       id="text31"
+       class="label"
+       x="180"
+       y="563"
+       font-weight="bold"
+       text-anchor="middle">TE - Transport Egress</text>
+    <text
+       id="text32"
+       class="tiny"
+       x="180"
+       y="578"
+       text-anchor="middle">Internal Result → External Format</text>
+  </g>
+  <path
+     id="path32"
+     class="flow-arrow"
+     d="m180 588.9v15" />
+  <!-- External World (Bottom) -->
+  <g
+     id="g4">
+    <rect
+       id="rect32"
+       x="59.449"
+       y="612.17"
+       width="240"
+       height="25"
+       rx="5"
+       fill="#e0e0e0"
+       stroke="#757575"
+       stroke-width="1.5" />
+    <text
+       id="text33"
+       class="label"
+       x="180.55127"
+       y="627.06403"
+       font-weight="bold"
+       text-anchor="middle">External World (Result + Evidence)</text>
+  </g>
+  <!-- Key Properties Box -->
+  <g
+     id="g7">
+    <text
+       id="text29"
+       class="tiny"
+       transform="matrix(0 -1 1 -.02193 0 0)"
+       x="-365.66174"
+       y="37.756371"
+       fill="#6a1b9a">Control</text>
+    <rect
+       id="rect33"
+       x="18.099"
+       y="299.1"
+       width="30.802"
+       height="149.8"
+       rx="2.5668"
+       fill="#fce4ec"
+       stroke="#880e4f"
+       stroke-width="1.6982" />
+    <text
+       id="text34"
+       class="tiny"
+       transform="rotate(-90)"
+       x="-370"
+       y="38"
+       font-size="12px"
+       font-weight="bold"
+       text-anchor="middle">RB (Runtime Binding)</text>
+  </g>
+  <text
+     id="text35"
+     fill="#000000"
+     font-size="13.333px"
+     style="shape-inside:url(#rect35);white-space:pre"
+     xml:space="preserve" />
+  <text
+     id="text37"
+     x="298.49426"
+     y="67.739471"
+     fill="#000000"
+     font-size="13.333px"
+     xml:space="preserve"><tspan
+       id="tspan37"
+       x="298.49426"
+       y="67.739471" /></text>
+  <text
+     id="text38"
+     x="248.37807"
+     y="76.551109"
+     fill="#000000"
+     font-size="13.333px"
+     xml:space="preserve"><tspan
+       id="tspan38"
+       x="248.37807"
+       y="76.551109" /></text>
+  <text
+     id="text39"
+     fill="#000000"
+     font-size="13.333px"
+     style="shape-inside:url(#rect39);white-space:pre"
+     xml:space="preserve" />
+  <g
+     id="g1">
+    <rect
+       id="rect14"
+       class="capability-box"
+       x="62.205101"
+       y="303.89749"
+       width="240"
+       height="145"
+       rx="5" />
+    <text
+       id="text15"
+       class="label"
+       x="182.20509"
+       y="320.89749"
+       font-weight="bold"
+       text-anchor="middle">Capability Surface</text>
+    <rect
+       id="rect15"
+       x="72.205101"
+       y="328.89749"
+       width="220"
+       height="30"
+       rx="2"
+       fill="#ffffff"
+       stroke="#1565c0" />
+    <text
+       id="text16"
+       class="small"
+       x="82.205101"
+       y="345.89749"
+       font-weight="bold">CC</text>
+    <text
+       id="text17"
+       class="tiny"
+       x="182.20509"
+       y="345.89749"
+       text-anchor="middle">Capability Contracts (Authorization Rules)</text>
+    <g
+       id="ct-node"
+       transform="translate(2.2051,-1.1025)">
+      <rect
+         id="rect17"
+         x="70"
+         y="368"
+         width="100"
+         height="35"
+         rx="2"
+         fill="#c8e6c9"
+         stroke="#2e7d32"
+         stroke-width="1.5" />
+      <text
+         id="text18"
+         class="small"
+         x="80"
+         y="383"
+         font-weight="bold">CT</text>
+      <text
+         id="text19"
+         class="tiny"
+         x="120"
+         y="383"
+         text-anchor="middle">Pure Transform</text>
+      <text
+         id="text20"
+         class="tiny"
+         x="120"
+         y="395"
+         font-style="italic"
+         text-anchor="middle">Effect(CT) = ∅</text>
+    </g>
+    <g
+       id="cs-node"
+       transform="translate(2.2051,-1.1025)">
+      <rect
+         id="rect20"
+         x="190"
+         y="368"
+         width="100"
+         height="35"
+         rx="2"
+         fill="#ffcdd2"
+         stroke="#c62828"
+         stroke-width="1.5" />
+      <text
+         id="text21"
+         class="small"
+         x="200"
+         y="383"
+         font-weight="bold">CS</text>
+      <text
+         id="text22"
+         class="tiny"
+         x="240"
+         y="383"
+         text-anchor="middle">Side Effect</text>
+      <text
+         id="text23"
+         class="tiny"
+         x="240"
+         y="395"
+         font-style="italic"
+         text-anchor="middle">External Mutation</text>
+    </g>
+    <path
+       id="path23"
+       d="m 122.2051,358.8975 v 8"
+       marker-end="url(#arrow-small)"
+       stroke="#666666" />
+    <path
+       id="path24"
+       d="m 242.2051,358.8975 v 8"
+       marker-end="url(#arrow-small)"
+       stroke="#666666" />
+    <text
+       id="text24"
+       class="tiny"
+       x="182.20509"
+       y="412.89749"
+       font-style="italic"
+       text-anchor="middle">DAG Traversal: Parallel CT, Sequential CS</text>
+    <text
+       id="text25"
+       class="tiny"
+       x="182.20509"
+       y="422.89749"
+       font-style="italic"
+       text-anchor="middle">Dependencies enforced by WF graph</text>
+    <text
+       id="text-outcomes"
+       class="tiny"
+       x="179.94162"
+       y="433.65274"
+       font-style="italic"
+       text-anchor="middle"
+       style="font-style:italic;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:8px;font-family:Arial, sans-serif;-inkscape-font-specification:'Arial, sans-serif, Italic';font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-variant-east-asian:normal;text-anchor:middle">Outcomes: SUCCESS | VIOLATION |</text>
+    <text
+       id="text-outcomes-6"
+       class="tiny"
+       x="179.94884"
+       y="444.75107"
+       font-style="italic"
+       text-anchor="middle"
+       style="font-style:italic;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:8px;font-family:Arial, sans-serif;-inkscape-font-specification:'Arial, sans-serif, Italic';font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-variant-east-asian:normal;text-anchor:middle">| ALREADY_EXISTS | BACKEND_ERROR</text>
+  </g>
+</svg>

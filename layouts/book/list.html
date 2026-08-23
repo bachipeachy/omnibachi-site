@@ -1,0 +1,18 @@
+{{- /* Book section: a single-page chapter table of contents (no pagination). */ -}}
+{{- define "main" }}
+<header class="page-header">
+  {{- partial "breadcrumbs.html" . }}
+  <h1>{{ .Title }}</h1>
+  {{- with .Description }}<div class="post-description">{{ . | markdownify }}</div>{{- end }}
+</header>
+{{- if .Content }}
+<div class="post-content">{{ .Content }}</div>
+{{- end }}
+<nav class="book-toc">
+  <ol>
+    {{- range (sort .Pages "Weight") }}
+    <li><a href="{{ .Permalink }}">{{ .Title }}</a></li>
+    {{- end }}
+  </ol>
+</nav>
+{{- end }}

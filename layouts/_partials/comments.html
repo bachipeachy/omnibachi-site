@@ -1,0 +1,51 @@
+{{- /* Discussion on an article page.
+
+       Two routes, deliberately: a threaded comment box for readers who have a GitHub
+       account, and a plain email link for readers who do not. giscus writes into this
+       repository's GitHub Discussions through the GitHub API, so it can only accept a
+       comment it can attribute to an account — sign-in is structural, not a setting.
+       Rather than swap in a third-party backend to avoid that, the note below gives
+       everyone else a way in that needs no account, no cookie and no service. */ -}}
+
+<div class="comment-alt">
+  <strong>Join the discussion.</strong>
+  Comments below are backed by GitHub Discussions and need a GitHub account.
+  Without one, reply by email — <a href="mailto:bachipeachy@gmail.com?subject={{ printf "omnibachi.org — %s" .Title | urlquery }}">bachipeachy@gmail.com</a>
+  — and say whether you would like it quoted here.
+</div>
+
+{{- /* giscus comments (GitHub Discussions). Renders only once repoId is filled in
+       hugo.toml [params.giscus]; until then this is a no-op so the site deploys cleanly. */ -}}
+{{- $g := site.Params.giscus }}
+{{- if and $g $g.repoId (ne $g.repoId "REPLACE_WITH_REPO_ID") }}
+<div class="giscus-wrapper">
+  <script src="https://giscus.app/client.js"
+          data-repo="{{ $g.repo }}"
+          data-repo-id="{{ $g.repoId }}"
+          data-category="{{ $g.category }}"
+          data-category-id="{{ $g.categoryId }}"
+          data-mapping="{{ $g.mapping | default "pathname" }}"
+          data-strict="{{ $g.strict | default "0" }}"
+          data-reactions-enabled="{{ $g.reactionsEnabled | default "1" }}"
+          data-emit-metadata="{{ $g.emitMetadata | default "0" }}"
+          data-input-position="{{ $g.inputPosition | default "bottom" }}"
+          data-theme="{{ if eq site.Params.defaultTheme "dark" }}dark{{ else }}preferred_color_scheme{{ end }}"
+          data-lang="{{ $g.lang | default "en" }}"
+          crossorigin="anonymous"
+          async>
+  </script>
+  <noscript>Please enable JavaScript to view the comments powered by giscus.</noscript>
+</div>
+<script>
+  // Keep the giscus theme in sync with PaperMod's light/dark toggle.
+  (function () {
+    function current() { return document.body.classList.contains('dark') ? 'dark' : 'light'; }
+    function apply() {
+      var f = document.querySelector('iframe.giscus-frame');
+      if (f) f.contentWindow.postMessage({ giscus: { setConfig: { theme: current() } } }, 'https://giscus.app');
+    }
+    var btn = document.getElementById('theme-toggle');
+    if (btn) btn.addEventListener('click', function () { setTimeout(apply, 50); });
+  })();
+</script>
+{{- end }}

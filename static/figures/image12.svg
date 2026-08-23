@@ -1,0 +1,148 @@
+<?xml version="1.0" standalone="yes"?>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="-24 -24 948 728" font-family="'Helvetica Neue', Helvetica, Arial, sans-serif" width="948" height="728">
+
+<!-- White background -->
+<rect x="-24" y="-24" width="948" height="728" fill="#FFFFFF"/>
+
+<!-- Border rectangle with margin -->
+<rect x="-18" y="-18" width="936" height="716" rx="4" fill="none" stroke="#CCCCCC" stroke-width="1.5"/>
+
+<!-- Title -->
+<text x="450" y="32" text-anchor="middle" font-size="18" font-weight="bold" fill="#000">Enterprise Computing Context — Where PGS Sits</text>
+<text x="450" y="52" text-anchor="middle" font-size="12" fill="#000">Figure 2.11a — Eight constitutional layers positioned within the enterprise stack</text>
+
+<!-- ===== TIER 1: APPLICATION DOMAINS (top) ===== -->
+<rect x="50" y="72" width="800" height="170" rx="8" fill="#FFF8E1" stroke="#C6A700" stroke-width="1.5"/>
+<text x="450" y="96" text-anchor="middle" font-size="14" font-weight="bold" fill="#000">APPLICATION DOMAINS &amp; AI SYSTEM GOVERNANCE</text>
+<text x="450" y="112" text-anchor="middle" font-size="10" fill="#000">Business context — declares WHAT the system does — domain knowledge lives here</text>
+
+<!-- Domain boxes - row 1 -->
+<rect x="75" y="126" width="230" height="44" rx="4" fill="#fff" stroke="#D4B83A" stroke-width="1"/>
+<text x="190" y="144" text-anchor="middle" font-size="11" font-weight="bold" fill="#000">FINANCIAL</text>
+<text x="190" y="160" text-anchor="middle" font-size="9.5" fill="#000">Transactions . Compliance . SOX/PCI-DSS</text>
+
+<rect x="335" y="126" width="230" height="44" rx="4" fill="#fff" stroke="#D4B83A" stroke-width="1"/>
+<text x="450" y="144" text-anchor="middle" font-size="11" font-weight="bold" fill="#000">HEALTHCARE</text>
+<text x="450" y="160" text-anchor="middle" font-size="9.5" fill="#000">Clinical . Compliance . HIPAA</text>
+
+<rect x="595" y="126" width="230" height="44" rx="4" fill="#fff" stroke="#D4B83A" stroke-width="1"/>
+<text x="710" y="144" text-anchor="middle" font-size="11" font-weight="bold" fill="#000">MANUFACTURING</text>
+<text x="710" y="160" text-anchor="middle" font-size="9.5" fill="#000">Industrial . Automation . Quality Control</text>
+
+<!-- Domain boxes - row 2 -->
+<rect x="75" y="180" width="170" height="44" rx="4" fill="#fff" stroke="#D4B83A" stroke-width="1"/>
+<text x="160" y="198" text-anchor="middle" font-size="10" font-weight="bold" fill="#000">SUPPLY CHAIN</text>
+<text x="160" y="214" text-anchor="middle" font-size="9" fill="#000">Logistics . Inventory</text>
+
+<rect x="260" y="180" width="170" height="44" rx="4" fill="#fff" stroke="#D4B83A" stroke-width="1"/>
+<text x="345" y="198" text-anchor="middle" font-size="10" font-weight="bold" fill="#000">ENERGY</text>
+<text x="345" y="214" text-anchor="middle" font-size="9" fill="#000">Smart Grid . Distribution</text>
+
+<rect x="445" y="180" width="170" height="44" rx="4" fill="#fff" stroke="#D4B83A" stroke-width="1"/>
+<text x="530" y="198" text-anchor="middle" font-size="10" font-weight="bold" fill="#000">TELECOM</text>
+<text x="530" y="214" text-anchor="middle" font-size="9" fill="#000">Service Prov . Billing</text>
+
+<rect x="630" y="180" width="195" height="44" rx="4" fill="#fff" stroke="#D4B83A" stroke-width="1"/>
+<text x="727" y="198" text-anchor="middle" font-size="10" font-weight="bold" fill="#000">GOVT / DEFENSE</text>
+<text x="727" y="214" text-anchor="middle" font-size="9" fill="#000">Classified . Unclassified</text>
+
+<!-- ===== Annotation between tiers ===== -->
+<text x="450" y="260" text-anchor="middle" font-size="10" fill="#000" font-style="italic">Domains declare intent — Protocol governs behavior</text>
+
+<!-- ===== TIER 2: PGS (middle — the focus) ===== -->
+<rect x="50" y="274" width="800" height="180" rx="8" fill="#E8F0FE" stroke="#2B5080" stroke-width="2.5"/>
+
+<!-- Emphasis banner -->
+<rect x="50" y="274" width="800" height="30" rx="8" fill="#2B5080"/>
+<rect x="50" y="289" width="800" height="15" fill="#2B5080"/>
+<text x="450" y="294" text-anchor="middle" font-size="14" font-weight="bold" fill="#fff">PROTOCOL-GOVERNED SYSTEMS — Eight Constitutional Layers</text>
+
+<!-- PGS internal layers -->
+<text x="450" y="324" text-anchor="middle" font-size="10.5" fill="#000">The architectural surface — domain-blind, infrastructure-independent</text>
+
+<!-- Simplified layer flow -->
+<rect x="75" y="340" width="100" height="36" rx="4" fill="#fff" stroke="#4A7FBF" stroke-width="1"/>
+<text x="125" y="362" text-anchor="middle" font-size="9" font-weight="bold" fill="#000">L2 Tooling</text>
+
+<text x="182" y="362" text-anchor="middle" font-size="12" fill="#000">→</text>
+
+<rect x="190" y="340" width="110" height="36" rx="4" fill="#fff" stroke="#D4883A" stroke-width="1"/>
+<text x="245" y="362" text-anchor="middle" font-size="9" font-weight="bold" fill="#000">L3 Governance</text>
+
+<text x="307" y="362" text-anchor="middle" font-size="12" fill="#000">→</text>
+
+<rect x="315" y="340" width="100" height="36" rx="4" fill="#fff" stroke="#4A8C5C" stroke-width="1"/>
+<text x="365" y="362" text-anchor="middle" font-size="9" font-weight="bold" fill="#000">L4 Protocol</text>
+
+<text x="422" y="362" text-anchor="middle" font-size="12" fill="#000">→</text>
+
+<rect x="430" y="340" width="80" height="36" rx="4" fill="#fff" stroke="#7E57C2" stroke-width="1" stroke-dasharray="4,2"/>
+<text x="470" y="356" text-anchor="middle" font-size="8" font-weight="bold" fill="#000">Compile</text>
+<text x="470" y="368" text-anchor="middle" font-size="7" fill="#000">(bridge)</text>
+
+<text x="517" y="362" text-anchor="middle" font-size="12" fill="#000">→</text>
+
+<rect x="525" y="340" width="100" height="36" rx="4" fill="#fff" stroke="#555" stroke-width="1"/>
+<text x="575" y="362" text-anchor="middle" font-size="9" font-weight="bold" fill="#000">L5 Execution</text>
+
+<text x="632" y="362" text-anchor="middle" font-size="12" fill="#000">→</text>
+
+<rect x="640" y="340" width="60" height="36" rx="4" fill="#E0F7FA" stroke="#00838F" stroke-width="1"/>
+<text x="670" y="362" text-anchor="middle" font-size="9" font-weight="bold" fill="#000">L6 CT</text>
+
+<rect x="710" y="340" width="60" height="36" rx="4" fill="#FBE9E7" stroke="#BF360C" stroke-width="1"/>
+<text x="740" y="362" text-anchor="middle" font-size="9" font-weight="bold" fill="#000">L7 CS</text>
+
+<!-- Transport + Trace -->
+<rect x="175" y="392" width="250" height="30" rx="4" fill="#FFF9C4" stroke="#C6A700" stroke-width="1"/>
+<text x="300" y="412" text-anchor="middle" font-size="9.5" font-weight="bold" fill="#000">L8 — Transport (Ingress / Egress)</text>
+
+<rect x="475" y="392" width="250" height="30" rx="4" fill="#ECEFF1" stroke="#7C8898" stroke-width="1" stroke-dasharray="4,2"/>
+<text x="600" y="412" text-anchor="middle" font-size="9.5" font-weight="bold" fill="#000">Trace Plane (Orthogonal — EV_)</text>
+
+<!-- L1 Structure callout -->
+<rect x="780" y="392" width="50" height="30" rx="4" fill="#F5F5F5" stroke="#999" stroke-width="1" stroke-dasharray="4,2"/>
+<text x="805" y="411" text-anchor="middle" font-size="8" font-weight="bold" fill="#000">L1</text>
+
+<!-- Key property callout -->
+<text x="450" y="442" text-anchor="middle" font-size="10" fill="#000" font-weight="bold">Same protocol artifacts execute on any deployment target below</text>
+
+<!-- ===== Annotation between tiers ===== -->
+<text x="450" y="472" text-anchor="middle" font-size="10" fill="#000" font-style="italic">Protocol is deployment-agnostic — Infrastructure provides execution surface</text>
+
+<!-- ===== TIER 3: COMPUTING INFRASTRUCTURE (bottom) ===== -->
+<rect x="50" y="486" width="800" height="140" rx="8" fill="#F5F5F5" stroke="#999" stroke-width="1.5"/>
+<text x="450" y="510" text-anchor="middle" font-size="14" font-weight="bold" fill="#000">COMPUTING INFRASTRUCTURE</text>
+<text x="450" y="526" text-anchor="middle" font-size="10" fill="#000">Deployment targets — PGS is agnostic to all of these</text>
+
+<!-- Infrastructure boxes - row 1 -->
+<rect x="75" y="540" width="170" height="36" rx="4" fill="#fff" stroke="#CCC" stroke-width="1"/>
+<text x="160" y="562" text-anchor="middle" font-size="10" fill="#000">Servers / Firmware</text>
+
+<rect x="260" y="540" width="170" height="36" rx="4" fill="#fff" stroke="#CCC" stroke-width="1"/>
+<text x="345" y="562" text-anchor="middle" font-size="10" fill="#000">Operating Systems</text>
+
+<rect x="445" y="540" width="170" height="36" rx="4" fill="#fff" stroke="#CCC" stroke-width="1"/>
+<text x="530" y="562" text-anchor="middle" font-size="10" fill="#000">Cloud Platforms</text>
+
+<rect x="630" y="540" width="195" height="36" rx="4" fill="#fff" stroke="#CCC" stroke-width="1"/>
+<text x="727" y="562" text-anchor="middle" font-size="10" fill="#000">Network Infrastructure</text>
+
+<!-- Infrastructure boxes - row 2 -->
+<rect x="75" y="584" width="170" height="36" rx="4" fill="#fff" stroke="#CCC" stroke-width="1"/>
+<text x="160" y="606" text-anchor="middle" font-size="10" fill="#000">Virtualization</text>
+
+<rect x="260" y="584" width="170" height="36" rx="4" fill="#fff" stroke="#CCC" stroke-width="1"/>
+<text x="345" y="606" text-anchor="middle" font-size="10" fill="#000">Containers / K8s</text>
+
+<rect x="445" y="584" width="170" height="36" rx="4" fill="#fff" stroke="#CCC" stroke-width="1"/>
+<text x="530" y="606" text-anchor="middle" font-size="10" fill="#000">FPGA / ASIC</text>
+
+<rect x="630" y="584" width="195" height="36" rx="4" fill="#fff" stroke="#CCC" stroke-width="1"/>
+<text x="727" y="606" text-anchor="middle" font-size="10" fill="#000">Storage Systems</text>
+
+<!-- Bottom annotation -->
+<text x="450" y="656" text-anchor="middle" font-size="11" fill="#000" font-weight="bold">PGS occupies the architectural middle: above infrastructure, below application domains.</text>
+<text x="450" y="674" text-anchor="middle" font-size="10.5" fill="#000">The protocol layer is invariant across deployment targets.</text>
+
+</svg>

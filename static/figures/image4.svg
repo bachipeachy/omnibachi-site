@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="700" viewBox="-24 -24 1248 748">
+
+<!-- White background -->
+<rect x="-24" y="-24" width="1248" height="748" fill="#FFFFFF"/>
+
+<!-- Border rectangle with margin -->
+<rect x="-18" y="-18" width="1236" height="736" rx="4" fill="none" stroke="#CCCCCC" stroke-width="1.5"/>
+
+<!-- Title -->
+<text x="600" y="60" text-anchor="middle" font-family="Garamond, 'Times New Roman', serif" font-size="38" font-weight="bold" fill="#000">Structural Governance Debt Compounding</text>
+
+<!-- Subtitle -->
+<text x="600" y="88" text-anchor="middle" font-family="Garamond, 'Times New Roman', serif" font-size="18" fill="#000">Figure 1.5a — Implicit vs. declared governance scaling behavior</text>
+
+<!-- Axes -->
+<line x1="150" y1="600" x2="1060" y2="600" stroke="#000" stroke-width="3"/>
+<line x1="150" y1="600" x2="150" y2="120" stroke="#000" stroke-width="3"/>
+
+<!-- Axis arrowheads -->
+<polygon points="1060,594 1060,606 1080,600" fill="#000"/>
+<polygon points="144,120 156,120 150,100" fill="#000"/>
+
+<!-- X-axis label -->
+<text x="600" y="660" text-anchor="middle" font-family="Garamond, 'Times New Roman', serif" font-size="30" fill="#000">System Size (N)</text>
+
+<!-- Y-axis label -->
+<text x="55" y="380" transform="rotate(-90 55,380)" text-anchor="middle" font-family="Garamond, 'Times New Roman', serif" font-size="30" fill="#000">Governance Overhead</text>
+
+<!-- O(N²) parabolic curve — implicit governance (red) -->
+<polyline
+  points="150,580 200,578 262,570 325,553 375,538 450,507 525,465 600,412 675,348 750,273 825,187 880,130"
+  fill="none" stroke="#BF360C" stroke-width="4"/>
+
+<!-- O(N²) label -->
+<text x="620" y="200" font-family="Garamond, 'Times New Roman', serif" font-size="30" fill="#BF360C" font-weight="bold">Implicit Governance  O(N²)</text>
+
+<!-- Annotation arrow from label to curve -->
+<line x1="618" y1="210" x2="580" y2="280" stroke="#BF360C" stroke-width="1.5"/>
+<polygon points="578,276 575,286 584,282" fill="#BF360C"/>
+
+<!-- O(N) linear line — declared governance (blue dashed) -->
+<line x1="150" y1="580" x2="1050" y2="330" stroke="#1A3660" stroke-width="4" stroke-dasharray="12,10"/>
+
+<!-- O(N) label -->
+<text x="780" y="490" font-family="Garamond, 'Times New Roman', serif" font-size="30" fill="#1A3660" font-weight="bold">Declared Governance  O(N)</text>
+
+<!-- Annotation arrow from label to line -->
+<line x1="780" y1="472" x2="760" y2="430" stroke="#1A3660" stroke-width="1.5"/>
+<polygon points="758,434 756,424 764,426" fill="#1A3660"/>
+
+<!-- Light grid lines for readability -->
+<line x1="150" y1="480" x2="1050" y2="480" stroke="#DDD" stroke-width="1"/>
+<line x1="150" y1="360" x2="1050" y2="360" stroke="#DDD" stroke-width="1"/>
+<line x1="150" y1="240" x2="1050" y2="240" stroke="#DDD" stroke-width="1"/>
+
+<!-- Shaded region between curves to emphasize the growing gap -->
+<path d="M150,580 L262,570 L375,538 L450,507 L525,465 L600,412 L675,348 L750,273 L825,187 L880,130
+         L880,345 L150,580 Z"
+      fill="#BF360C" fill-opacity="0.06"/>
+
+<!-- "Growing debt" annotation in shaded region -->
+<text x="500" y="530" font-family="Garamond, 'Times New Roman', serif" font-size="22" fill="#BF360C" font-style="italic" text-anchor="middle">← accumulating governance debt →</text>
+
+</svg>

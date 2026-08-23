@@ -1,0 +1,789 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<svg
+   viewBox="-5 -7 910 1012"
+   font-family="'Helvetica Neue', Helvetica, Arial, sans-serif"
+   width="910"
+   height="1012"
+   version="1.1"
+   id="svg51"
+   xmlns="http://www.w3.org/2000/svg">
+  <defs
+     id="defs2">
+    <marker
+       id="arrow"
+       markerWidth="10"
+       markerHeight="7"
+       refX="10"
+       refY="3.5"
+       orient="auto">
+      <polygon
+         points="0 0, 10 3.5, 0 7"
+         fill="#333"
+         id="polygon1" />
+    </marker>
+    <marker
+       id="arrow-trace"
+       markerWidth="10"
+       markerHeight="7"
+       refX="10"
+       refY="3.5"
+       orient="auto">
+      <polygon
+         points="0 0, 10 3.5, 0 7"
+         fill="#7C8898"
+         id="polygon2" />
+    </marker>
+  </defs>
+  <!-- White background -->
+  <rect
+     x="-5"
+     y="-7"
+     width="910"
+     height="1012"
+     fill="#FFFFFF"
+     id="rect2" />
+  <!-- Border rectangle with ~24px margin inset -->
+  <rect
+     x="1"
+     y="-1"
+     width="898"
+     height="1000"
+     rx="4"
+     fill="none"
+     stroke="#CCCCCC"
+     stroke-width="1.5"
+     id="rect3" />
+  <!-- Title -->
+  <text
+     x="450"
+     y="36"
+     text-anchor="middle"
+     font-size="18"
+     font-weight="bold"
+     fill="#000"
+     id="text3">PGS Reference Architecture — Layered Structural Topology</text>
+  <text
+     x="450"
+     y="56"
+     text-anchor="middle"
+     font-size="12px"
+     fill="#000000"
+     id="text4">Figure 2.8a — Eight Constitutional Layers + Orthogonal Trace Plane</text>
+  <!-- L1 — Structure Layer (left sidebar) -->
+  <rect
+     x="20"
+     y="80"
+     width="70"
+     height="580"
+     rx="6"
+     fill="#F5F5F5"
+     stroke="#999"
+     stroke-width="1.5"
+     stroke-dasharray="5,3"
+     id="rect4" />
+  <text
+     x="-369.31293"
+     y="44.914429"
+     text-anchor="middle"
+     font-size="11px"
+     font-weight="bold"
+     fill="#000000"
+     transform="rotate(-90)"
+     id="text5">L1 — Structure Layer</text>
+  <text
+     x="-368"
+     y="66"
+     text-anchor="middle"
+     font-size="9px"
+     fill="#000000"
+     transform="rotate(-90)"
+     id="text6">Boot-time invariants for protocol resolution</text>
+  <!-- L2 — Tooling Layer -->
+  <rect
+     x="250"
+     y="80"
+     width="400"
+     height="60"
+     rx="6"
+     fill="#E8F0FE"
+     stroke="#4A7FBF"
+     stroke-width="1.5"
+     id="rect6" />
+  <text
+     x="450"
+     y="105"
+     text-anchor="middle"
+     font-size="13"
+     font-weight="bold"
+     fill="#1A3660"
+     id="text7">L2 — Tooling Layer</text>
+  <text
+     x="450"
+     y="122"
+     text-anchor="middle"
+     font-size="10.5"
+     fill="#000"
+     id="text8">Design-time artifact creation — Human-governed, AI-assisted</text>
+  <!-- Arrow L2 → L3 -->
+  <line
+     x1="450"
+     y1="140"
+     x2="450"
+     y2="158"
+     stroke="#333"
+     stroke-width="1.5"
+     marker-end="url(#arrow)"
+     id="line8" />
+  <!-- L3 — Governance Layer -->
+  <rect
+     x="250"
+     y="162"
+     width="400"
+     height="60"
+     rx="6"
+     fill="#FFF3E0"
+     stroke="#D4883A"
+     stroke-width="1.5"
+     id="rect8" />
+  <text
+     x="450"
+     y="187"
+     text-anchor="middle"
+     font-size="13"
+     font-weight="bold"
+     fill="#6B3A0A"
+     id="text9">L3 — Governance Layer</text>
+  <text
+     x="450"
+     y="204"
+     text-anchor="middle"
+     font-size="10.5"
+     fill="#000"
+     id="text10">Structural, semantic, constitutional enforcement</text>
+  <!-- Arrow L3 → L4 -->
+  <line
+     x1="450"
+     y1="222"
+     x2="450"
+     y2="240"
+     stroke="#333"
+     stroke-width="1.5"
+     marker-end="url(#arrow)"
+     id="line10" />
+  <text
+     x="468"
+     y="236"
+     font-size="9"
+     fill="#000"
+     font-style="italic"
+     id="text11">ENFORCED</text>
+  <!-- L4 — Protocol Layer -->
+  <rect
+     x="250"
+     y="244"
+     width="400"
+     height="60"
+     rx="6"
+     fill="#E8F5E9"
+     stroke="#4A8C5C"
+     stroke-width="1.5"
+     id="rect11" />
+  <text
+     x="450"
+     y="269"
+     text-anchor="middle"
+     font-size="13"
+     font-weight="bold"
+     fill="#1D4030"
+     id="text12">L4 — Protocol Layer</text>
+  <text
+     x="450"
+     y="286"
+     text-anchor="middle"
+     font-size="10.5"
+     fill="#000"
+     id="text13">Immutable, versioned — Sole source of execution truth</text>
+  <!-- Arrow L4 → Compilation -->
+  <line
+     x1="450"
+     y1="304"
+     x2="450"
+     y2="322"
+     stroke="#333"
+     stroke-width="1.5"
+     marker-end="url(#arrow)"
+     id="line13" />
+  <text
+     x="468"
+     y="318"
+     font-size="9"
+     fill="#000"
+     font-style="italic"
+     id="text14">VALIDATED</text>
+  <!-- Compilation & Derivation -->
+  <rect
+     x="270"
+     y="326"
+     width="360"
+     height="48"
+     rx="6"
+     fill="#F3E8FF"
+     stroke="#7E57C2"
+     stroke-width="1.5"
+     stroke-dasharray="6,3"
+     id="rect14" />
+  <text
+     x="450"
+     y="347"
+     text-anchor="middle"
+     font-size="11"
+     font-weight="bold"
+     fill="#3A1D60"
+     id="text15">Compilation &amp; Derivation</text>
+  <text
+     x="450"
+     y="363"
+     text-anchor="middle"
+     font-size="10"
+     fill="#000"
+     id="text16">L4 → L5 Bridge — Deterministic, no business logic</text>
+  <!-- Arrow Compilation → L5 -->
+  <line
+     x1="450"
+     y1="374"
+     x2="450"
+     y2="398"
+     stroke="#333"
+     stroke-width="1.5"
+     marker-end="url(#arrow)"
+     id="line16" />
+  <text
+     x="468"
+     y="392"
+     font-size="9"
+     fill="#000"
+     font-style="italic"
+     id="text17">COMPILED</text>
+  <!-- L5 — Execution Layer (outer box) -->
+  <rect
+     x="120"
+     y="402"
+     width="660"
+     height="260"
+     rx="8"
+     fill="#FAFAFA"
+     stroke="#444"
+     stroke-width="2"
+     id="rect17" />
+  <text
+     x="450"
+     y="426"
+     text-anchor="middle"
+     font-size="14"
+     font-weight="bold"
+     fill="#000"
+     id="text18">L5 — Execution Layer</text>
+  <text
+     x="450"
+     y="443"
+     text-anchor="middle"
+     font-size="10.5"
+     fill="#000"
+     id="text19">Semantically blind DAG Executor — No imperative logic — No execution path outside DAG</text>
+  <!-- Capability Router -->
+  <rect
+     x="300"
+     y="454"
+     width="300"
+     height="36"
+     rx="4"
+     fill="#fff"
+     stroke="#666"
+     stroke-width="1"
+     id="rect19" />
+  <text
+     x="450"
+     y="477"
+     text-anchor="middle"
+     font-size="11"
+     fill="#000"
+     id="text20">Capability Router (Contract Resolution Only)</text>
+  <!-- L6 — CT Layer -->
+  <rect
+     x="145"
+     y="508"
+     width="290"
+     height="56"
+     rx="6"
+     fill="#E0F7FA"
+     stroke="#00838F"
+     stroke-width="1.5"
+     id="rect20" />
+  <text
+     x="290"
+     y="532"
+     text-anchor="middle"
+     font-size="12"
+     font-weight="bold"
+     fill="#003040"
+     id="text21">L6 — CT Layer</text>
+  <text
+     x="290"
+     y="549"
+     text-anchor="middle"
+     font-size="10"
+     fill="#000"
+     id="text22">Pure Computation — Deterministic</text>
+  <!-- L7 — CS Layer -->
+  <rect
+     x="465"
+     y="508"
+     width="290"
+     height="56"
+     rx="6"
+     fill="#FBE9E7"
+     stroke="#BF360C"
+     stroke-width="1.5"
+     id="rect22" />
+  <text
+     x="610"
+     y="532"
+     text-anchor="middle"
+     font-size="12"
+     font-weight="bold"
+     fill="#5F0A00"
+     id="text23">L7 — CS Layer</text>
+  <text
+     x="610"
+     y="549"
+     text-anchor="middle"
+     font-size="10"
+     fill="#000"
+     id="text24">Contract-Bound Mutation — Swappable</text>
+  <!-- Arrows from Router to L6/L7 -->
+  <line
+     x1="380"
+     y1="490"
+     x2="310"
+     y2="508"
+     stroke="#333"
+     stroke-width="1"
+     marker-end="url(#arrow)"
+     id="line24" />
+  <line
+     x1="520"
+     y1="490"
+     x2="590"
+     y2="508"
+     stroke="#333"
+     stroke-width="1"
+     marker-end="url(#arrow)"
+     id="line25" />
+  <!-- Derived Consequences -->
+  <rect
+     x="195"
+     y="580"
+     width="190"
+     height="50"
+     rx="4"
+     fill="#F5F5F5"
+     stroke="#AAA"
+     stroke-width="1"
+     stroke-dasharray="4,2"
+     id="rect25" />
+  <text
+     x="290"
+     y="600"
+     text-anchor="middle"
+     font-size="10"
+     font-weight="bold"
+     fill="#000"
+     id="text25">Derived Consequences</text>
+  <text
+     x="290"
+     y="614"
+     text-anchor="middle"
+     font-size="9"
+     fill="#000"
+     id="text26">(Non-Authoritative)</text>
+  <!-- EXECUTED label -->
+  <text
+     x="468"
+     y="648"
+     font-size="9"
+     fill="#000"
+     font-style="italic"
+     id="text27">EXECUTED</text>
+  <!-- Arrow L5 → L8 -->
+  <line
+     x1="450"
+     y1="662"
+     x2="450"
+     y2="680"
+     stroke="#333"
+     stroke-width="1.5"
+     marker-end="url(#arrow)"
+     id="line27" />
+  <!-- L8 — Transport Layer -->
+  <rect
+     x="170"
+     y="684"
+     width="560"
+     height="70"
+     rx="6"
+     fill="#FFF9C4"
+     stroke="#C6A700"
+     stroke-width="1.5"
+     id="rect27" />
+  <text
+     x="450"
+     y="709"
+     text-anchor="middle"
+     font-size="13"
+     font-weight="bold"
+     fill="#4D3F00"
+     id="text28">L8 — Transport Layer</text>
+  <text
+     x="450"
+     y="726"
+     text-anchor="middle"
+     font-size="10.5"
+     fill="#000"
+     id="text29">Declared Ingress (TI) / Egress (TE) — Nothing crosses undeclared</text>
+  <text
+     x="290"
+     y="744"
+     text-anchor="middle"
+     font-size="9.5"
+     fill="#000"
+     id="text30">Requests, Commands, Events, Payloads</text>
+  <text
+     x="610"
+     y="744"
+     text-anchor="middle"
+     font-size="9.5"
+     fill="#000"
+     id="text31">Responses, Receipts, Notifications</text>
+  <line
+     x1="450"
+     y1="730"
+     x2="450"
+     y2="745"
+     stroke="#C6A700"
+     stroke-width="0.5"
+     id="line31" />
+  <!-- Trace and Audit Plane (right sidebar) -->
+  <rect
+     x="810"
+     y="80"
+     width="70"
+     height="674"
+     rx="6"
+     fill="#ECEFF1"
+     stroke="#7C8898"
+     stroke-width="1.5"
+     stroke-dasharray="6,3"
+     id="rect31" />
+  <text
+     x="381.86237"
+     y="-846.58624"
+     text-anchor="middle"
+     font-size="11px"
+     font-weight="bold"
+     fill="#000000"
+     transform="rotate(90)"
+     id="text32">Trace and Audit Plane (Orthogonal)</text>
+  <!-- Trace arrows from layers to Trace Plane -->
+  <line
+     x1="650"
+     y1="110"
+     x2="808"
+     y2="110"
+     stroke="#7C8898"
+     stroke-width="1"
+     stroke-dasharray="4,3"
+     marker-end="url(#arrow-trace)"
+     id="line32" />
+  <line
+     x1="650"
+     y1="192"
+     x2="808"
+     y2="192"
+     stroke="#7C8898"
+     stroke-width="1"
+     stroke-dasharray="4,3"
+     marker-end="url(#arrow-trace)"
+     id="line33" />
+  <line
+     x1="650"
+     y1="274"
+     x2="808"
+     y2="274"
+     stroke="#7C8898"
+     stroke-width="1"
+     stroke-dasharray="4,3"
+     marker-end="url(#arrow-trace)"
+     id="line34" />
+  <line
+     x1="630"
+     y1="350"
+     x2="808"
+     y2="350"
+     stroke="#7C8898"
+     stroke-width="1"
+     stroke-dasharray="4,3"
+     marker-end="url(#arrow-trace)"
+     id="line35" />
+  <line
+     x1="780"
+     y1="530"
+     x2="808"
+     y2="530"
+     stroke="#7C8898"
+     stroke-width="1"
+     stroke-dasharray="4,3"
+     marker-end="url(#arrow-trace)"
+     id="line36" />
+  <line
+     x1="730"
+     y1="719"
+     x2="808"
+     y2="719"
+     stroke="#7C8898"
+     stroke-width="1"
+     stroke-dasharray="4,3"
+     marker-end="url(#arrow-trace)"
+     id="line37" />
+  <!-- Legend box -->
+  <rect
+     x="120"
+     y="790"
+     width="660"
+     height="190"
+     rx="6"
+     fill="#FAFAFA"
+     stroke="#999"
+     stroke-width="1"
+     id="rect37" />
+  <text
+     x="450"
+     y="812"
+     text-anchor="middle"
+     font-size="11"
+     font-weight="bold"
+     fill="#000"
+     id="text37">Legend</text>
+  <!-- Legend: Authority flow -->
+  <line
+     x1="160"
+     y1="835"
+     x2="200"
+     y2="835"
+     stroke="#333"
+     stroke-width="1.5"
+     marker-end="url(#arrow)"
+     id="line38" />
+  <text
+     x="212"
+     y="839"
+     font-size="10"
+     fill="#000"
+     id="text38">Authority flow (declaration → enforcement)</text>
+  <!-- Legend: Observation -->
+  <line
+     x1="160"
+     y1="858"
+     x2="200"
+     y2="858"
+     stroke="#7C8898"
+     stroke-width="1"
+     stroke-dasharray="4,3"
+     marker-end="url(#arrow-trace)"
+     id="line39" />
+  <text
+     x="212"
+     y="862"
+     font-size="10"
+     fill="#000"
+     id="text39">Observation (each layer → Trace Plane)</text>
+  <!-- Legend: Constitutional layer -->
+  <rect
+     x="160"
+     y="874"
+     width="40"
+     height="14"
+     rx="2"
+     fill="none"
+     stroke="#444"
+     stroke-width="2"
+     id="rect39" />
+  <text
+     x="212"
+     y="886"
+     font-size="10"
+     fill="#000"
+     id="text40">Constitutional layer (L1–L8)</text>
+  <!-- Legend: Bridge process -->
+  <rect
+     x="160"
+     y="896"
+     width="40"
+     height="14"
+     rx="2"
+     fill="none"
+     stroke="#7E57C2"
+     stroke-width="1.5"
+     stroke-dasharray="6,3"
+     id="rect40" />
+  <text
+     x="212"
+     y="908"
+     font-size="10"
+     fill="#000"
+     id="text41">Bridge process / orthogonal plane (not a layer)</text>
+  <!-- Legend color swatches (right column) -->
+  <rect
+     x="500"
+     y="828"
+     width="14"
+     height="14"
+     rx="2"
+     fill="#E8F0FE"
+     stroke="#4A7FBF"
+     stroke-width="1"
+     id="rect41" />
+  <text
+     x="520"
+     y="839"
+     font-size="10"
+     fill="#000"
+     id="text42">L2 Tooling</text>
+  <rect
+     x="610"
+     y="828"
+     width="14"
+     height="14"
+     rx="2"
+     fill="#FFF3E0"
+     stroke="#D4883A"
+     stroke-width="1"
+     id="rect42" />
+  <text
+     x="630"
+     y="839"
+     font-size="10"
+     fill="#000"
+     id="text43">L3 Governance</text>
+  <rect
+     x="500"
+     y="850"
+     width="14"
+     height="14"
+     rx="2"
+     fill="#E8F5E9"
+     stroke="#4A8C5C"
+     stroke-width="1"
+     id="rect43" />
+  <text
+     x="520"
+     y="861"
+     font-size="10"
+     fill="#000"
+     id="text44">L4 Protocol</text>
+  <rect
+     x="610"
+     y="850"
+     width="14"
+     height="14"
+     rx="2"
+     fill="#F3E8FF"
+     stroke="#7E57C2"
+     stroke-width="1"
+     id="rect44" />
+  <text
+     x="630"
+     y="861"
+     font-size="10"
+     fill="#000"
+     id="text45">Compilation</text>
+  <rect
+     x="500"
+     y="872"
+     width="14"
+     height="14"
+     rx="2"
+     fill="#E0F7FA"
+     stroke="#00838F"
+     stroke-width="1"
+     id="rect45" />
+  <text
+     x="520"
+     y="883"
+     font-size="10"
+     fill="#000"
+     id="text46">L6 CT (Pure)</text>
+  <rect
+     x="610"
+     y="872"
+     width="14"
+     height="14"
+     rx="2"
+     fill="#FBE9E7"
+     stroke="#BF360C"
+     stroke-width="1"
+     id="rect46" />
+  <text
+     x="630"
+     y="883"
+     font-size="10"
+     fill="#000"
+     id="text47">L7 CS (Mutation)</text>
+  <rect
+     x="500"
+     y="894"
+     width="14"
+     height="14"
+     rx="2"
+     fill="#FFF9C4"
+     stroke="#C6A700"
+     stroke-width="1"
+     id="rect47" />
+  <text
+     x="520"
+     y="905"
+     font-size="10"
+     fill="#000"
+     id="text48">L8 Transport</text>
+  <rect
+     x="610"
+     y="894"
+     width="14"
+     height="14"
+     rx="2"
+     fill="#ECEFF1"
+     stroke="#7C8898"
+     stroke-width="1"
+     id="rect48" />
+  <text
+     x="630"
+     y="905"
+     font-size="10"
+     fill="#000"
+     id="text49">Trace Plane</text>
+  <!-- Footer text -->
+  <text
+     x="450"
+     y="955"
+     text-anchor="middle"
+     font-size="10.5"
+     fill="#000"
+     font-weight="bold"
+     id="text50">Eight constitutional layers (L1–L8) define structural boundaries.</text>
+  <text
+     x="450"
+     y="972"
+     text-anchor="middle"
+     font-size="10.5"
+     fill="#000"
+     id="text51">Compilation bridges L4 → L5. Trace Plane observes all layers orthogonally.</text>
+</svg>
