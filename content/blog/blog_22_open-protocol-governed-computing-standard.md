@@ -191,8 +191,8 @@ implementation attempted to realize them literally: it carved out exactly the ne
 code and wrote down why — because without it nothing can ever be superseded. The map found the
 exception afterwards.
 
-The conclusion was that the realization needed no change. **The document did.** Two normative
-revisions followed, and a third correction is pending.
+The conclusion was that the realization needed no change. **The document did.** Three normative
+revisions followed.
 
 That is what makes the map worth having. Not the checklist — the pressure.
 
