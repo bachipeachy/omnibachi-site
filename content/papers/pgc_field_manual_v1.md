@@ -30,7 +30,10 @@ single rule settles most decisions correctly.
 **This revision.** v1 supersedes v0. It corrects the identity model — governance namespaces no
 longer carry an `fb.` prefix, and authority and concern are declared fields rather than parts of a
 name — and adds *The human block* (§4), which states what the prose beside a machine block is for
-and what it may not become. v0 remains archived under its own DOI as the superseded record.
+and what it may not become. It also records two things a claimed guarantee turned out not to carry:
+a snapshot's conformance profile is now resolved and evaluated at assembly (§7), and supersession is
+stated as what it is — a relation between identities that retires a predecessor and redirects no
+caller (§4). v0 remains archived under its own DOI as the superseded record.
 
 **PGC is not** workflow orchestration with governance wrappers · a policy engine · a runtime
 authorization framework · a service mesh · a BPM engine.
@@ -218,6 +221,11 @@ heuristic flexibility. Growing the ontology without governance necessity is debt
 
 **Versions are immutable.** There is no "latest". A behaviour change is a new version (`_V1`,
 `_V2`); the old version stays valid and unchanged.
+
+**Superseding does not redirect a caller.** A supersession is a declared relation between two
+identities — it retires the predecessor inside the composition and says nothing to anyone holding
+its name. A caller that keeps invoking the superseded identity is refused by it, correctly: the
+artifact was never told a successor exists. **The caller moves; the supersession does not move it.**
 
 ### Identity
 
@@ -458,6 +466,10 @@ rebuild and get the same identity back.
 - **Composition conformance.** Rules that quantify over the whole — read from the assembled
   snapshot's own declarations, so **a domain is checked against the governance it actually compiled
   under**, never against whatever the tool happens to know.
+- **The claimed profile is evaluated.** A snapshot names its conformance profile by identity, and
+  assembly resolves that profile and checks the snapshot against it. **A claim nothing reads is not a
+  claim.** A profile whose required artifacts no longer resolve is refused here, and until something
+  read it, a rotted profile and a satisfied one were indistinguishable from inside the build.
 
 **The indexes are not conveniences.** They are what let a composition be interrogated rather than
 read. A governed system that cannot answer questions about itself is governed only in principle.
