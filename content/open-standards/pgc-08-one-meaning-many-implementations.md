@@ -154,7 +154,7 @@ Otherwise a "replacement" is quietly a new constitution.
 
 ## The open question
 
-PGC is an open standard because the hardest test is outside the reference implementation. Can a
+Protocol_Governed Computing (PGC) is an open standard because the hardest test is outside the reference implementation. Can a
 different team, using different tools, construct a system whose behavior is governed by the same
 meaning? Can an evaluator establish that without trusting resemblance? Can the system refuse when
 governance is unknown, and prove what it was allowed to do when it proceeds?

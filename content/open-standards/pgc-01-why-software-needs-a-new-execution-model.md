@@ -34,7 +34,7 @@ I think we need to approach that problem differently.
 
 That is the premise behind **Protocol-Governed Computing (PGC)**.
 
-PGC is an architectural approach in which the governing semantics of a system are expressed explicitly as a protocol and separated from the mechanisms that realize them.
+Protocol_Governed Computing (PGC) is an architectural approach in which the governing semantics of a system are expressed explicitly as a protocol and separated from the mechanisms that realize them.
 
 The distinction is fundamental:
 

@@ -134,7 +134,7 @@ A system may read evidence for inspection, analysis, or a later human decision. 
 record of past determinations into the next determination as though history were governance.
 
 If withholding an old trace changes what a new proposal is allowed to do, the trace has become an
-undeclared source of authority. PGC calls for evidence to remain output only.
+undeclared source of authority. Protocol_Governed Computing (PGC) calls for evidence to remain output only.
 
 This does not make history irrelevant. A person may examine evidence and propose a governed
 transformation. What is forbidden is allowing the record to silently decide.

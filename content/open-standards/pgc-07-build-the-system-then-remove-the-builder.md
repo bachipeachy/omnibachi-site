@@ -163,7 +163,7 @@ If the only path is to excavate the old code, then the code remains the constitu
 standard lets a new team derive the same semantic decisions and build a different mechanism, then
 the governed meaning has survived its first implementation.
 
-That is the test I want PGC to face in public. The [open standard](https://github.com/protocol-governed-computing/standards)
+That is the test I want Protocol_Governed Computing (PGC) to face in public. The [open standard](https://github.com/protocol-governed-computing/standards)
 is not finished merely because the reference realization runs. It becomes stronger when an
 independent implementation can disagree about architecture and still agree about meaning.
 

@@ -35,7 +35,7 @@ A pipeline has five stages, so we write a standard that requires five stages.
 
 Each inference may be convenient. None is automatically valid.
 
-The PGC Standard draws a hard line: a realization may show how a property was obtained, but it does
+The Protocol_Governed Computing (PGC) Standard draws a hard line: a realization may show how a property was obtained, but it does
 not decide what the property means. The standard specifies semantics. The implementation realizes
 them.
 

@@ -25,7 +25,7 @@ Usually, the system is still running. The dashboards are green. Customers are be
 question is not whether the software works. The question is whether anyone can explain what it is
 doing, in terms that do not depend on remembering a particular codebase.
 
-That gap is where PGC begins.
+That gap is where Protocol_Governed Computing (PGC) begins.
 
 ## Working is not the same as being intelligible
 

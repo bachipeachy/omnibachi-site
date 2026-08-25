@@ -75,7 +75,7 @@ An obligation never rendered as an assertion is an intention. An assertion that 
 supply is unreachable. An assertion that cannot refuse is vacuous. In each case the system can
 appear organized while the requirement has no force.
 
-This is why PGC treats an obligation with no capable enforcement as a finding, not as a weaker
+This is why Protocol_Governed Computing (PGC) treats an obligation with no capable enforcement as a finding, not as a weaker
 level of compliance.
 
 ## The test that changes the question

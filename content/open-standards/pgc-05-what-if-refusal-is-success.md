@@ -60,7 +60,7 @@ someone else to accept later.
 ## Fail-hard behavior
 
 Fail-hard behavior is often described as an operational preference: stop rather than continue when
-something looks wrong. In PGC it has a semantic reason.
+something looks wrong. In Protocol_Governed Computing (PGC) it has a semantic reason.
 
 If construction cannot establish the governance closure for a candidate, it cannot know that the
 candidate is admissible. If a reference cannot be resolved, the structure is not complete. If a
