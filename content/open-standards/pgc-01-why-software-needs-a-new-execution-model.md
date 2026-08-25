@@ -171,33 +171,37 @@ Those are the criticisms that will make this work better.
 
 ## A Series, Not a Finished Argument
 
-This is the first article in a series exploring the ideas behind PGC and its standards development.
+This is the first article in a series exploring the questions behind PGC and the assumptions it asks us to reconsider.
 
-In the next articles, I plan to go deeper into questions such as:
+In the next articles, I plan to explore questions such as:
 
-### #2 — Meaning, Not Mechanism
+### #2 — Software Works—So Why Can’t We Explain It?
 
-Why specifications drift into telling you how to build things, and how to tell the two apart.
+How a system can function correctly while its rules, authority, and limits become increasingly difficult to understand.
 
-### #3 — Why I Wrote the Implementation First
+### #3 — When Code Becomes the Constitution
 
-Building before specifying is supposed to be backwards. It was the only way I found out which ideas were real.
+How implementation quietly becomes the real specification—and why that makes long-lived systems difficult to govern or replace.
 
-### #4 — Checking a Standard Against Reality
+### #4 — The Rule That Was There but Did Nothing
 
-The comparison that found the contradiction, what else it turned up, and why I retired it afterwards.
+Why declared, implemented, enforced, and demonstrated are four different conditions, not four words for the same thing.
 
-### #5 — Declared, Implemented, Enforced, Demonstrated
+### #5 — What If Refusal Is Success?
 
-Four words that look like synonyms. Most governance failures are a system sitting in one and presenting as another.
+Why rejection and fail-hard behavior can be correct outcomes rather than failures of the system.
 
-### #6 — What AI Actually Changes
+### #6 — Can Software Prove What It Was Allowed to Do?
 
-Not code generation. The collapse in the cost of producing implementations, and what that does to the value of knowing what they are allowed to do.
+What evidence, provenance, determination, and conformance add to the meaning of a governed system.
 
-### #7 — Womb to Tomb
+### #7 — Build the System, Then Remove the Builder
 
-Governing a system across decades of regulatory and organizational change—and why replacement is the requirement everyone designs against and nobody designs for.
+Why the real test of a standard is whether an independent team can implement it without access to the original code.
+
+### #8 — One Meaning, Many Implementations
+
+How a semantics-first standard can allow architectures, languages, tools, and teams to change without losing the system’s governed identity.
 
 ---
 
