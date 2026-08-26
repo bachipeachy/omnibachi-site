@@ -1,7 +1,7 @@
 ---
-title: 'PGC #6 — Can Software Prove What It Was Allowed to Do?'
+title: 'PGC #7 — Can Software Prove What It Was Allowed to Do?'
 date: '2026-08-25'
-weight: 6
+weight: 7
 slug: can-software-prove-what-it-was-allowed-to-do
 series:
 - PGC Open Standard
@@ -22,7 +22,7 @@ A log can tell us that an account was upgraded. It may not tell us which governa
 rules were evaluated, whether the representation had been altered, or whether the upgrade happened
 without a determination at all. A record of behavior is not automatically evidence of permission.
 
-PGC treats that distinction as foundational.
+Protocol-Governed Computing (PGC) treats that distinction as foundational.
 
 ## An event is not a determination
 
@@ -134,23 +134,21 @@ A system may read evidence for inspection, analysis, or a later human decision. 
 record of past determinations into the next determination as though history were governance.
 
 If withholding an old trace changes what a new proposal is allowed to do, the trace has become an
-undeclared source of authority. Protocol_Governed Computing (PGC) calls for evidence to remain output only.
+undeclared source of authority. PGC calls for evidence to remain output only.
 
 This does not make history irrelevant. A person may examine evidence and propose a governed
 transformation. What is forbidden is allowing the record to silently decide.
 
 ## How conformance uses evidence
 
-The Conformance Model distinguishes several ways obligations are discharged.
+Evidence supports one kind of check especially well: **derivation** — recomputing a determination
+from the record and comparing it with what the system said it decided. That is a stronger claim
+than "the log looks right."
 
-Observation can establish what happened. Structural analysis can establish that a forbidden path
-does not exist. Comparison can show that replacing a runtime or environment does not change a
-governed consequence. Derivation can re-compute a determination from supplied evidence and compare
-it with the recorded result.
-
-The choice matters. A successful execution cannot prove that no undeclared path exists. A
-signature cannot replace a derivation when the claim is about semantic correctness. A test of one
-runtime says nothing about substitutability unless another genuinely independent runtime is used.
+But evidence has limits, and they are worth knowing. A successful execution cannot prove that no
+undeclared path exists. A signature cannot replace a derivation when the claim is about semantic
+correctness. A test of one runtime says nothing about substitutability unless a second, genuinely
+independent runtime is used.
 
 Evidence is powerful because it supports the right kind of check, not because it makes every claim
 true.
@@ -170,4 +168,17 @@ these distinctions in the Evidence, Attestation & Provenance and Conformance doc
 not bookkeeping details. They are the difference between remembering what software did and being
 able to establish why it was allowed to do so.
 
-The next challenge is larger still: can another team build the system from the standard alone?
+That leads to the payoff the whole series has been circling: one meaning should be able to live in
+many implementations without quietly becoming many different systems.
+
+---
+
+**The standard is open, and I am looking for people to attack it — not endorse it.**
+
+What it claims, what would prove it wrong, and what has *not* yet been established are all set out
+in the [call for review](https://github.com/protocol-governed-
+computing/standards/blob/main/doc/call_for_review.md). If you have ever had to reconstruct, after
+the fact, why something was allowed — and could not — that experience is exactly the kind of
+evidence this work needs.
+
+Objections, counter-examples, and serious technical criticism: **bachipeachy@gmail.com**

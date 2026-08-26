@@ -1,7 +1,7 @@
 ---
-title: 'PGC #4 — The Rule That Was There but Did Nothing'
+title: 'PGC #5 — The Rule That Was There but Did Nothing'
 date: '2026-08-25'
-weight: 4
+weight: 5
 slug: the-rule-that-was-there-but-did-nothing
 series:
 - PGC Open Standard
@@ -59,7 +59,7 @@ The green build is not false exactly. It is answering a smaller question than th
 
 ## Enforcement is a chain
 
-PGC describes enforcement as a chain rather than a single check:
+Protocol-Governed Computing (PGC) describes enforcement as a chain rather than a single check:
 
 ```text
 obligation -> assertion -> rule -> determination
@@ -75,7 +75,7 @@ An obligation never rendered as an assertion is an intention. An assertion that 
 supply is unreachable. An assertion that cannot refuse is vacuous. In each case the system can
 appear organized while the requirement has no force.
 
-This is why Protocol_Governed Computing (PGC) treats an obligation with no capable enforcement as a finding, not as a weaker
+This is why PGC treats an obligation with no capable enforcement as a finding, not as a weaker
 level of compliance.
 
 ## The test that changes the question
@@ -170,3 +170,15 @@ must enforce what applies; an evaluator must establish whether it did so.
 
 The next article follows the most surprising consequence of this model: sometimes the successful
 result is not admission, but refusal.
+
+---
+
+**The standard is open, and I am looking for people to attack it — not endorse it.**
+
+What it claims, what would prove it wrong, and what has *not* yet been established are all set out
+in the [call for review](https://github.com/protocol-governed-
+computing/standards/blob/main/doc/call_for_review.md). Here is a question worth asking on Monday:
+**name one rule in your system that has actually refused something.** If that is hard to answer,
+you have found the thing this article is about.
+
+Objections, counter-examples, and serious technical criticism: **bachipeachy@gmail.com**

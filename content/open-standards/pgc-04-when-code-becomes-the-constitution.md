@@ -1,7 +1,7 @@
 ---
-title: 'PGC #3 — When Code Becomes the Constitution'
+title: 'PGC #4 — When Code Becomes the Constitution'
 date: '2026-08-25'
-weight: 3
+weight: 4
 slug: when-code-becomes-the-constitution
 series:
 - PGC Open Standard
@@ -35,7 +35,7 @@ A pipeline has five stages, so we write a standard that requires five stages.
 
 Each inference may be convenient. None is automatically valid.
 
-The Protocol_Governed Computing (PGC) Standard draws a hard line: a realization may show how a property was obtained, but it does
+The Protocol-Governed Computing (PGC) Standard draws a hard line: a realization may show how a property was obtained, but it does
 not decide what the property means. The standard specifies semantics. The implementation realizes
 them.
 
@@ -91,16 +91,12 @@ The Conceptual Model defines distinctions such as declaration versus documentati
 versus ownership, admission versus presence, construction versus execution, and evidence versus
 attestation.
 
-The Semantic Model then gives a governed change a general form: a proposal is evaluated against
-the complete applicable governance closure, producing admit, constrain, or refuse, followed by the
-resulting state and evidence.
+The Semantic Model gives a governed change a general form. The Architectural Invariants state what
+any realization must preserve regardless of how it is built.
 
-The Architectural Invariants state properties a realization must preserve. Behavior originates in
-declaration. Authority does not arrive through position, containment, or load order. Determination
-precedes effect. Nothing enters by discovery. A sealed representation does not change.
-
-Notice what is absent: no required package layout, process count, language, or pipeline diagram.
-Those may be excellent techniques. They are not the semantics.
+Notice what is absent from all of it: no required package layout, process count, language, or
+pipeline diagram. Those may be excellent techniques. They are not the semantics — and a standard
+that confuses the two has written down one team's habits and called them a specification.
 
 ## A standard can be too specific
 
@@ -135,19 +131,6 @@ code until it matches the prose. The standard must be examined, and if necessary
 That is the reverse-engineering loop at its best: code reveals a question; semantics answer it;
 the normative document governs the next implementation.
 
-## The danger grows with automation
-
-AI makes the authority inversion easier to repeat. A coding system can infer a missing default,
-choose a nearby reference, or move a check across a boundary while preserving the visible tests.
-The code may look more complete after the change. The governing meaning may be less explicit.
-
-A semantics-first standard gives an AI-generated implementation something more durable to preserve
-than the last arrangement of files. It also gives reviewers a sharper question than "does this
-patch look reasonable?"
-
-Does the change alter a declaration, a determination, a permitted consequence, or only a mechanism?
-If it changes meaning, where is the governed transformation and its evidence?
-
 ## The constitutional test
 
 The reference implementation can show that the model is satisfiable. It cannot prove that the
@@ -167,3 +150,15 @@ can stand after the code that first revealed it is gone.
 
 The next question is even less comfortable: what happens when a rule is written down, a check
 exists, and the system still cannot actually enforce it?
+
+---
+
+**The standard is open, and I am looking for people to attack it — not endorse it.**
+
+What it claims, what would prove it wrong, and what has *not* yet been established are all set out
+in the [call for review](https://github.com/protocol-governed-
+computing/standards/blob/main/doc/call_for_review.md). If you have watched implementation quietly
+become the real policy — and then watched someone try to replace it — that story is worth more to
+me than agreement.
+
+Objections, counter-examples, and serious technical criticism: **bachipeachy@gmail.com**

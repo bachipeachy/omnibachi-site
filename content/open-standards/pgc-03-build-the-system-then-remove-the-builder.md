@@ -1,7 +1,7 @@
 ---
-title: 'PGC #7 — Build the System, Then Remove the Builder'
+title: 'PGC #3 — Build the System, Then Remove the Builder'
 date: '2026-08-25'
-weight: 7
+weight: 3
 slug: build-the-system-then-remove-the-builder
 series:
 - PGC Open Standard
@@ -67,7 +67,7 @@ is allowed to mean.
 
 ## How the discovery loop really works
 
-There is an irony in the PGC project: the implementation came first, but the standard cannot depend
+There is an irony in the Protocol-Governed Computing (PGC) project: the implementation came first, but the standard cannot depend
 on it.
 
 Building the first realization exposed the questions. Intellectual reverse engineering then
@@ -87,6 +87,49 @@ realization -> candidate concepts -> semantics -> requirements
 The important direction is the return path. Once the standard exists, the realization is evidence
 about whether the semantics are satisfiable. It is not the authority that decides what the standard
 means.
+
+## I ran a cheaper version of this test
+
+Building a second implementation is expensive. There is a cheaper experiment that tests the same
+thing, and I have now run it twice.
+
+Give a competent reader the standard and nothing else. No source code. No architecture. No previous
+attempt. No answers from me about what the standard requires — only logistics. Then ask them to
+write a conformance profile: the document that decides everything the standard deliberately leaves
+open.
+
+The rules are strict because the value depends on them. The reader may not consult the
+implementation. They may not see what an earlier reader produced. And when they get stuck, they may
+not ask me to resolve it — they record the question and decide it themselves.
+
+**That log of questions is the actual result.** The profile is just the reason to produce it.
+
+Both readers produced profiles that hold up. Neither needed a concept the standard does not have.
+Neither got stuck. That is the good news, and it is the weaker half of what I learned.
+
+## The result I did not expect
+
+Of the twenty-eight changes in the current revision, **eighteen came from readers who did not build
+the system.** That alone would justify the exercise.
+
+But the sharpest finding came from a reader who reported nothing wrong.
+
+Their questions log ended with a clean bill of health: no missing decisions, nothing the standard
+failed to answer. Then I read their profile against the documents — and six of those eighteen
+changes came from gaps that reader had walked straight over. They had quietly invented an answer
+each time, sensibly, and never noticed they were inventing.
+
+The lesson is uncomfortable and worth stating plainly:
+
+> **A reviewer reporting no problems is not evidence that a specification is complete. It may only
+> be evidence that the specification does not signal where it is silent.**
+
+Every one of those six was a place where the standard left something open and gave the reader no way
+to tell whether the silence was deliberate. A confident reader fills it in. A specification that
+depends on readers being unconfident is not finished.
+
+That is why the profile has to be read against the documents, not just accepted. And it is why I
+would rather have hostile readers than agreeable ones.
 
 ## What independent implementation reveals
 
@@ -127,32 +170,17 @@ silently changing the other.
 
 ## Why this is a useful burden
 
-The independent implementer test imposes a cost on the author. A standard cannot hide behind
-familiar code, private context, or "everyone knows what we meant." Terms must be stable. Boundaries
-must be semantic. Negative properties must have a way to fail. Claims must name their subject,
-profile, revision, and claimant.
+The test imposes a real cost on the author. A standard cannot hide behind familiar code, private
+context, or "everyone knows what we meant." Terms must be stable. Negative properties must have a
+way to fail.
 
-That burden is a feature. It moves knowledge from the memories of a founding team into something
-that can be inspected, challenged, and re-realized.
+That burden is the feature. It moves knowledge out of a founding team's memory and into something
+that can be inspected, challenged, and rebuilt.
 
 It also changes what maintenance means. A replacement runtime is not required to preserve an
 internal design. It is required to preserve the governed consequences. A new construction method
 is not suspicious because it is unfamiliar. It is suspicious only if it changes what the
 declarations authorize.
-
-## AI makes the test more important
-
-AI can already produce a plausible second implementation by copying patterns from the first. That
-is not the same as understanding the standard.
-
-A semantics-first specification gives a model, a human team, or both a better target. It says what
-must not be inferred, where refusal is required, what evidence must carry, and which mechanisms are
-merely examples. It makes it possible to review generated code against meaning rather than against
-surface similarity.
-
-The standard still needs human judgment. Independent implementation is not automatic proof of
-completeness. But disagreement becomes productive when the text is the object being challenged,
-instead of an unwritten intention behind the code.
 
 ## Removing the builder
 
@@ -163,9 +191,21 @@ If the only path is to excavate the old code, then the code remains the constitu
 standard lets a new team derive the same semantic decisions and build a different mechanism, then
 the governed meaning has survived its first implementation.
 
-That is the test I want Protocol_Governed Computing (PGC) to face in public. The [open standard](https://github.com/protocol-governed-computing/standards)
+That is the test I want PGC to face in public. The [open standard](https://github.com/protocol-governed-computing/standards)
 is not finished merely because the reference realization runs. It becomes stronger when an
 independent implementation can disagree about architecture and still agree about meaning.
 
-And that leads to the payoff: one meaning should be able to live in many implementations without
-becoming many different systems.
+The next article turns to what makes that hard in the first place — the way implementation quietly
+becomes the real policy, until the code is the only place the rules actually live.
+
+---
+
+**The standard is open, and I am looking for people to attack it — not endorse it.**
+
+What it claims, what would prove it wrong, and what has *not* yet been established are all set out
+in the [call for review](https://github.com/protocol-governed-
+computing/standards/blob/main/doc/call_for_review.md). **Read it and tell me where you would have
+to invent something.** That is the most useful thing anyone can send me, and it takes an afternoon
+rather than a project.
+
+Objections, counter-examples, and serious technical criticism: **bachipeachy@gmail.com**

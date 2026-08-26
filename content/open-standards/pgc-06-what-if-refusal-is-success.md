@@ -1,7 +1,7 @@
 ---
-title: 'PGC #5 — What If Refusal Is Success?'
+title: 'PGC #6 — What If Refusal Is Success?'
 date: '2026-08-25'
-weight: 5
+weight: 6
 slug: what-if-refusal-is-success
 series:
 - PGC Open Standard
@@ -33,7 +33,7 @@ Software often makes this harder to see. A refusal may appear as an exception, a
 403 response, or a missing output. Those forms are mechanisms. The semantic question is different:
 did the system determine that the proposal must not proceed, and can it establish why?
 
-PGC treats refusal as one of the defined consequences of governance, alongside admit and constrain.
+Protocol-Governed Computing (PGC) treats refusal as one of the defined consequences of governance, alongside admit and constrain.
 It is not a degraded admission. It is not a warning attached to an outcome that continues. It is
 the successful result of a determination that says: this proposal does not proceed.
 
@@ -60,7 +60,7 @@ someone else to accept later.
 ## Fail-hard behavior
 
 Fail-hard behavior is often described as an operational preference: stop rather than continue when
-something looks wrong. In Protocol_Governed Computing (PGC) it has a semantic reason.
+something looks wrong. In PGC it has a semantic reason.
 
 If construction cannot establish the governance closure for a candidate, it cannot know that the
 candidate is admissible. If a reference cannot be resolved, the structure is not complete. If a
@@ -181,3 +181,14 @@ That is not failure disguised as success. It is success made legible.
 
 The next question follows naturally: if a system can refuse correctly, can it also prove what it
 was allowed to do when it proceeded?
+
+---
+
+**The standard is open, and I am looking for people to attack it — not endorse it.**
+
+What it claims, what would prove it wrong, and what has *not* yet been established are all set out
+in the [call for review](https://github.com/protocol-governed-
+computing/standards/blob/main/doc/call_for_review.md). If there is a place in your system where
+*unknown* quietly becomes *permitted*, I would like to hear where it is and why it got there.
+
+Objections, counter-examples, and serious technical criticism: **bachipeachy@gmail.com**

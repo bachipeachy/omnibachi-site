@@ -19,7 +19,7 @@ machinery means the same thing.
 
 That is a poor bargain. It confuses a system's identity with the tools that first realized it.
 
-The central promise of Protocol-Governed Computing is more ambitious: one semantic meaning, many
+The central promise of Protocol-Governed Computing (PGC) is more ambitious: one semantic meaning, many
 implementations.
 
 ## The recipe is not the meal
@@ -74,10 +74,9 @@ A second construction method need not use the same stages. It must determine adm
 resolve what execution depends on, produce a complete authorized representation, and refuse without
 usable output when it cannot establish those facts.
 
-The evaluator uses the discharge method suited to the property. Observation can show that a
-refusal occurred. Structural analysis can show that a forbidden effect path is absent. Comparison
-can show that substituting another runtime or environment does not change governed consequences.
-Derivation can recompute a determination from the evidence supplied.
+The evaluator picks the method that suits the property — and for substitutability there is only one
+that works: run the same snapshot somewhere else and compare. **Nothing you can observe about a
+single implementation establishes that a second one would agree with it.**
 
 This is a more demanding form of openness than publishing source code. It lets implementations
 differ while making their differences answerable to the same semantic test.
@@ -154,7 +153,7 @@ Otherwise a "replacement" is quietly a new constitution.
 
 ## The open question
 
-Protocol_Governed Computing (PGC) is an open standard because the hardest test is outside the reference implementation. Can a
+PGC is an open standard because the hardest test is outside the reference implementation. Can a
 different team, using different tools, construct a system whose behavior is governed by the same
 meaning? Can an evaluator establish that without trusting resemblance? Can the system refuse when
 governance is unknown, and prove what it was allowed to do when it proceeds?
@@ -174,3 +173,15 @@ The payoff is simple to state:
 That is the possibility PGC is trying to make real: one semantic meaning, many architectures,
 many languages, many teams, and enough evidence to tell the difference between a new mechanism and
 a new system.
+
+---
+
+**The standard is open, and I am looking for people to attack it — not endorse it.**
+
+What it claims, what would prove it wrong, and what has *not* yet been established are all set out
+in the [call for review](https://github.com/protocol-governed-
+computing/standards/blob/main/doc/call_for_review.md). If you have replaced a runtime, a
+framework, or a database and could not prove the governed meaning survived, that is the problem
+this standard exists to make tractable.
+
+Objections, counter-examples, and serious technical criticism: **bachipeachy@gmail.com**

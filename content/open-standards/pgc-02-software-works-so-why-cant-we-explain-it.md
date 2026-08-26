@@ -25,7 +25,7 @@ Usually, the system is still running. The dashboards are green. Customers are be
 question is not whether the software works. The question is whether anyone can explain what it is
 doing, in terms that do not depend on remembering a particular codebase.
 
-That gap is where Protocol_Governed Computing (PGC) begins.
+That gap is where Protocol-Governed Computing (PGC) begins.
 
 ## Working is not the same as being intelligible
 
@@ -125,10 +125,10 @@ That is the difference between a system that happens to be understandable to its
 one whose governing identity can be examined by an independent party. The former depends on
 context. The latter has something durable to point to.
 
-PGC calls the required properties architectural invariants, but the phrase does not mean a
-prescribed stack. It means truths such as: behavior originates in declaration; authority is not
-ambient; determination precedes effect; nothing enters by discovery; a sealed representation
-cannot change; and refused work leaves no governed residue.
+PGC calls the required properties architectural invariants. The phrase does not mean a prescribed
+stack — it means a short list of things that must be true however you build. One example, and it is
+the one people argue about most: **authority is not ambient.** Nothing acquires the right to decide
+by being nearby, being loaded first, or being the thing that happens to be running.
 
 These properties can be realized in many ways. The properties, not the techniques, are what matter.
 
@@ -159,6 +159,19 @@ The question to carry forward is simple:
 
 > When software works, can we explain not only what it did, but why it was allowed to do it?
 
-That is the standard PGC is trying to make possible. And once that question is taken seriously,
-the next danger becomes visible: code does not merely implement authority. Over time, it can begin
-to impersonate it.
+That is the standard PGC is trying to make possible.
+
+Which raises an obvious challenge, and the next article is my attempt to answer it honestly: if I
+claim a standard makes meaning portable, can anyone but me actually read it and use it? I ran that
+experiment twice. The results were not entirely comfortable.
+
+---
+
+**The standard is open, and I am looking for people to attack it — not endorse it.**
+
+What it claims, what would prove it wrong, and what has *not* yet been established are all set out
+in the [call for review](https://github.com/protocol-governed-
+computing/standards/blob/main/doc/call_for_review.md). If you can explain your system's rules to
+an outsider **without anyone reading the code**, I would genuinely like to know how you did it.
+
+Objections, counter-examples, and serious technical criticism: **bachipeachy@gmail.com**
