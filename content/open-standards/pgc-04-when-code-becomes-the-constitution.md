@@ -156,8 +156,7 @@ exists, and the system still cannot actually enforce it?
 **The standard is open, and I am looking for people to attack it — not endorse it.**
 
 What it claims, what would prove it wrong, and what has *not* yet been established are all set out
-in the [call for review](https://github.com/protocol-governed-
-computing/standards/blob/main/doc/call_for_review.md). If you have watched implementation quietly
+in the [call for review](https://github.com/protocol-governed-computing/standards/blob/main/doc/call_for_review.md). If you have watched implementation quietly
 become the real policy — and then watched someone try to replace it — that story is worth more to
 me than agreement.
 

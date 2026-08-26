@@ -179,8 +179,7 @@ a new system.
 **The standard is open, and I am looking for people to attack it — not endorse it.**
 
 What it claims, what would prove it wrong, and what has *not* yet been established are all set out
-in the [call for review](https://github.com/protocol-governed-
-computing/standards/blob/main/doc/call_for_review.md). If you have replaced a runtime, a
+in the [call for review](https://github.com/protocol-governed-computing/standards/blob/main/doc/call_for_review.md). If you have replaced a runtime, a
 framework, or a database and could not prove the governed meaning survived, that is the problem
 this standard exists to make tractable.
 

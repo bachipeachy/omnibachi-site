@@ -176,8 +176,7 @@ result is not admission, but refusal.
 **The standard is open, and I am looking for people to attack it — not endorse it.**
 
 What it claims, what would prove it wrong, and what has *not* yet been established are all set out
-in the [call for review](https://github.com/protocol-governed-
-computing/standards/blob/main/doc/call_for_review.md). Here is a question worth asking on Monday:
+in the [call for review](https://github.com/protocol-governed-computing/standards/blob/main/doc/call_for_review.md). Here is a question worth asking on Monday:
 **name one rule in your system that has actually refused something.** If that is hard to answer,
 you have found the thing this article is about.
 

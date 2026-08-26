@@ -187,8 +187,7 @@ was allowed to do when it proceeded?
 **The standard is open, and I am looking for people to attack it — not endorse it.**
 
 What it claims, what would prove it wrong, and what has *not* yet been established are all set out
-in the [call for review](https://github.com/protocol-governed-
-computing/standards/blob/main/doc/call_for_review.md). If there is a place in your system where
+in the [call for review](https://github.com/protocol-governed-computing/standards/blob/main/doc/call_for_review.md). If there is a place in your system where
 *unknown* quietly becomes *permitted*, I would like to hear where it is and why it got there.
 
 Objections, counter-examples, and serious technical criticism: **bachipeachy@gmail.com**

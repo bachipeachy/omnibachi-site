@@ -203,8 +203,7 @@ becomes the real policy, until the code is the only place the rules actually liv
 **The standard is open, and I am looking for people to attack it — not endorse it.**
 
 What it claims, what would prove it wrong, and what has *not* yet been established are all set out
-in the [call for review](https://github.com/protocol-governed-
-computing/standards/blob/main/doc/call_for_review.md). **Read it and tell me where you would have
+in the [call for review](https://github.com/protocol-governed-computing/standards/blob/main/doc/call_for_review.md). **Read it and tell me where you would have
 to invent something.** That is the most useful thing anyone can send me, and it takes an afternoon
 rather than a project.
 

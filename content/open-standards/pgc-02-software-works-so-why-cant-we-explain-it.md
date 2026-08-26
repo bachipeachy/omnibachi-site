@@ -170,8 +170,7 @@ experiment twice. The results were not entirely comfortable.
 **The standard is open, and I am looking for people to attack it — not endorse it.**
 
 What it claims, what would prove it wrong, and what has *not* yet been established are all set out
-in the [call for review](https://github.com/protocol-governed-
-computing/standards/blob/main/doc/call_for_review.md). If you can explain your system's rules to
+in the [call for review](https://github.com/protocol-governed-computing/standards/blob/main/doc/call_for_review.md). If you can explain your system's rules to
 an outsider **without anyone reading the code**, I would genuinely like to know how you did it.
 
 Objections, counter-examples, and serious technical criticism: **bachipeachy@gmail.com**
