@@ -9,9 +9,6 @@ tags:
 - PGC
 - open-standard
 ---
-
-# Build the System, Then Remove the Builder
-
 Here is a severe test for a software standard:
 
 Take away the people who built the reference system. Take away its source code. Leave another team

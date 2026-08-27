@@ -9,9 +9,6 @@ tags:
 - PGC
 - open-standard
 ---
-
-# One Meaning, Many Implementations
-
 Every long-lived software system eventually faces the same bargain.
 
 Keep the old machinery because nobody can prove what may change, or replace it and hope the new

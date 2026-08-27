@@ -9,14 +9,12 @@ tags:
 - PGC
 - open-standard
 ---
+We have never been better at building software. We have never been worse at saying what it is
+allowed to do.
 
-# Why Software Needs a New Execution Model
-
-For decades we have become very good at writing software. We have programming languages,
-frameworks, databases, cloud platforms, DevOps, CI/CD, microservices, containers, orchestration,
-observability, and now increasingly capable AI coding assistants.
-
-And yet maintaining a large business system over decades remains extraordinarily difficult.
+Languages, frameworks, cloud platforms, CI/CD, observability, and now AI assistants that write code
+faster than anyone can review it — and maintaining a large business system over decades remains
+extraordinarily difficult.
 
 The problem is not that we cannot write algorithms. The problem is everything surrounding the
 algorithms. Business software accumulates rules, policies, workflows, authorizations, constraints,

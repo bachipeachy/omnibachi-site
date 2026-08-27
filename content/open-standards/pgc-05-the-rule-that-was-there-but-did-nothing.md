@@ -9,9 +9,6 @@ tags:
 - PGC
 - open-standard
 ---
-
-# The Rule That Was There but Did Nothing
-
 Imagine opening a compliance report and seeing a rule listed as passed.
 
 Now imagine asking a simpler question: when did this rule ever stop anything?

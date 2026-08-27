@@ -9,9 +9,6 @@ tags:
 - PGC
 - open-standard
 ---
-
-# Can Software Prove What It Was Allowed to Do?
-
 After an incident, the first question is usually, "What happened?"
 
 That is a useful question. It is not the only one.

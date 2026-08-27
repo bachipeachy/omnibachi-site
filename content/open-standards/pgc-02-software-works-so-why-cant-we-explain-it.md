@@ -9,9 +9,6 @@ tags:
 - PGC
 - open-standard
 ---
-
-# Software Works—So Why Can't We Explain It?
-
 There is a moment in every old software system when someone asks a reasonable question and the
 room goes quiet.
 
