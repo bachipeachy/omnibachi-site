@@ -10,11 +10,11 @@ tags:
 - open-standard
 ---
 
-The previous article asked why software can work for years while becoming harder to explain. This
-addendum is a closer look at the proposed answer.
+A trace can show that a branch ran. It cannot show that the branch was allowed to decide.
 
-Not a summary of the PGC Standard. A test of whether its central picture earns the confidence it
-invites.
+That gap is why software can work for years and still get harder to explain. The PGC Standard sets
+out to close it. This is not a summary of the standard — it is a test of whether its central
+picture earns the confidence it invites.
 
 ![The PGC Standard from declared meaning to governed behavior](https://raw.githubusercontent.com/protocol-governed-computing/standards/main/spec/0d_visual_representation_of_the_standard.svg)
 
@@ -63,8 +63,8 @@ This creates a useful distinction:
 > not merely when a maintainer can narrate how it happened.
 
 That is a high bar. It is also the part worth reading the standard for, because ordinary
-observability tooling does not settle authority. A trace can show that a branch ran. It cannot, by
-itself, show that the branch was allowed to decide.
+observability tooling does not settle authority. It records what happened, and authority is a
+question about what was permitted to happen.
 
 ## The seal is where the argument lives
 

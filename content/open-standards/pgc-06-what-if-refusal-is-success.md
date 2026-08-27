@@ -9,9 +9,6 @@ tags:
 - PGC
 - open-standard
 ---
-
-# What If Refusal Is Success?
-
 We have trained ourselves to treat refusal as a software failure.
 
 The request was rejected. The build stopped. The transaction did not complete. The service returned

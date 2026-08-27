@@ -9,9 +9,6 @@ tags:
 - PGC
 - open-standard
 ---
-
-# When Code Becomes the Constitution
-
 Every organization has a moment when the written policy says one thing, the people say another,
 and the software quietly decides the matter.
 
