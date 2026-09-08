@@ -2,15 +2,23 @@
 # convert_paper.sh — bidirectional paper conversion using pandoc
 #
 # Usage:
-#   ./convert_paper.sh <input_file>
+#   ./convert_paper.sh <input_file> [family]
+#
+# `family` selects the reference document and filter (default: pgs). Each paper
+# family owns its own pair; the IEEE path has its own driver in ieee/ and is not
+# reached from here.
 #
 # Direction is inferred from the input file extension:
 #   .md   → produces <basename>.docx   (forward: md → docx)
 #   .docx → produces <basename>.md     (reverse: docx → md)
 #
 # Forward conversion options applied:
-#   --reference-doc  pgs_reference.docx  (page numbers, letter margins)
-#   --lua-filter     pgs_docx_filter.lua (page breaks, table widths)
+#   --reference-doc  <family>/<family>_reference.docx
+#   --lua-filter     <family>/<family>_docx_filter.lua  (skipped if absent)
+#
+# Each paper family owns a subdirectory holding its reference document, its
+# optional filter, and the builder that produces the reference document. Nothing
+# is shared between families except this driver.
 #
 # Reverse conversion options applied:
 #   --wrap=none        (no line-wrapping — one paragraph per line)
@@ -21,31 +29,40 @@ set -euo pipefail
 
 SCRIPT_DIR="$(cd "$(dirname "${BASH_SOURCE[0]}")" && pwd)"
 
-if [[ $# -ne 1 ]]; then
-  echo "Usage: $0 <file.md | file.docx>" >&2
+if [[ $# -lt 1 || $# -gt 2 ]]; then
+  echo "Usage: $0 <file.md | file.docx> [family]   # family defaults to pgs" >&2
   exit 1
 fi
 
 INPUT="$1"
+FAMILY="${2:-pgs}"
 BASENAME="${INPUT%.*}"
 EXT="${INPUT##*.}"
 
 case "${EXT}" in
   md)
     OUTPUT="${BASENAME}.docx"
-    REFERENCE="${SCRIPT_DIR}/pgs_reference.docx"
-    FILTER="${SCRIPT_DIR}/pgs_docx_filter.lua"
+    FAMILY_DIR="${SCRIPT_DIR}/${FAMILY}"
+    REFERENCE="${FAMILY_DIR}/${FAMILY}_reference.docx"
+    FILTER="${FAMILY_DIR}/${FAMILY}_docx_filter.lua"
 
-    if [[ ! -f "${REFERENCE}" ]]; then
-      echo "Building reference.docx …"
-      python3 "${SCRIPT_DIR}/make_reference_docx.py"
+    if [[ ! -d "${FAMILY_DIR}" ]]; then
+      echo "Unknown family '${FAMILY}' — expected a directory at ${FAMILY_DIR}" >&2
+      echo "Available: $(cd "${SCRIPT_DIR}" && ls -d */ 2>/dev/null | tr -d / | tr '\n' ' ')" >&2
+      exit 1
     fi
 
-    echo "Forward: ${INPUT} → ${OUTPUT}"
-    pandoc "${INPUT}" \
-      --reference-doc="${REFERENCE}" \
-      --lua-filter="${FILTER}" \
-      -o "${OUTPUT}"
+    if [[ ! -f "${REFERENCE}" ]]; then
+      echo "Building $(basename "${REFERENCE}") …"
+      python3 "${FAMILY_DIR}/make_${FAMILY}_reference_docx.py"
+    fi
+
+    echo "Forward: ${INPUT} → ${OUTPUT}  [${FAMILY}]"
+    if [[ -f "${FILTER}" ]]; then
+      pandoc "${INPUT}" --reference-doc="${REFERENCE}" --lua-filter="${FILTER}" -o "${OUTPUT}"
+    else
+      pandoc "${INPUT}" --reference-doc="${REFERENCE}" -o "${OUTPUT}"
+    fi
     echo "Done: ${OUTPUT}"
     ;;
 

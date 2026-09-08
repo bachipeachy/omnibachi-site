@@ -1,0 +1,59 @@
+$if(classoptions)$\documentclass[$classoptions$]{IEEEtran}$else$\documentclass[conference]{IEEEtran}$endif$
+\IEEEoverridecommandlockouts
+
+\usepackage{cite}
+\usepackage{amsmath,amssymb}
+\usepackage{graphicx}
+\usepackage{booktabs}
+\usepackage{tabularx}
+\usepackage{textcomp}
+\usepackage{xcolor}
+\usepackage[utf8]{inputenc}
+\usepackage[T1]{fontenc}
+\usepackage{url}
+\usepackage[hidelinks]{hyperref}
+
+% Ragged-right prose column for tabularx — IEEE tables are text-heavy and
+% justified narrow columns produce rivers.
+\newcolumntype{L}{>{\raggedright\arraybackslash}X}
+
+% pandoc emits \tightlist for compact lists
+\providecommand{\tightlist}{%
+  \setlength{\itemsep}{0pt}\setlength{\parskip}{0pt}}
+
+\begin{document}
+
+\title{$title$}
+
+\author{\IEEEauthorblockN{$for(author)$$author.name$$sep$, $endfor$}
+\IEEEauthorblockA{$for(author)$$if(author.affiliation)$\textit{$author.affiliation$}\\$endif$$if(author.location)$$author.location$\\$endif$$if(author.orcid)$ORCID $author.orcid$\\$endif$$if(author.email)$$author.email$$endif$$sep$ \and $endfor$}}
+
+\maketitle
+
+$if(abstract)$
+\begin{abstract}
+$abstract$
+\end{abstract}
+$endif$
+
+$if(keywords)$
+\begin{IEEEkeywords}
+$keywords$
+\end{IEEEkeywords}
+$endif$
+
+$body$
+
+$if(bibliography_body)$
+\begin{thebibliography}{$bibcount$}
+$bibliography_body$
+\end{thebibliography}
+$endif$
+
+$if(biography)$
+\begin{IEEEbiographynophoto}{$biography_name$}
+$biography$
+\end{IEEEbiographynophoto}
+$endif$
+
+\end{document}

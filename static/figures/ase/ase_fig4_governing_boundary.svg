@@ -1,0 +1,72 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 576 726" width="576" height="726"
+     font-family="Helvetica, Arial, sans-serif">
+  <rect width="576" height="726" fill="#ffffff"/>
+  <defs>
+    <marker id="c" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse">
+      <path d="M0,0 L10,5 L0,10 z" fill="#1a1a1a"/></marker>
+    <marker id="cw" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="6" markerHeight="6" orient="auto-start-reverse">
+      <path d="M0,0 L10,5 L0,10 z" fill="#666"/></marker>
+  </defs>
+  <g fill="#1a1a1a">
+
+  <!-- who sets the boundary -->
+  <text x="28" y="30" font-size="11.5" letter-spacing="1.5" fill="#444">THE BOUNDARY IS SET BEFORE THE AGENT ACTS</text>
+  <g font-size="10.5" text-anchor="middle">
+    <rect x="34" y="44" width="152" height="38" fill="#f0f0f0" stroke="#1a1a1a"/>
+    <circle cx="52" cy="63" r="5" fill="#1a1a1a"/>
+    <text x="118" y="60">human scope</text><text x="118" y="74" fill="#666">what is governed</text>
+    <rect x="212" y="44" width="152" height="38" fill="#f0f0f0" stroke="#1a1a1a"/>
+    <circle cx="230" cy="63" r="5" fill="#1a1a1a"/>
+    <text x="296" y="60">normative profile</text><text x="296" y="74" fill="#666">must not be self-authored</text>
+    <rect x="390" y="44" width="152" height="38" fill="#ffffff" stroke="#1a1a1a"/>
+    <text x="466" y="60">governing surface</text><text x="466" y="74" fill="#666">carried by baseline #n</text>
+  </g>
+  <line x1="288" y1="86" x2="288" y2="106" stroke="#1a1a1a" marker-end="url(#c)"/>
+
+  <!-- ===== THE GOVERNED SURFACE ===== -->
+  <rect x="34" y="112" width="508" height="330" fill="#ffffff" stroke="#1a1a1a" stroke-width="4"/>
+  <text x="46" y="134" font-size="11" letter-spacing="1.4" fill="#666">THE GOVERNED SURFACE — THE AGENT'S REACH</text>
+
+  <g font-size="12" text-anchor="middle">
+    <rect x="58" y="152" width="132" height="34" fill="#f7f7f7" stroke="#999"/><text x="124" y="174">derive</text>
+    <rect x="222" y="152" width="132" height="34" fill="#f7f7f7" stroke="#999"/><text x="288" y="174">analyze</text>
+    <rect x="386" y="152" width="132" height="34" fill="#f7f7f7" stroke="#999"/><text x="452" y="174">query the baseline</text>
+    <rect x="58" y="200" width="132" height="34" fill="#f7f7f7" stroke="#999"/><text x="124" y="222">model the domain</text>
+    <rect x="222" y="200" width="132" height="34" fill="#f7f7f7" stroke="#999"/><text x="288" y="222">design</text>
+    <rect x="386" y="200" width="132" height="34" fill="#f7f7f7" stroke="#999"/><text x="452" y="222">construct</text>
+    <rect x="58" y="248" width="132" height="34" fill="#f7f7f7" stroke="#999"/><text x="124" y="270">render artifacts</text>
+    <rect x="222" y="248" width="132" height="34" fill="#f7f7f7" stroke="#999"/><text x="288" y="270">transform</text>
+    <rect x="386" y="248" width="132" height="34" fill="#f7f7f7" stroke="#999"/><text x="452" y="270">revise and resubmit</text>
+  </g>
+  <text x="288" y="310" text-anchor="middle" font-size="12.5" font-style="italic">
+    unrestricted within — every open step may be derived
+  </text>
+  <text x="288" y="330" text-anchor="middle" font-size="11" fill="#666">
+    no step here is reserved to a human, and none confers authority
+  </text>
+
+  <!-- attempt to cross -->
+  <path d="M288,352 L288,392" stroke="#1a1a1a" stroke-width="1.6" marker-end="url(#c)"/>
+  <text x="300" y="374" font-size="11" fill="#333">an attempt to exceed the surface…</text>
+  <rect x="176" y="396" width="224" height="34" fill="#1a1a1a"/>
+  <text x="288" y="418" text-anchor="middle" font-size="12.5" fill="#ffffff">REFUSED — a declared outcome</text>
+  <text x="288" y="440" text-anchor="middle" font-size="9.5" fill="#666">Three kinds, by the transition blocked: phase refusal &#183; construction refusal &#183; admission refusal (&#167;3.2).</text>
+
+  <!-- ===== OUTSIDE: what is withheld ===== -->
+  <text x="28" y="478" font-size="11.5" letter-spacing="1.4" fill="#444">OUTSIDE THE SURFACE — NOT THE AGENT'S TO MOVE</text>
+  <g font-size="12">
+    <text x="44" y="504">·  redefine the scope<tspan font-size="9" fill="#888">   — declared; not exercised</tspan></text>
+    <text x="44" y="528">·  author the profile that governs it<tspan font-size="9" fill="#888">   — declared; profile is an external input</tspan></text>
+    <text x="44" y="552">·  enlarge the governed surface<tspan font-size="9" fill="#888">   — declared; not exercised</tspan></text>
+    <text x="44" y="576">·  promote a candidate<tspan font-size="9" fill="#888">   — no promotion operation exists (&#167;5.5)</tspan></text>
+    <text x="44" y="600">·  write to the sealed baseline<tspan font-size="9" fill="#888">   — identity comparison + wrong-baseline refusal</tspan></text>
+    <text x="44" y="624">·  supply behaviour the seal does not carry<tspan font-size="9" fill="#888">   — observed for the exercised case</tspan></text>
+  </g>
+
+  <line x1="28" y1="650" x2="548" y2="650" stroke="#c9c9c9"/>
+  <text x="28" y="674" font-size="12.5" font-style="italic">The agent is powerful inside the construction process</text>
+  <text x="28" y="690" font-size="12.5" font-style="italic">and powerless over the governing boundary.</text>
+  <text x="28" y="710" font-size="9" fill="#888">The withheld set states architectural intent. The annotation on each item names its mechanism;</text>
+  <text x="28" y="722" font-size="9" fill="#888">&#167;8.2 reports which were exercised. The containment shown is architectural intent, not an empirical result.</text>
+  </g>
+</svg>

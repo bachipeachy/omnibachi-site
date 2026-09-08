@@ -25,6 +25,7 @@ demonstrate how complex systems can be governed by protocol rather than conventi
 |---|---|
 | **[Blog](https://omnibachi.org/blog/)** | Essays, architectural insights, project updates, and design explorations. |
 | **[Papers](https://omnibachi.org/papers/)** | Technical publications, including DOI-backed reference papers. |
+| **[Open Standards](https://omnibachi.org/open-standards/)** | The PGC Standard argued in the open — each article takes one claim and pushes on it until it holds or breaks. |
 | **[Book](https://omnibachi.org/book/)** | The practitioner's guide to protocol-governed architecture. |
 | **[Learn](https://omnibachi.org/learn/)** | Tutorials, walkthroughs, examples, and hands-on resources. |
 | **[Use Cases](https://omnibachi.org/use-cases/)** | Where PGC applies: agentic AI, compliance, autonomous software, and more. |
