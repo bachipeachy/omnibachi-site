@@ -1,0 +1,99 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1240 806" width="1240" height="806" font-family="Helvetica Neue, Helvetica, Arial, sans-serif">
+<defs>
+<marker id="a" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse">
+<path d="M0 0 L10 5 L0 10 z" fill="#5b7186"/></marker>
+<style>
+.t{font-size:27px;font-weight:700;fill:#17324d}
+.sub{font-size:15px;fill:#5b7186}
+.bandh{font-size:17px;font-weight:700;fill:#17324d}
+.bands{font-size:12.5px;fill:#6b8098}
+.bt{font-size:15px;font-weight:700;fill:#1d3b57}
+.bd{font-size:13px;fill:#4a6076}
+.prop{font-size:12.5px;font-weight:700;fill:#0f6e63}
+.note{font-size:13px;fill:#4a6076}
+.noteh{font-size:13px;font-weight:700;fill:#8a4b08}
+</style>
+</defs>
+<rect width="1240" height="806" fill="#ffffff"/>
+
+<text class="t" x="40" y="46">Protocol-Governed Computing — Functional Architecture</text>
+<text class="sub" x="40" y="72">Governed declarations determine authorized behavior · construction seals it · execution realizes it · evolution produces a governed successor</text>
+
+<!-- KNOWLEDGE -->
+<rect x="40" y="100" width="360" height="450" rx="10" fill="#f6f9fc" stroke="#cfdce7"/>
+<text class="bandh" x="62" y="130">Knowledge Partition</text>
+<text class="bands" x="62" y="151">What the system may become</text>
+
+<rect x="62" y="168" width="316" height="122" rx="7" fill="#fff" stroke="#d7e2ec"/>
+<text class="bt" x="80" y="195">Governed declarations</text>
+<text class="bd" x="80" y="217">protocols, rules, profiles, constraints</text>
+<text class="bd" x="80" y="236">and domain declarations</text>
+<line x1="80" y1="250" x2="360" y2="250" stroke="#e3ebf2"/>
+<text class="prop" x="80" y="272">P1 · behavior determined before execution</text>
+
+<rect x="62" y="306" width="316" height="122" rx="7" fill="#fff" stroke="#d7e2ec"/>
+<text class="bt" x="80" y="333">Transformation</text>
+<text class="bd" x="80" y="355">named predecessor + purpose →</text>
+<text class="bd" x="80" y="374">staged derivation → next declarations</text>
+<line x1="80" y1="388" x2="360" y2="388" stroke="#e3ebf2"/>
+<text class="prop" x="80" y="410">P4 · change derives a named successor</text>
+
+<!-- CONSTRUCTION -->
+<rect x="440" y="100" width="360" height="450" rx="10" fill="#f6f9fc" stroke="#cfdce7"/>
+<text class="bandh" x="462" y="130">Governed Construction</text>
+<text class="bands" x="462" y="151">Transitions are explicit; failure yields refusal</text>
+
+<rect x="462" y="168" width="316" height="122" rx="7" fill="#fff" stroke="#d7e2ec"/>
+<text class="bt" x="480" y="195">Protocol compilation</text>
+<text class="bd" x="480" y="217">declarations → verified projections;</text>
+<text class="bd" x="480" y="236">obligations made explicit</text>
+<line x1="480" y1="250" x2="760" y2="250" stroke="#e3ebf2"/>
+<text class="prop" x="480" y="272">P3 · admits or refuses; never repairs</text>
+
+<rect x="462" y="306" width="316" height="122" rx="7" fill="#fff" stroke="#d7e2ec"/>
+<text class="bt" x="480" y="333">Assemble and seal</text>
+<text class="bd" x="480" y="355">manifest-pinned projections →</text>
+<text class="bd" x="480" y="374">immutable executable snapshot</text>
+<line x1="480" y1="388" x2="760" y2="388" stroke="#e3ebf2"/>
+<text class="prop" x="480" y="410">P2 · authority carried by sealed state</text>
+
+<!-- EXECUTION -->
+<rect x="840" y="100" width="360" height="450" rx="10" fill="#f6f9fc" stroke="#cfdce7"/>
+<text class="bandh" x="862" y="130">Execution Partition</text>
+<text class="bands" x="862" y="151">What the sealed snapshot may realize</text>
+
+<rect x="862" y="168" width="316" height="80" rx="7" fill="#fff" stroke="#d7e2ec"/>
+<text class="bt" x="880" y="195">Sealed snapshot</text>
+<text class="bd" x="880" y="217">manifest-pinned, verified, immutable</text>
+
+<rect x="862" y="264" width="316" height="80" rx="7" fill="#fff" stroke="#d7e2ec"/>
+<text class="bt" x="880" y="291">Runtime</text>
+<text class="bd" x="880" y="313">deterministic traversal; realizes only</text>
+
+<rect x="862" y="360" width="316" height="80" rx="7" fill="#fff" stroke="#d7e2ec"/>
+<text class="bt" x="880" y="387">Bound capabilities</text>
+<text class="bd" x="880" y="409">bound by the snapshot, not discovered</text>
+
+<rect x="862" y="456" width="316" height="70" rx="7" fill="#eef7f5" stroke="#b9ddd6"/>
+<text class="prop" x="880" y="481">Derived, not assumed</text>
+<text class="bd" x="880" y="503">P1 ∧ P2 → execution cannot amend authority</text>
+
+<!-- flow arrows -->
+<line x1="400" y1="230" x2="455" y2="230" stroke="#5b7186" stroke-width="2" marker-end="url(#a)"/>
+<line x1="800" y1="230" x2="855" y2="230" stroke="#5b7186" stroke-width="2" marker-end="url(#a)"/>
+
+<!-- evidence band -->
+<rect x="40" y="580" width="1160" height="104" rx="10" fill="#f6f9fc" stroke="#cfdce7"/>
+<text class="bandh" x="62" y="610">Inspection · refusal · evidence</text>
+<text class="bd" x="62" y="633">Read-only projections, snapshots, traces and explicit refusals — checkable independently of whoever performed the activity.</text>
+<text class="prop" x="62" y="662">P5 · obligations inspectable, refusable, evidenced</text>
+<text class="prop" x="700" y="662">P2 ∧ P5 → worker independence</text>
+
+<!-- successor loop -->
+<path d="M 1180 684 L 1210 684 L 1210 740 L 30 740 L 30 375 L 55 375" fill="none" stroke="#5b7186" stroke-width="2" stroke-dasharray="5 4" marker-end="url(#a)"/>
+<text class="note" x="480" y="732">evidence and a new mandate produce the next governed successor</text>
+
+<!-- footnote -->
+<text class="noteh" x="40" y="766">Properties are anchored where they arise.</text>
+<text class="note" x="40" y="788">P1–P5 are stipulated; the two shaded results are derived from them, not assumed.</text>
+</svg>

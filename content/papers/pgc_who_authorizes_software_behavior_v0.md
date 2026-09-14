@@ -1,7 +1,7 @@
 ---
 title: 'Who Authorizes Software Behavior? Governing the AI-Native SDLC'
 date: '2026-09-14'
-weight: 5
+weight: 4
 slug: who-authorizes-software-behavior
 ---
 

@@ -27,3 +27,5 @@
 # not the correspondence. What goes public is content/papers/ and static/figures/;
 # a PDF meant to be kept belongs in parkinglot/pdf_published/.
 /ieee_doc/
+/jss_doc/
+/wiley_doc/

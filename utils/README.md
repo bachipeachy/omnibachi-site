@@ -10,7 +10,9 @@ can always be regenerated from source.
     convert_docx_md.sh      the one shared driver, md ⇄ docx
     ase/                    Springer ASE journal
     ieee/                   IEEE conference — LaTeX and DOCX paths
+    jss/                    Elsevier JSS journal
     pgs/                    PGS concept papers
+    wiley/                  Wiley journals — SPE, JSEP
 
 Each family owns a subdirectory holding its reference document, its optional Lua
 filter, and the builder that produces the reference document. Families share the
@@ -45,8 +47,20 @@ are referenced, and a page break before each section would only add pages.
 which injects the continuous section break IEEE needs so the title block runs full
 width above a two-column body.
 
-**pgs** — `pgs_docx_filter.lua` starts every `##` section on a new page. That suits a
-concept paper read section by section and is wrong for a journal manuscript.
+**jss** — 12 pt body, single spaced, 1 in margins, page numbers on, single column.
+A clean reading copy rather than a typeset page; line numbering is off and is one
+edit to restore.
+
+**pgs** — `pgs_docx_filter.lua` starts every `##` section on a new page, and turns a
+horizontal rule into a hard break. That suits a concept paper read section by
+section.
+
+**wiley** — Times New Roman throughout, 12 pt body, 10 pt tables, single spaced,
+single column, 1 in margins, as Wiley asks. Tables at 10 pt because a 26-row table
+overruns the page at body size. `wiley_docx_filter.lua` starts every `##` section on
+a new page except the abstract, which stays with the title block. The figure and
+tables live inside the sections that reference them, so the break separates neither
+from its text.
 
 ## Adding a family
 
