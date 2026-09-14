@@ -1,0 +1,145 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1042 990" width="1042" height="990"
+     font-family="Helvetica, Arial, sans-serif">
+<defs>
+  <marker id="hv" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="5" markerHeight="5" orient="auto-start-reverse"><path d="M0,0 L10,5 L0,10 z" fill="#1a1a1a"/></marker>
+  <marker id="gv" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="5.5" markerHeight="5.5" orient="auto-start-reverse"><path d="M0,0 L10,5 L0,10 z" fill="#666"/></marker>
+</defs>
+<rect x="0" y="0" width="1042" height="990" fill="#ffffff"/>
+
+<!-- ============ TITLE + LEGEND ============ -->
+<text x="30" y="36" font-size="19" font-weight="700" fill="#1a1a1a">Protocol-Governed Computing — the governed lifecycle</text>
+<rect x="600" y="14" width="406" height="30" rx="15" fill="#f7f7f7" stroke="#c8c8c8" stroke-width="1"/>
+<circle cx="618" cy="29" r="5.5" fill="#1a1a1a"/>
+<text x="630" y="33" font-size="12" fill="#1a1a1a">human act</text>
+<circle cx="702" cy="29" r="5.5" fill="#ffffff" stroke="#1a1a1a" stroke-width="1.6"/>
+<text x="714" y="33" font-size="12" fill="#1a1a1a">agent may derive</text>
+<line x1="826" y1="29" x2="846" y2="29" stroke="#666" stroke-width="2" marker-end="url(#gv)"/>
+<text x="854" y="33" font-size="12" fill="#1a1a1a">consulted, not consumed</text>
+
+<!-- ============ 1 GENESIS ============ -->
+<rect x="24" y="70" width="982" height="176" rx="8" fill="#f2f2f2" stroke="#b0b0b0" stroke-width="1.2"/>
+<text x="44" y="97" font-size="17" font-weight="700" fill="#1a1a1a">1 · Genesis</text>
+<text x="152" y="97" font-size="14" font-style="italic" fill="#1a1a1a">a platform scope becomes a first sealed baseline</text>
+<rect x="528" y="110" width="214" height="30" rx="4" fill="#ffffff" stroke="#8a8a8a" stroke-width="1.2"/>
+<text x="635" y="130" text-anchor="middle" font-size="13" fill="#1a1a1a">PGC standard specification</text>
+<line x1="635" y1="140" x2="635" y2="166" stroke="#666" stroke-width="2" marker-end="url(#gv)"/>
+
+<rect x="44" y="170" width="214" height="54" rx="5" fill="#e4e4e4" stroke="#333" stroke-width="1.4"/>
+<circle cx="60" cy="170" r="6" fill="#1a1a1a"/>
+<text x="151" y="196" text-anchor="middle" font-size="16" fill="#1a1a1a">Profile scope</text>
+<text x="151" y="214" text-anchor="middle" font-size="13" fill="#333">what to govern</text>
+<rect x="286" y="170" width="214" height="54" rx="5" fill="#ffffff" stroke="#333" stroke-width="1.4"/>
+<circle cx="302" cy="170" r="6" fill="#ffffff" stroke="#1a1a1a" stroke-width="1.6"/>
+<text x="393" y="203" text-anchor="middle" font-size="16" fill="#1a1a1a">Author normative profile</text>
+<rect x="528" y="170" width="214" height="54" rx="5" fill="#ffffff" stroke="#333" stroke-width="1.4"/>
+<circle cx="544" cy="170" r="6" fill="#ffffff" stroke="#1a1a1a" stroke-width="1.6"/>
+<text x="635" y="203" text-anchor="middle" font-size="16" fill="#1a1a1a">Compile, assemble, seal</text>
+<rect x="770" y="170" width="216" height="54" rx="5" fill="#1a1a1a"/>
+<text x="878" y="203" text-anchor="middle" font-size="17" font-weight="600" fill="#ffffff">Genesis baseline</text>
+<g stroke="#1a1a1a" stroke-width="2.4" marker-end="url(#hv)">
+  <line x1="258" y1="197" x2="282" y2="197"/><line x1="500" y1="197" x2="524" y2="197"/><line x1="742" y1="197" x2="766" y2="197"/>
+</g>
+
+<!-- ============ 2 TRANSFORMATION ============ -->
+<rect x="24" y="266" width="982" height="300" rx="8" fill="#ffffff" stroke="#b0b0b0" stroke-width="1.2"/>
+<text x="44" y="293" font-size="17" font-weight="700" fill="#1a1a1a">2 · Transformation</text>
+<text x="208" y="293" font-size="14" font-style="italic" fill="#1a1a1a">a business problem becomes the next sealed baseline — design first, then construction</text>
+<rect x="300" y="306" width="430" height="30" rx="4" fill="#ffffff" stroke="#8a8a8a" stroke-width="1.2"/>
+<text x="515" y="326" text-anchor="middle" font-size="13" fill="#1a1a1a">baseline #n · snapshot inspector · PGC standard specification</text>
+<line x1="515" y1="336" x2="515" y2="352" stroke="#666" stroke-width="2" marker-end="url(#gv)"/>
+
+<rect x="44" y="356" width="170" height="54" rx="5" fill="#e4e4e4" stroke="#333" stroke-width="1.4"/>
+<circle cx="60" cy="356" r="6" fill="#1a1a1a"/>
+<text x="129" y="382" text-anchor="middle" font-size="16" fill="#1a1a1a">Business</text>
+<text x="129" y="400" text-anchor="middle" font-size="16" fill="#1a1a1a">problem</text>
+<g fill="#ffffff" stroke="#333" stroke-width="1.4">
+  <rect x="236" y="356" width="170" height="54" rx="5"/><rect x="428" y="356" width="170" height="54" rx="5"/>
+  <rect x="620" y="356" width="170" height="54" rx="5"/><rect x="812" y="356" width="170" height="54" rx="5"/>
+</g>
+<g text-anchor="middle" fill="#1a1a1a">
+  <text x="321" y="383" font-size="16">P0–P1</text><text x="321" y="401" font-size="13" fill="#333">seed, request</text>
+  <text x="513" y="383" font-size="16">P2–P4</text><text x="513" y="401" font-size="13" fill="#333">reuse or author</text>
+  <text x="705" y="383" font-size="16">P5–P6</text><text x="705" y="401" font-size="13" fill="#333">business, governance</text>
+  <text x="897" y="383" font-size="16">P7–P8</text><text x="897" y="401" font-size="13" fill="#333">design, mandate</text>
+</g>
+<g fill="#ffffff" stroke="#1a1a1a" stroke-width="1.6"><circle cx="252" cy="356" r="6"/><circle cx="444" cy="356" r="6"/><circle cx="636" cy="356" r="6"/><circle cx="828" cy="356" r="6"/></g>
+<g stroke="#1a1a1a" stroke-width="2.4" marker-end="url(#hv)">
+  <line x1="214" y1="383" x2="232" y2="383"/><line x1="406" y1="383" x2="424" y2="383"/>
+  <line x1="598" y1="383" x2="616" y2="383"/><line x1="790" y1="383" x2="808" y2="383"/>
+</g>
+
+<text x="878" y="436" text-anchor="end" font-size="13" font-weight="600" fill="#1a1a1a">design intent + mandate</text>
+<rect x="360" y="420" width="310" height="30" rx="4" fill="#ffffff" stroke="#8a8a8a" stroke-width="1.2"/>
+<text x="515" y="440" text-anchor="middle" font-size="13" fill="#1a1a1a">governance surface carried by baseline #n</text>
+<line x1="515" y1="450" x2="515" y2="464" stroke="#666" stroke-width="2"/>
+<path d="M897,410 L897,466 L104,466 L104,486" fill="none" stroke="#1a1a1a" stroke-width="2.4" marker-end="url(#hv)"/>
+
+<rect x="44" y="490" width="219" height="54" rx="5" fill="#ffffff" stroke="#333" stroke-width="1.4"/>
+<circle cx="60" cy="490" r="6" fill="#ffffff" stroke="#1a1a1a" stroke-width="1.6"/>
+<text x="153" y="516" text-anchor="middle" font-size="16" fill="#1a1a1a">Construction</text>
+<text x="153" y="534" text-anchor="middle" font-size="13" fill="#333">renders from design alone</text>
+<rect x="285" y="490" width="219" height="54" rx="5" fill="#ffffff" stroke="#333" stroke-width="1.4"/>
+<circle cx="301" cy="490" r="6" fill="#ffffff" stroke="#1a1a1a" stroke-width="1.6"/>
+<text x="394" y="516" text-anchor="middle" font-size="16" fill="#1a1a1a">Protocol compilation</text>
+<text x="394" y="534" text-anchor="middle" font-size="13" fill="#333">admitted or refused</text>
+<rect x="526" y="490" width="219" height="54" rx="5" fill="#e4e4e4" stroke="#333" stroke-width="1.4"/>
+<circle cx="542" cy="490" r="6" fill="#1a1a1a"/>
+<text x="635" y="516" text-anchor="middle" font-size="16" fill="#1a1a1a">Promote, assemble, seal</text>
+<text x="635" y="534" text-anchor="middle" font-size="13" fill="#333">a separate act</text>
+<rect x="767" y="490" width="219" height="54" rx="5" fill="#1a1a1a"/>
+<text x="876" y="523" text-anchor="middle" font-size="17" font-weight="600" fill="#ffffff">Baseline #n+1</text>
+<g stroke="#1a1a1a" stroke-width="2.4" marker-end="url(#hv)">
+  <line x1="263" y1="517" x2="281" y2="517"/><line x1="504" y1="517" x2="522" y2="517"/><line x1="745" y1="517" x2="763" y2="517"/>
+</g>
+
+<path d="M986,517 L1014,517 L1014,321 L738,321" fill="none" stroke="#1a1a1a" stroke-width="2.2" stroke-dasharray="6 4" marker-end="url(#hv)"/>
+<text x="1006" y="259" text-anchor="end" font-size="13" font-weight="600" fill="#1a1a1a">#n+1 becomes #n for the next change</text>
+
+<!-- ============ THE SEAL ============ -->
+<path d="M876,544 L876,576 L129,576 L129,662" fill="none" stroke="#1a1a1a" stroke-width="2.4" marker-end="url(#hv)"/>
+<line x1="24" y1="592" x2="1006" y2="592" stroke="#1a1a1a" stroke-width="4.5"/>
+<text x="1006" y="610" text-anchor="end" font-size="14" font-weight="700" fill="#1a1a1a">SEAL · nothing below determines behavior</text>
+
+<!-- ============ 3 EXECUTION ============ -->
+<rect x="24" y="620" width="982" height="140" rx="8" fill="#f2f2f2" stroke="#b0b0b0" stroke-width="1.2"/>
+<text x="44" y="648" font-size="17" font-weight="700" fill="#1a1a1a">3 · Execution</text>
+<text x="176" y="648" font-size="14" font-style="italic" fill="#1a1a1a">the sealed baseline is read, never amended</text>
+<rect x="44" y="666" width="170" height="66" rx="5" fill="#1a1a1a"/>
+<text x="129" y="705" text-anchor="middle" font-size="17" font-weight="600" fill="#ffffff">Baseline #n+1</text>
+<g fill="#ffffff" stroke="#333" stroke-width="1.4">
+  <rect x="236" y="666" width="170" height="66" rx="5"/><rect x="428" y="666" width="170" height="66" rx="5"/><rect x="620" y="666" width="170" height="66" rx="5"/>
+</g>
+<rect x="812" y="666" width="170" height="66" rx="5" fill="#e4e4e4" stroke="#333" stroke-width="1.4"/>
+<g text-anchor="middle" fill="#1a1a1a">
+  <text x="321" y="700" font-size="16">Ingress</text><text x="321" y="720" font-size="13" fill="#333">admitted at the boundary</text>
+  <text x="513" y="694" font-size="16">Execute</text><text x="513" y="712" font-size="13" fill="#333">reads routes,</text><text x="513" y="728" font-size="13" fill="#333">decides nothing</text>
+  <text x="705" y="700" font-size="16">Egress</text><text x="705" y="720" font-size="13" fill="#333">declared outcome only</text>
+  <text x="897" y="700" font-size="16">Interactive actors</text><text x="897" y="720" font-size="13" fill="#333">and virtual actors</text>
+</g>
+<g fill="#ffffff" stroke="#1a1a1a" stroke-width="1.6"><circle cx="252" cy="666" r="6"/><circle cx="444" cy="666" r="6"/><circle cx="636" cy="666" r="6"/><circle cx="844" cy="666" r="6"/></g>
+<circle cx="828" cy="666" r="6" fill="#1a1a1a"/>
+<g stroke="#1a1a1a" stroke-width="2.4" marker-end="url(#hv)">
+  <line x1="214" y1="699" x2="232" y2="699"/><line x1="406" y1="699" x2="424" y2="699"/><line x1="598" y1="699" x2="616" y2="699"/><line x1="790" y1="699" x2="808" y2="699"/>
+</g>
+
+<!-- ============ 4 EVIDENCE ============ -->
+<rect x="24" y="780" width="982" height="140" rx="8" fill="#ffffff" stroke="#b0b0b0" stroke-width="1.2"/>
+<text x="44" y="808" font-size="17" font-weight="700" fill="#1a1a1a">4 · Evidence</text>
+<text x="172" y="808" font-size="14" font-style="italic" fill="#1a1a1a">every band above emits; nothing is asserted that is not recorded</text>
+<rect x="44" y="822" width="942" height="82" rx="6" fill="#fafafa" stroke="#333" stroke-width="1.4"/>
+<g stroke="#d0d0d0" stroke-width="1"><line x1="279" y1="834" x2="279" y2="892"/><line x1="515" y1="834" x2="515" y2="892"/><line x1="751" y1="834" x2="751" y2="892"/></g>
+<g fill="#1a1a1a">
+  <text x="60" y="850" font-size="15" font-weight="600">Determinations</text>
+  <text x="60" y="870" font-size="13" fill="#333">what was admitted, and</text><text x="60" y="887" font-size="13" fill="#333">against which rule</text>
+  <text x="296" y="850" font-size="15" font-weight="600">Refusals</text>
+  <text x="296" y="870" font-size="13" fill="#333">what was declined,</text><text x="296" y="887" font-size="13" fill="#333">and why</text>
+  <text x="532" y="850" font-size="15" font-weight="600">Outcomes</text>
+  <text x="532" y="870" font-size="13" fill="#333">what executed, and</text><text x="532" y="887" font-size="13" fill="#333">which route carried it</text>
+  <text x="768" y="850" font-size="15" font-weight="600">Identity</text>
+  <text x="768" y="870" font-size="13" fill="#333">content addresses</text><text x="768" y="887" font-size="13" fill="#333">throughout</text>
+</g>
+
+<!-- ============ CLOSING ============ -->
+<text x="515" y="950" text-anchor="middle" font-size="15" fill="#1a1a1a">An agent may derive every open step. A human sets the scope, states the problem, and promotes —</text>
+<text x="515" y="972" text-anchor="middle" font-size="15" fill="#1a1a1a">so proposing software and authorizing software remain separate acts.</text>
+</svg>
