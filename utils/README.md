@@ -11,6 +11,7 @@ can always be regenerated from source.
     ase/                    Springer ASE journal
     ieee/                   IEEE conference — LaTeX and DOCX paths
     jss/                    Elsevier JSS journal
+    oxford/                 Oxford University Press — The Computer Journal
     pgs/                    PGS concept papers
     wiley/                  Wiley journals — SPE, JSEP
 
@@ -50,6 +51,12 @@ width above a two-column body.
 **jss** — 12 pt body, single spaced, 1 in margins, page numbers on, single column.
 A clean reading copy rather than a typeset page; line numbering is off and is one
 edit to restore.
+
+**oxford** — Times New Roman, 12 pt body, 10 pt tables, **double spaced**, single column, 25.4 mm
+margins, page numbers on. The Computer Journal asks for double spacing and margins of at least
+25 mm, and accepts Word alongside its LaTeX template. No filter: double spacing already carries a
+manuscript past the length of a typeset article, and a page break per section would add ten more
+pages for no reviewer benefit. Copy `wiley/wiley_docx_filter.lua` into `oxford/` if a submission wants them.
 
 **pgs** — `pgs_docx_filter.lua` starts every `##` section on a new page, and turns a
 horizontal rule into a hard break. That suits a concept paper read section by

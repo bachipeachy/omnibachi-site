@@ -1,120 +1,118 @@
 ---
 title: "omnibachi"
-description: "Protocol-Governed Systems — governing agentic AI and software through compiled, declarative protocol."
+description: "Protocol-Governed Computing — governing agentic AI and software through compiled, declarative protocol."
 ---
 
-# Protocol-Governed Systems (PGS)
+# Protocol-Governed Computing (PGC)
 
 > Governed by Protocol. Constructed by Compiler. Proven by Trace.
 >
-> A reference architecture for building deterministic, inspectable, AI-era software systems.
+> A reference architecture for deterministic, inspectable, AI-era software systems.
 
 ## Why this exists
 
 Modern software has a governance problem.
 
-As systems become distributed, event-driven, AI-assisted, and increasingly machine-generated, the gap between what engineers *intended* and what software is actually *allowed to do* keeps widening.
+Systems are distributed, event-driven and increasingly machine-generated. The gap keeps widening
+between what engineers *intended* and what the software is actually *allowed to do*.
 
-Behavior hides in orchestration code, runtime conditionals, framework conventions, implicit routing, service glue — and increasingly, in AI-generated implementation details no human reviewed.
+Behavior hides in orchestration code, runtime conditionals, framework conventions, implicit routing
+and service glue — and now in AI-generated implementation no human reviewed.
 
-PGS explores a different model:
+PGC asks a different question:
 
-> What if behavior was governed *before execution* instead of inferred *during execution*?
+> What if behavior were governed *before execution* instead of inferred *during execution*?
 
-## What is PGS?
+## What PGC is
 
-PGS is a **Protocol-Governed Execution Architecture** where:
+PGC is an execution architecture in which behavior originates from a compiled, governed artifact.
 
-- behavior is declared in governed protocol artifacts
-- admissible execution paths are compiled ahead of time
-- runtime traversal is deterministic
-- undeclared behavior is unreachable
-- every execution produces structured evidence
+- Behavior is declared in governed protocol artifacts.
+- A compiler admits or refuses those artifacts and emits domain projections.
+- An assembler composes what was admitted into a sealed, content-identified snapshot.
+- A runtime reads that snapshot and traverses it. It adds nothing.
+- Every run emits a structured trace.
 
-The runtime does not "figure out" what to do. It traverses a precompiled execution graph.
+The runtime does not work out what to do. It traverses a graph the compiler already fixed.
 
-## What makes this different?
+## The lifecycle
 
-Most workflow systems orchestrate code. PGS governs behavior itself.
+```
+protocol artifacts → compiler → domain projections → assembler
+    → sealed snapshot → runtime → execution → trace and evidence
+```
 
-Traditional systems still allow hidden routing, implicit side effects, undeclared execution paths, runtime interpretation, and logic spread across services.
+The snapshot is sealed at build time and the runtime consumes it unchanged. No behavior enters at
+execution time that was not present in the snapshot. Change is a governed transition from one sealed
+snapshot to its named successor; the predecessor is retained, never edited in place.
 
-PGS moves those concerns into protocol declarations, compiler-enforced invariants, federated governance boundaries, and deterministic execution topology.
+## What makes this different
+
+Most workflow systems orchestrate code. PGC governs behavior itself.
+
+Conventional systems still permit hidden routing, implicit side effects, undeclared execution paths
+and logic spread across services. PGC moves those concerns into protocol declarations,
+compiler-enforced invariants, closed capability surfaces and a deterministic execution topology.
 
 This is not a framework abstraction. It is a different execution model.
 
 ## Why this matters in the AI era
 
-AI can generate software faster than humans can reliably govern it.
+AI generates software faster than humans can reliably govern it.
 
-PGS was designed around a simple premise:
+PGC was designed around one premise:
 
-> AI-generated behavior should not bypass architectural admissibility.
+> AI-generated behavior must not bypass architectural admissibility.
 
-In PGS:
+Execution legality is compiled before runtime. Side effects are declared. Routing surfaces are
+closed. Traces are immutable. The runtime is deliberately semantic-agnostic, so it cannot invent
+undeclared behavior at execution time.
 
-- execution legality is compiled before runtime
-- side effects are explicitly declared
-- routing surfaces are closed
-- execution traces are immutable
-- runtime is intentionally semantic-agnostic
+A worker — human or agent — proposes. Governance disposes. Authority sits in the governed artifacts,
+the structural validation, the approval gates and the compiler, never in whoever did the authoring.
 
-The system cannot invent undeclared behavior at execution time.
-
-## What you are looking at
-
-This is the **reference ecosystem** for Protocol-Governed Systems.
-
-It demonstrates:
-
-- governed workflow execution
-- compile-time admissibility construction
-- federated governance boundaries
-- deterministic runtime traversal
-- immutable execution traces
-- semantic-agnostic execution infrastructure
-
-This is not a toy mockup. The workflows execute end-to-end against real state and produce real traces.
-
-## Core architectural idea
-
-PGS separates software into two distinct spaces:
+## The governance space and the execution space
 
 | Space | Responsibility |
 |---|---|
 | Human Governance Space | Defines what behavior is admissible |
-| Machine Execution Space | Executes only what has already been declared and compiled |
+| Machine Execution Space | Executes only what has been declared and compiled |
 
-This inversion matters. The runtime is not trusted to "do the right thing." The compiler constrains what the runtime is even capable of doing.
+The inversion is the point. The runtime is not trusted to do the right thing. The compiler constrains
+what the runtime is capable of doing at all.
 
-## What happens when you run PGS?
+## Evolving the system — governed change
 
-You will execute real workflows against persistent state.
+PGC does not stop at governing execution. It governs how the system itself changes.
 
-You will observe:
+A change travels a gated pipeline: a plain-language problem statement becomes a design mandate, the
+mandate becomes authored artifacts, and the artifacts face the same admission the compiler applies to
+everything else. A refused change produces no snapshot and names the rule that refused it. The refusal
+is itself an artifact, recorded like an admission.
 
-- deterministic routing
-- compile-time constrained behavior
-- immutable structured traces
-- different outcomes from the same workflow without code changes
-- runtime execution without orchestration logic embedded in services
+## What you are looking at
 
-The protocol — not handwritten runtime branching — governs outcomes.
+This is the reference ecosystem for Protocol-Governed Computing, and it runs.
 
-## What PGS is NOT
+- **[Open Standards](/open-standards/)** — the PGC Standard, in the open and under construction,
+  argued one claim at a time against a real system.
+- **[Papers](/papers/)** — preprints under review at peer-reviewed journals, and the deposited
+  foundations they rest on. DOI-published except where a publisher's policy forbids it.
+- **[Blog](/blog/)** and **[Learn](/learn/)** — where the ideas are introduced and worked through.
+- **[Open Source](https://github.com/protocol-governed-computing)** — the compiler, assembler,
+  runtime, inspector, governance surface and business domains, each its own repository. Apache-2.0.
 
-PGS is not:
+Every published composition is sealed, deposited and citable by DOI, so a claim about what a system
+does can be checked against the artifact rather than against a description of it.
 
-- a low-code workflow builder
-- a BPM engine
-- an orchestration DSL
-- a rules engine
-- an agent framework
-- or another event bus abstraction
+## What PGC is not
+
+PGC is not a low-code workflow builder, a BPM engine, an orchestration DSL, a rules engine, an agent
+framework or another event bus abstraction.
 
 It is a governed execution substrate.
 
-## Who is this for?
+## Who this is for
 
 - Engineers building high-integrity systems
 - Teams integrating AI-generated code safely
@@ -122,35 +120,11 @@ It is a governed execution substrate.
 - Researchers interested in governed computation
 - Anyone curious what software looks like when protocol becomes the source of truth
 
-## Architecture highlights
-
-- Compile-time admissibility enforcement
-- Federated governance boundaries (FB_*)
-- Semantic-agnostic runtime execution
-- Deterministic execution graphs
-- Immutable execution evidence
-- Fully declared side-effect surfaces
-- Protocol-first system evolution
-- FQDN-based artifact identity
-- Governance-constrained compiler behavior
-- Governance-first change management — every change is a governed Change Request → Authoring Mandate dossier; authoring is interchangeable, authority is not ([`pgs_change_mgmt`](https://github.com/protocol-governed-computing/transformation#readme))
-
-## Open source
-
-PGS is released under Apache-2.0.
-
-The goal is not to create a closed platform. The goal is to explore whether software systems can become more governable, more inspectable, and more deterministic — without sacrificing extensibility.
-
-## Evolving the system — governed change
-
-PGS does not stop at governing execution; it governs **how the system itself changes**. Every protocol change travels a governed, gated pipeline — from a plain-language Change Request to an Authoring Mandate — producing a complete, reviewable dossier *before* any artifact is authored.
-
-The pipeline is **governance-first and authority-invariant**: a stage may be drafted by a human or an automated agent, but authority resides in the governed artifacts, structural validation, approval gates, and the compiler — never in the author. *The actor proposes; governance disposes.*
-
 ## One-line summary
 
-> PGS explores what software looks like when protocol — not runtime code — becomes the governing authority of execution.
+> PGC explores what software looks like when protocol — not runtime code — becomes the governing
+> authority of execution.
 
 ---
 
-*Explore the ecosystem from the menu above — Blog, Papers, Book, Learn, and Open Source.*
+*Explore the ecosystem from the menu above.*

@@ -1,0 +1,84 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1020 520" width="1020" height="520" font-family="Helvetica Neue, Helvetica, Arial, sans-serif">
+  <rect width="1020" height="520" fill="#ffffff"/>
+  <defs>
+    <marker id="c" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse">
+      <path d="M0,0 L10,5 L0,10 z" fill="#111"/>
+    </marker>
+  </defs>
+
+  <!-- snapshot -->
+  <rect x="40" y="40" width="200" height="72" fill="#e8e8e8" stroke="#111" stroke-width="2"/>
+  <text x="140" y="68" font-size="14" font-weight="bold" text-anchor="middle">sealed snapshot</text>
+  <text x="140" y="90" font-size="11" fill="#444" text-anchor="middle">read once, never modified</text>
+
+  <line x1="140" y1="112" x2="140" y2="168" stroke="#111" marker-end="url(#c)"/>
+  <text x="152" y="145" font-size="12" font-style="italic">warm reboot: load once, verify against the manifest</text>
+
+  <!-- runtime box -->
+  <rect x="40" y="172" width="560" height="210" fill="#fbfbfb" stroke="#111" stroke-width="2"/>
+  <text x="60" y="198" font-size="14" font-weight="bold">runtime — a traversal of what the snapshot already says</text>
+
+  <rect x="62" y="215" width="120" height="82" fill="#fff" stroke="#111"/>
+  <text x="122" y="248" font-size="13" text-anchor="middle">scheduler</text>
+  <text x="122" y="270" font-size="11" fill="#555" text-anchor="middle">walks the</text>
+  <text x="122" y="285" font-size="11" fill="#555" text-anchor="middle">workflow</text>
+
+  <rect x="196" y="215" width="120" height="82" fill="#fff" stroke="#111"/>
+  <text x="256" y="248" font-size="13" text-anchor="middle">dispatcher</text>
+  <text x="256" y="270" font-size="11" fill="#555" text-anchor="middle">runs one</text>
+  <text x="256" y="285" font-size="11" fill="#555" text-anchor="middle">contract's steps</text>
+
+  <rect x="330" y="215" width="120" height="82" fill="#fff" stroke="#111"/>
+  <text x="390" y="248" font-size="13" text-anchor="middle">loader</text>
+  <text x="390" y="270" font-size="11" fill="#555" text-anchor="middle">resolves what</text>
+  <text x="390" y="285" font-size="11" fill="#555" text-anchor="middle">to run</text>
+
+  <rect x="464" y="215" width="120" height="82" fill="#fff" stroke="#111"/>
+  <text x="524" y="248" font-size="13" text-anchor="middle">evidence</text>
+  <text x="524" y="270" font-size="11" fill="#555" text-anchor="middle">records what</text>
+  <text x="524" y="285" font-size="11" fill="#555" text-anchor="middle">happened</text>
+
+  <text x="320" y="335" font-size="12" font-style="italic" text-anchor="middle">no domain vocabulary · no routing computation · no handler discovery · no fallback</text>
+  <text x="320" y="360" font-size="12" text-anchor="middle">size is bounded by the traversal mechanism, not by the number of domains admitted</text>
+
+  <!-- outputs -->
+  <line x1="200" y1="382" x2="200" y2="424" stroke="#111" marker-end="url(#c)"/>
+  <line x1="450" y1="382" x2="450" y2="424" stroke="#111" marker-end="url(#c)"/>
+
+  <rect x="80" y="428" width="240" height="62" fill="#fff" stroke="#111"/>
+  <text x="200" y="454" font-size="13" text-anchor="middle">governed state</text>
+  <text x="200" y="475" font-size="11" fill="#444" text-anchor="middle">through declared capabilities only</text>
+
+  <rect x="340" y="428" width="240" height="62" fill="#fff" stroke="#111"/>
+  <text x="460" y="454" font-size="13" text-anchor="middle">trace</text>
+  <text x="460" y="475" font-size="11" fill="#444" text-anchor="middle">emitted by the same traversal</text>
+
+  <!-- capability surface -->
+  <rect x="650" y="172" width="330" height="210" fill="#fbfbfb" stroke="#111" stroke-width="2"/>
+  <text x="670" y="198" font-size="14" font-weight="bold">the only things the substrate may do</text>
+
+  <rect x="670" y="215" width="140" height="130" fill="#fff" stroke="#111"/>
+  <text x="740" y="240" font-size="13" text-anchor="middle">transforms</text>
+  <text x="740" y="262" font-size="11" fill="#555" text-anchor="middle">pure computation</text>
+  <text x="740" y="280" font-size="11" fill="#555" text-anchor="middle">inputs → outputs</text>
+  <text x="740" y="298" font-size="11" fill="#555" text-anchor="middle">no clock, no network,</text>
+  <text x="740" y="314" font-size="11" fill="#555" text-anchor="middle">no randomness</text>
+  <text x="740" y="330" font-size="11" font-style="italic" text-anchor="middle">platform set closed at twelve;</text>
+  <text x="740" y="344" font-size="11" font-style="italic" text-anchor="middle">a domain may declare its own</text>
+
+  <rect x="826" y="215" width="140" height="130" fill="#e8e8e8" stroke="#111" stroke-width="1.5"/>
+  <text x="896" y="240" font-size="13" text-anchor="middle">side effects</text>
+  <text x="896" y="262" font-size="11" fill="#555" text-anchor="middle">governed mutation</text>
+  <text x="896" y="280" font-size="11" fill="#555" text-anchor="middle">every change the</text>
+  <text x="896" y="298" font-size="11" fill="#555" text-anchor="middle">platform can make</text>
+  <text x="896" y="314" font-size="11" fill="#555" text-anchor="middle">is one of these</text>
+  <text x="896" y="336" font-size="12" font-weight="bold" text-anchor="middle">CLOSED — six</text>
+
+  <text x="815" y="368" font-size="12" font-style="italic" text-anchor="middle">no domain declares a side effect; a seventh does not compile</text>
+
+  <line x1="600" y1="277" x2="646" y2="277" stroke="#111" marker-end="url(#c)"/>
+  <text x="623" y="265" font-size="11" fill="#444" text-anchor="middle"> </text>
+
+  <text x="815" y="444" font-size="12" text-anchor="middle">a missing binding, capability or route</text>
+  <text x="815" y="464" font-size="12" text-anchor="middle">is a declared refusal, never a default</text>
+</svg>
