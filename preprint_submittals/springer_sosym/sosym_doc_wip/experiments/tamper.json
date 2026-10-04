@@ -1,0 +1,64 @@
+{
+  "snapshot_id": "f8356d9c8938aea16ab7850d7bda964d8d16c42c64e5db9056d5fe58040ec1d0",
+  "results": [
+    {
+      "class": "control",
+      "altered": "nothing",
+      "refused": false
+    },
+    {
+      "class": "route",
+      "altered": "a routing target in the compiled dispatch table",
+      "refused": true,
+      "reason": "Snapshot refused at acceptance: integrity failure at tokenized/workload/dispatch.json: content hashes to c067598fe5b55f7b\u2026 but the self-description carries d076c58bad8d2c68\u2026 for it (3b \u00a77 clause 1)."
+    },
+    {
+      "class": "constituent",
+      "altered": "a canonical artifact (workload__CC_COMPUTE_SEQUENCES_V0.json)",
+      "refused": true,
+      "reason": "Snapshot refused at acceptance: integrity failure at canonical/workload/capability_contracts/workload__CC_COMPUTE_SEQUENCES_V0.json: content hashes to 242ab3287af3aa32\u2026 but the self-description carrie"
+    },
+    {
+      "class": "graph",
+      "altered": "a published workflow graph (WF_COLLATZ_CONJECTURE_V0.graph.json): one added edge",
+      "refused": true,
+      "reason": "Snapshot refused at acceptance: integrity failure at behavior_logic/workload/WF_COLLATZ_CONJECTURE_V0/WF_COLLATZ_CONJECTURE_V0.graph.json: content hashes to 973365197ba01163\u2026 but the self-description "
+    },
+    {
+      "class": "effect",
+      "altered": "a side-effect declaration (ai_governance/capability_side_effects__CS_APPENDONLY_JSONL_V0.json)",
+      "refused": true,
+      "reason": "Snapshot refused at acceptance: integrity failure at canonical/ai_governance/capability_side_effects/capability_side_effects__CS_APPENDONLY_JSONL_V0.json: content hashes to c8c5900c159f93f7\u2026 but the s"
+    },
+    {
+      "class": "reference",
+      "altered": "a reference in the artifact index",
+      "refused": true,
+      "reason": "Snapshot refused at acceptance: integrity failure at artifact_index/index.json: content hashes to eaa04084dfe7d319\u2026 but the self-description carries 89a255e37ec305ea\u2026 for it (3b \u00a77 clause 1)."
+    },
+    {
+      "class": "profile",
+      "altered": "the profile the manifest claims",
+      "refused": true,
+      "reason": "snapshot claims profile 'SOME_OTHER_PROFILE_V0' and no profile of that identity was found under /Users/bp/protocol-governed-computing/.github/snapshot_profiles \u2014 a claim nobody can read is not a claim"
+    },
+    {
+      "class": "identity",
+      "altered": "the identity the manifest states",
+      "refused": true,
+      "reason": "Snapshot refused at acceptance: identity failure: derived f8356d9c8938aea1\u2026 from content, snapshot bears 0000000000000000\u2026 (3b \u00a77 clause 2, SN-2)."
+    },
+    {
+      "class": "added_file",
+      "altered": "an added file no constituent list declares",
+      "refused": true,
+      "reason": "Snapshot refused at acceptance: undeclared content: 1 file(s) present and enumerated nowhere \u2014 e.g. ['canonical/workload/undeclared.json']. A constituent absent from the self-description must be refus"
+    },
+    {
+      "class": "removed_file",
+      "altered": "a removed constituent (workload__CT_PURE_COLLATZ_STEP_V0.json)",
+      "refused": true,
+      "reason": "Snapshot refused at acceptance: missing content: 1 file(s) enumerated and absent \u2014 e.g. ['canonical/workload/capability_transforms/workload__CT_PURE_COLLATZ_STEP_V0.json']."
+    }
+  ]
+}

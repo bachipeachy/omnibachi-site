@@ -1,0 +1,73 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1020 560" width="1020" height="560" font-family="Helvetica Neue, Helvetica, Arial, sans-serif">
+  <rect width="1020" height="560" fill="#ffffff"/>
+  <defs>
+    <marker id="b" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse">
+      <path d="M0,0 L10,5 L0,10 z" fill="#111"/>
+    </marker>
+  </defs>
+
+  <!-- outer snapshot -->
+  <rect x="30" y="60" width="640" height="430" fill="#fbfbfb" stroke="#111" stroke-width="2"/>
+  <text x="350" y="46" font-size="14" font-style="italic" text-anchor="middle">snapshot — sealed, read-only, never modified after assembly</text>
+
+  <!-- manifest -->
+  <rect x="55" y="85" width="590" height="62" fill="#e8e8e8" stroke="#111" stroke-width="1.5"/>
+  <text x="80" y="112" font-size="14" font-weight="bold">manifest</text>
+  <text x="80" y="133" font-size="12" fill="#333">identity · domain set · provenance</text>
+  <text x="620" y="112" font-size="12" font-style="italic" text-anchor="end">root of trust</text>
+  <text x="620" y="133" font-size="11" fill="#444" text-anchor="end">everything below is checked against it</text>
+
+  <!-- component rows -->
+  <g font-size="13">
+    <rect x="55" y="165" width="215" height="52" fill="#fff" stroke="#111"/>
+    <text x="70" y="188" font-size="13">declarations</text>
+    <text x="70" y="207" font-size="11" fill="#555">canonical/ · vocabulary/</text>
+    <text x="290" y="188" font-size="13" font-style="italic">What behavior is admitted?</text>
+
+    <rect x="55" y="229" width="215" height="52" fill="#fff" stroke="#111"/>
+    <text x="70" y="252" font-size="13">projections</text>
+    <text x="70" y="271" font-size="11" fill="#555">behavior_logic/</text>
+    <text x="290" y="252" font-size="13" font-style="italic">What executable structure realizes it?</text>
+
+    <rect x="55" y="293" width="215" height="52" fill="#fff" stroke="#111"/>
+    <text x="70" y="316" font-size="13">capability binding map</text>
+    <text x="70" y="335" font-size="11" fill="#555">store_index/ · tokenized/</text>
+    <text x="290" y="316" font-size="13" font-style="italic">Which permitted capability</text>
+    <text x="290" y="334" font-size="13" font-style="italic">realizes each operation?</text>
+
+    <rect x="55" y="357" width="215" height="52" fill="#fff" stroke="#111"/>
+    <text x="70" y="380" font-size="13">indexes</text>
+    <text x="70" y="399" font-size="11" fill="#555">artifact_index/ · kind_index/</text>
+    <text x="290" y="380" font-size="13" font-style="italic">What exists, and where?</text>
+
+    <rect x="55" y="421" width="215" height="52" fill="#fff" stroke="#111"/>
+    <text x="70" y="444" font-size="13">admission record</text>
+    <text x="70" y="463" font-size="11" fill="#555">evidence/ · trust/ · conformance/</text>
+    <text x="290" y="444" font-size="13" font-style="italic">On what ground was each</text>
+    <text x="290" y="462" font-size="13" font-style="italic">artifact admitted?</text>
+  </g>
+
+  <!-- identity derivation -->
+  <rect x="720" y="85" width="270" height="118" fill="#fff" stroke="#111"/>
+  <text x="740" y="112" font-size="13" font-weight="bold">content identity</text>
+  <text x="740" y="136" font-size="12" fill="#333">derived from content, not assigned</text>
+  <text x="740" y="158" font-size="12" fill="#333">change any governed artifact</text>
+  <text x="740" y="176" font-size="12" fill="#333">and the identity changes</text>
+  <text x="740" y="194" font-size="11" fill="#555" font-style="italic">two identities compare two systems</text>
+  <line x1="670" y1="120" x2="716" y2="120" stroke="#111" marker-end="url(#b)"/>
+
+  <!-- consumers -->
+  <text x="855" y="262" font-size="13" font-style="italic" text-anchor="middle">consumed read-only by</text>
+  <rect x="720" y="280" width="270" height="44" fill="#fff" stroke="#111"/>
+  <text x="855" y="307" font-size="13" text-anchor="middle">runtime — executes it</text>
+  <rect x="720" y="336" width="270" height="44" fill="#fff" stroke="#111"/>
+  <text x="855" y="363" font-size="13" text-anchor="middle">transport — admits at the boundary</text>
+  <rect x="720" y="392" width="270" height="44" fill="#fff" stroke="#111"/>
+  <text x="855" y="419" font-size="13" text-anchor="middle">inspector — interrogates it</text>
+  <line x1="670" y1="330" x2="716" y2="330" stroke="#111" marker-end="url(#b)"/>
+
+  <text x="855" y="470" font-size="12" fill="#444" text-anchor="middle">none of them may change it</text>
+
+  <!-- footer rule -->
+  <text x="350" y="518" font-size="12" font-style="italic" text-anchor="middle">a component answering no execution question does not belong; a question left to the runtime is a failure of C2</text>
+</svg>

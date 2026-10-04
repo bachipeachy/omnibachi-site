@@ -1,0 +1,20 @@
+digraph G {
+  rankdir=TB; nodesep=0.35; ranksep=0.32;
+  node [fontname="Helvetica", fontsize=11, shape=box, style="rounded,filled", fillcolor=white, color=gray30];
+  edge [fontname="Helvetica", fontsize=10, color=gray30];
+  need [label="Business need", shape=plaintext, style=""];
+  author [label="Authored model"];
+  sealed [label=<<B>Sealed model</B><BR/><FONT POINT-SIZE="10">outcomes · routes · admissions<BR/>effects · events · governing closure</FONT>>, fillcolor="#e8f0fb", color="#2b5797", penwidth=2];
+  realize [label="Construction and runtime\n(realization)"];
+  observe [label="Observed execution\n(trace)", fillcolor="#f5f5f5"];
+  refuse [label="Refusal", shape=octagon, fillcolor="#fde2e2", color="#a32020"];
+  need -> author [label=" human-directed  "];
+  author -> sealed [label=" determination closes  "];
+  sealed -> realize [label=" realized by  "];
+  realize -> observe [label=" exercised as  "];
+  author -> refuse [label=" missing determination ", style=dashed, color="#a32020", fontcolor="#a32020"];
+  realize -> refuse [label=" no declared answer ", style=dashed, color="#a32020", fontcolor="#a32020"];
+  note [shape=note, fillcolor="#fffbe6", color=gray50, fontsize=10, label="Realization MUST NOT add\na domain-visible determination"];
+  {rank=same; realize; note}
+  realize -> note [style=invis];
+}

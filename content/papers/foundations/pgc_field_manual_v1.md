@@ -207,7 +207,7 @@ heuristic flexibility. Growing the ontology without governance necessity is debt
 | `IN_` | Intent | admission gate — ACK or NACK before any traversal |
 | `WF_` | Workflow | the topology: which contracts execute in what declared sequence |
 | `CC_` | Capability Contract | a named node; drives its steps and declares its outcomes |
-| `CT_` | Capability Transform | pure computation — no I/O, no clock, no randomness |
+| `CT_` | Capability Transform | computation with no effects — no I/O, no store, no clock; a deterministic atom, a non-deterministic atom, or a molecule |
 | `CS_` | Capability Side Effect | the only governed channel for changing anything |
 | `EV_` | Event | a declared moment, announced; **records facts, never triggers execution** |
 | `TE_` | Transport Egress | classifies the outcome and projects the declared response |
@@ -353,17 +353,24 @@ nothing. It defines the alphabet, never the sentences.
    ┌───────────────────────────────┬───────────────────────────────┐
    │  CAPABILITY TRANSFORM  (CT)   │  CAPABILITY SIDE EFFECT  (CS) │
    ├───────────────────────────────┼───────────────────────────────┤
-   │  pure computation             │  governed mutation            │
-   │  same input, same output      │  changes something outside    │
+   │  computation, no effects      │  governed mutation            │
+   │  inputs → outputs             │  changes something outside    │
    │  no files, no network,        │  itself: a store, the clock   │
-   │  no clock, no randomness      │                               │
+   │  no store, no clock           │                               │
    └───────────────────────────────┴───────────────────────────────┘
             open to extension              CLOSED — six of them
 ```
 
-A pure transform can do no harm outside itself, so the set may grow. A side effect is how the
+A transform can do no harm outside itself, so the set may grow. A side effect is how the
 platform touches the world, so it is finite, enumerable and reviewable. To know everything a PGC
 platform can *do to anything*, read six declarations rather than a codebase.
+
+Not every transform is determined by its inputs, and each is governed by the constitution its kind
+and purity place it under. A **deterministic atom** returns the same result for the same inputs. A
+**non-deterministic atom** (`ct_impure`), such as a language model's offer, has every result
+recorded where it is produced and substituted on replay, and nothing routes on it until a
+deterministic step has judged it. A **molecule** names no implementation: its declared steps are
+its specification.
 
 | capability | what it does |
 |---|---|
@@ -847,8 +854,9 @@ Every entry script resolves its own roots. No `PYTHONPATH` or `cd` gymnastics re
 Any argument bypasses discovery entirely, so an explicit source list silently omits domains added
 later. Prefer no arguments.
 
-Environment overrides where needed: `PGC_PLATFORM_ROOT`, `PGC_SNAPSHOT_ROOT`, `PGC_SNAPSHOT_OUT`,
-`PGC_SOURCE_ROOTS`, `PGC_IMPL_ROOTS`, `PGC_DATA_ROOT`.
+Environment overrides where needed: `PGC_PLATFORM_ROOT`, `PGC_SNAPSHOT_OUT`, `PGC_SOURCE_ROOTS`,
+`PGC_IMPL_ROOTS`, `PGC_DATA_ROOT`, and `PGC_SNAPSHOT_ROOT` for the runtime only. Where the compiler
+writes is not an override: each build configuration declares it in `output_configuration.root`.
 
 ### Execute
 

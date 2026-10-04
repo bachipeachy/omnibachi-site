@@ -22,10 +22,11 @@
 /ase_doc/ase_manuscript.docx
 /ase_doc/figures/png/
 
-# Publisher manuscript material — submitted originals, cover letters, and review
-# copies. None of it is published: the publisher clears the paper for the site,
-# not the correspondence. What goes public is content/papers/ and static/figures/;
-# a PDF meant to be kept belongs in parkinglot/pdf_published/.
+# Per-publisher working folders: drafts, build scripts, review copies, scratch.
+# Working state, never published. What a portal actually received is preserved
+# under preprint_submittals/, which is tracked. What goes public on the site is
+# content/papers/ and static/figures/; a PDF meant to be kept belongs in
+# parkinglot/pdf_published/.
 /ieee_doc/
 /jss_doc/
 /wiley_doc/

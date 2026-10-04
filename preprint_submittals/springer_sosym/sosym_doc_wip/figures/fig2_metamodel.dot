@@ -1,0 +1,26 @@
+digraph M {
+  rankdir=TB; nodesep=0.35; ranksep=0.45;
+  node [shape=record, fontname="Helvetica", fontsize=10, style=filled, fillcolor=white, color=gray30];
+  edge [fontname="Helvetica", fontsize=9, color=gray30, arrowhead=vee];
+  Profile [label="{Profile|external constraint\l}", fillcolor="#f5f5f5"];
+  Snapshot [label="{Snapshot|identity derived from content\lclaimed profile\l}", fillcolor="#e8f0fb"];
+  Workflow [label="{Workflow|nodes\lrouting: (node, outcome) → node \| ending\l}"];
+  Gate [label="{Admission gate|input contract\l}"];
+  Contract [label="{Capability contract|outcome vocabulary\lpipeline of steps\l}"];
+  Event [label="{Event|declared moment\l}"];
+  Transform [label="{Capability transform|purity: deterministic \| non-deterministic\l}"];
+  Effect [label="{Side-effect capability|declared operations\l}"];
+  Binding [label="{Runtime binding|effect → store\l}"];
+  Rule [label="{Invariant|rule over a declaration kind\l}", fillcolor="#f5f5f5"];
+  Snapshot -> Profile [label=" claims 1"];
+  Snapshot -> Workflow [label=" contains", arrowtail=diamond, dir=both];
+  Snapshot -> Rule [label=" contains", arrowtail=diamond, dir=both];
+  Workflow -> Gate [label=" entry"];
+  Workflow -> Contract [label=" node 1..*"];
+  Workflow -> Event [label=" announces"];
+  Contract -> Transform [label=" step"];
+  Contract -> Effect [label=" step"];
+  Binding -> Effect [label=" binds"];
+  Rule -> Contract [label=" judges", style=dashed];
+
+}

@@ -1,0 +1,27 @@
+== O1 control: unmodified collatz model
+Build Summary: 1 succeeded, 0 failed
+== O1: CC_COMPUTE_SEQUENCES_V0 declares VIOLATION; its route is removed
+-- construction
+Build Summary: 1 succeeded, 0 failed
+[assembler] round-trip verify: OK
+[conformance] composition: PASSED (5 rule(s) over 232 artifacts)
+-- execution with a payload whose numbers the capability refuses
+[runtime] Error: outcome 'VIOLATION' from node 89 has neither declared routing nor a declared ending in this workflow — the declarations do not answer for it (3a EX-5, 3c RT-9).
+ending: no_declared_answer at CC_COMPUTE_SEQUENCES_V0
+== O2 control: unmodified language-model model
+Build Summary: 1 succeeded, 0 failed
+== O2: the contract invokes the non-deterministic atom as a step it routes on
+      [ERROR] E701_ASSERTION_FAILURE: Assertion violations: ASSERT_NONDETERMINISM_NOT_ROUTED_V0 — 1 violation(s)
+Build Summary: 0 succeeded, 1 failed
+-- files left by the refused build: 0
+== O3: CC_RESOLVE_ACTOR_V0's lookup step omits BACKEND_ERROR, which its operation declares
+-- register the person
+Status:     SUCCESS
+-- oracle: the registry's own answer to the lookup on the corrupted store
+RESOLVE: BACKEND_ERROR
+-- accept the person
+Status:     SUCCESS
+actor state: ACCEPTED
+trace step: RESOLVE result_status = None
+trace step: READ result_status = None
+ending: declared_ending EXIT_SUCCESS | undeclared routes: 0

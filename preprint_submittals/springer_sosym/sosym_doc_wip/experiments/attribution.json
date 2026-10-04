@@ -1,0 +1,61 @@
+{
+  "snapshot_id": "f8356d9c8938aea16ab7850d7bda964d8d16c42c64e5db9056d5fe58040ec1d0",
+  "traces_explained": 243,
+  "traces_refused": {},
+  "traces_per_domain": {
+    "ai_governance": 2,
+    "blockchain": 34,
+    "book_library_mgmt": 45,
+    "causal_language_model": 78,
+    "workload": 1,
+    "transformation": 83
+  },
+  "endings": {
+    "declared_ending": 243
+  },
+  "statuses": {
+    "SUCCESS": 206,
+    "NOT_FOUND": 3,
+    "VIOLATION": 25,
+    "ALREADY_EXISTS": 8,
+    "NACK": 1
+  },
+  "snapshots": {
+    "composition": "f8356d9c8938aea16ab7850d7bda964d8d16c42c64e5db9056d5fe58040ec1d0",
+    "transformation": "cd8cc3e612f98d485d7f67540a473a32bb8e509251c9bd2a03384b694059ac9c"
+  },
+  "decisions": {
+    "admission": {
+      "observed": 243,
+      "attributed": 243,
+      "unattributed": 0
+    },
+    "captured_input": {
+      "observed": 66,
+      "attributed": 66,
+      "unattributed": 0
+    },
+    "effect": {
+      "observed": 852,
+      "attributed": 852,
+      "unattributed": 0
+    },
+    "event": {
+      "observed": 85,
+      "attributed": 85,
+      "unattributed": 0
+    },
+    "outcome": {
+      "observed": 765,
+      "attributed": 765,
+      "unattributed": 0
+    },
+    "route": {
+      "observed": 1008,
+      "attributed": 1008,
+      "unattributed": 0
+    }
+  },
+  "decisions_total": 3019,
+  "decisions_attributed": 3019
+}

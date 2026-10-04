@@ -1,0 +1,96 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 576 622" width="576" height="622"
+     font-family="Helvetica, Arial, sans-serif">
+  <rect width="576" height="622" fill="#ffffff"/>
+  <defs>
+    <marker id="p" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="6" markerHeight="6" orient="auto-start-reverse">
+      <path d="M0,0 L10,5 L0,10 z" fill="#1a1a1a"/></marker>
+  </defs>
+  <g fill="#1a1a1a">
+
+  <text x="28" y="24" font-size="11" letter-spacing="1.2" fill="#444">THE WHOLE LIFECYCLE, NOT THE DEVELOPMENT STAGE</text>
+  <text x="28" y="39" font-size="9.5" fill="#666">where authorization enters, who acts, and which stage the agent may perform</text>
+
+  <text x="40" y="62" font-size="9" letter-spacing="1" fill="#888">LIFECYCLE STAGE</text>
+  <text x="170" y="62" font-size="9" letter-spacing="1" fill="#888">WHAT PGC MAKES OF IT</text>
+  <text x="486" y="62" font-size="9" letter-spacing="1" fill="#888">ACTS</text>
+  <line x1="28" y1="68" x2="548" y2="68" stroke="#1a1a1a" stroke-width="1.2"/>
+
+  <g font-size="10">
+    <text x="40" y="88" font-weight="bold">inception</text>
+    <text x="170" y="88">genesis — scope and profile fix what is governed</text>
+    <circle cx="492" cy="84" r="4.5" fill="#1a1a1a"/><text x="502" y="88" font-size="9.5">human</text>
+    <line x1="28" y1="97" x2="548" y2="97" stroke="#ececec"/>
+
+    <text x="40" y="114" font-weight="bold">design</text>
+    <text x="170" y="114">P0–P8 — concerns separated, each phase admissible</text>
+    <circle cx="492" cy="110" r="4.5" fill="#ffffff" stroke="#1a1a1a" stroke-width="1.4"/><text x="502" y="114" font-size="9.5">agent</text>
+    <line x1="28" y1="123" x2="548" y2="123" stroke="#ececec"/>
+
+    <text x="40" y="140" font-weight="bold">construction</text>
+    <text x="170" y="140">renders an admitted design — produces a candidate</text>
+    <circle cx="492" cy="136" r="4.5" fill="#ffffff" stroke="#1a1a1a" stroke-width="1.4"/><text x="502" y="140" font-size="9.5">agent</text>
+    <line x1="28" y1="149" x2="548" y2="149" stroke="#ececec"/>
+
+    <text x="40" y="166" font-weight="bold">deployment</text>
+    <text x="170" y="166">promotion, then seal — two acts, neither in construction</text>
+    <circle cx="492" cy="162" r="4.5" fill="#1a1a1a"/><text x="502" y="166" font-size="9.5">human</text>
+    <line x1="28" y1="175" x2="548" y2="175" stroke="#ececec"/>
+
+    <text x="40" y="192" font-weight="bold">execution</text>
+    <text x="170" y="192">traversal of the seal — determines nothing</text>
+    <text x="486" y="192" font-size="9.5" fill="#888">neither</text>
+    <line x1="28" y1="201" x2="548" y2="201" stroke="#ececec"/>
+
+    <text x="40" y="218" font-weight="bold">evolution</text>
+    <text x="170" y="218">another governed transformation — not an exception</text>
+    <circle cx="480" cy="214" r="4.5" fill="#ffffff" stroke="#1a1a1a" stroke-width="1.4"/>
+    <circle cx="492" cy="214" r="4.5" fill="#1a1a1a"/><text x="502" y="218" font-size="9.5">both</text>
+    <line x1="28" y1="227" x2="548" y2="227" stroke="#ececec"/>
+
+    <text x="40" y="244" font-weight="bold">version mgmt</text>
+    <text x="170" y="244">baseline #n → #n+1 — the version <tspan font-style="italic">is</tspan> the sealed state</text>
+    <text x="486" y="244" font-size="9.5" fill="#888">automatic</text>
+  </g>
+  <line x1="28" y1="253" x2="548" y2="253" stroke="#1a1a1a" stroke-width="1.2"/>
+  <text x="28" y="270" font-size="9.5" fill="#666">Every stage is governed. The agent may perform two entirely and participate in a third.</text>
+
+  <text x="28" y="300" font-size="10.5" letter-spacing="1.1" fill="#444">WHAT IS RECAST AS A PROPERTY OF GOVERNED STATE</text>
+  <text x="28" y="314" font-size="9" fill="#666">Conventionally each is a managed process with its own procedure, owner and audit. Here each is recast.</text>
+
+  <g font-size="10">
+    <text x="40" y="340" font-weight="bold">change control</text>
+    <line x1="160" y1="336" x2="182" y2="336" stroke="#1a1a1a" marker-end="url(#p)"/>
+    <text x="192" y="340">a declared act, separate from construction; behaviour reaches</text>
+    <text x="192" y="352" font-size="9" fill="#666">the running system by sealing alone</text>
+
+    <text x="40" y="376" font-weight="bold">configuration mgmt</text>
+    <line x1="160" y1="372" x2="182" y2="372" stroke="#1a1a1a" marker-end="url(#p)"/>
+    <text x="192" y="376">carried inside the seal, so it is not a separate object that</text>
+    <text x="192" y="388" font-size="9" fill="#666">can drift from what executes</text>
+
+    <text x="40" y="412" font-weight="bold">release approval</text>
+    <line x1="160" y1="408" x2="182" y2="408" stroke="#1a1a1a" marker-end="url(#p)"/>
+    <text x="192" y="412">the authorization and the released artifact are one object;</text>
+    <text x="192" y="424" font-size="9" fill="#666">the authorization travels with what it authorized</text>
+
+    <text x="40" y="448" font-weight="bold">rollback</text>
+    <line x1="160" y1="444" x2="182" y2="444" stroke="#1a1a1a" marker-end="url(#p)"/>
+    <text x="192" y="448">a governed transformation to a retained baseline, where</text>
+    <text x="192" y="460" font-size="9" fill="#666">retention is provided — no exceptional path</text>
+
+    <text x="40" y="484" font-weight="bold">audit trail</text>
+    <line x1="160" y1="480" x2="182" y2="480" stroke="#1a1a1a" marker-end="url(#p)"/>
+    <text x="192" y="484">emitted by each band as it determines, not assembled</text>
+    <text x="192" y="496" font-size="9" fill="#666">afterwards from records not built for it</text>
+  </g>
+
+  <rect x="28" y="510" width="520" height="30" fill="#fafafa" stroke="#1a1a1a" stroke-dasharray="5 3"/>
+  <text x="40" y="524" font-size="9.5" fill="#444">The concerns do not disappear. Each is discharged by the structure of the governed state rather than by a</text>
+  <text x="40" y="535" font-size="9.5" fill="#444">process that watches for it. What has been exercised on this surface is reported in §6–§8.</text>
+
+  <text x="28" y="562" font-size="10.5" letter-spacing="1.1" fill="#444">WHY THIS MATTERS FOR AN AGENT</text>
+  <text x="28" y="580" font-size="10.5">An agent may be given the design, construction and transformation stages in full. On the</text>
+  <text x="28" y="594" font-size="10.5">architecture's terms, delegating them transfers no authority, because authorization is located</text>
+  <text x="28" y="608" font-size="10.5">in none of them. §8 reports which boundaries were exercised and which were not.</text>
+  </g>
+</svg>

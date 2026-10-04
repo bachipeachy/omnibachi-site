@@ -124,6 +124,11 @@ pagination.pagerSize = 10
 [markup]
   [markup.goldmark.renderer]
     unsafe = true
+  # Inline math \( … \) reaches the page untouched, for KaTeX on pages with `math: true`.
+  [markup.goldmark.extensions.passthrough]
+    enable = true
+    [markup.goldmark.extensions.passthrough.delimiters]
+      inline = [['\(', '\)']]
   [markup.highlight]
     noClasses = false
     codeFences = true

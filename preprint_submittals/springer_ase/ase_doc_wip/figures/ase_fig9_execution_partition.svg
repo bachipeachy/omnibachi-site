@@ -1,0 +1,70 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 576 676" width="576" height="676"
+     font-family="Helvetica, Arial, sans-serif">
+  <rect width="576" height="676" fill="#ffffff"/>
+  <defs>
+    <marker id="g" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse">
+      <path d="M0,0 L10,5 L0,10 z" fill="#1a1a1a"/></marker>
+  </defs>
+  <g fill="#1a1a1a">
+
+  <text x="28" y="30" font-size="11.5" letter-spacing="1.5" fill="#444">EXECUTION REALIZES; IT DOES NOT DETERMINE</text>
+
+  <!-- above the seal -->
+  <rect x="152" y="46" width="272" height="34" fill="#1a1a1a"/>
+  <text x="288" y="68" text-anchor="middle" font-size="12.5" fill="#ffffff">sealed baseline</text>
+  <text x="440" y="66" font-size="10" fill="#888">everything determined</text>
+
+  <!-- THE SEAL -->
+  <line x1="28" y1="98" x2="548" y2="98" stroke="#1a1a1a" stroke-width="4"/>
+  <text x="28" y="92" font-size="11.5" letter-spacing="1.6">SEAL</text>
+  <text x="548" y="114" text-anchor="end" font-size="10" fill="#888">nothing below determines behaviour</text>
+  <line x1="288" y1="80" x2="288" y2="94" stroke="#1a1a1a" marker-end="url(#g)"/>
+
+  <!-- what execution does -->
+  <rect x="28" y="132" width="520" height="130" fill="#ffffff" stroke="#1a1a1a"/>
+  <text x="46" y="154" font-size="11" letter-spacing="1.3" fill="#666">WHAT EXECUTION DOES</text>
+  <g font-size="11.5">
+    <text x="46" y="180">·  reads the sealed baseline</text>
+    <text x="46" y="202">·  admits at the boundary only what the baseline permits</text>
+    <text x="46" y="224">·  follows the behaviour already determined there</text>
+    <text x="46" y="246">·  emits only declared outcomes</text>
+  </g>
+  <line x1="288" y1="112" x2="288" y2="128" stroke="#1a1a1a" marker-end="url(#g)"/>
+
+  <!-- what it cannot do -->
+  <rect x="28" y="278" width="520" height="152" fill="#fafafa" stroke="#1a1a1a" stroke-dasharray="6 4"/>
+  <text x="46" y="300" font-size="11" letter-spacing="1.3" fill="#666">WHAT EXECUTION CANNOT DO — FIVE SEPARATE PROHIBITIONS</text>
+  <g font-size="11.5">
+    <text x="46" y="326">&#9679;  infer behaviour the baseline does not carry</text>
+    <text x="46" y="348">&#9675;  create a route</text>
+    <text x="46" y="370">&#9679;  supply a default</text>
+    <text x="46" y="392">&#9675;  change governance</text>
+    <text x="46" y="414">&#9675;  modify the baseline</text>
+  </g>
+  <text x="330" y="326" font-size="10.5" fill="#888" font-style="italic">&#9679; stimulated by the reported</text>
+  <text x="330" y="341" font-size="10.5" fill="#888" font-style="italic">case &#183; &#9675; declared, not stimulated</text>
+  <text x="330" y="356" font-size="10.5" fill="#888" font-style="italic">Each needs its own stimulus; one</text>
+  <text x="330" y="371" font-size="10.5" fill="#888" font-style="italic">traversal is not evidence for five.</text>
+
+  <!-- boundary cases -->
+  <line x1="28" y1="456" x2="548" y2="456" stroke="#c9c9c9"/>
+  <text x="28" y="480" font-size="11" letter-spacing="1.3" fill="#666">TWO BOUNDARY CASES</text>
+
+  <rect x="28" y="494" width="252" height="70" fill="#ffffff" stroke="#1a1a1a"/>
+  <text x="44" y="514" font-size="12">an unauthorized state</text>
+  <text x="44" y="532" font-size="10.5" fill="#666">corrupted snapshot · unresolvable binding</text>
+  <rect x="44" y="540" width="180" height="18" fill="#1a1a1a"/>
+  <text x="134" y="553" text-anchor="middle" font-size="10.5" fill="#ffffff">REFUSED — a declared outcome</text>
+
+  <rect x="296" y="494" width="252" height="70" fill="#ffffff" stroke="#1a1a1a"/>
+  <text x="312" y="514" font-size="12">rollback</text>
+  <text x="312" y="532" font-size="10.5" fill="#666">a governed transformation to a prior baseline —</text>
+  <text x="312" y="547" font-size="10.5" fill="#666">available only where that baseline is retained;</text>
+  <text x="312" y="562" font-size="10.5" fill="#666">retention is required, not provided</text>
+
+  <line x1="28" y1="588" x2="548" y2="588" stroke="#c9c9c9"/>
+  <text x="28" y="612" font-size="12.5" font-style="italic">Refusal is a declared outcome, not a new determination.</text>
+  <text x="28" y="636" font-size="10.5" fill="#666">The agent has left the loop entirely. No producer acts here, and nothing here confers authority.</text>
+  <text x="28" y="654" font-size="9.5" fill="#888">The five are prohibitions of the execution model. &#167;8.2 reports which the exercised case bears on.</text>
+  </g>
+</svg>

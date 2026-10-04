@@ -1,0 +1,62 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 576 578" width="576" height="578"
+     font-family="Helvetica, Arial, sans-serif">
+  <rect width="576" height="578" fill="#ffffff"/>
+  <defs>
+    <marker id="k" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse">
+      <path d="M0,0 L10,5 L0,10 z" fill="#1a1a1a"/></marker>
+  </defs>
+  <g fill="#1a1a1a">
+
+  <text x="28" y="28" font-size="11.5" letter-spacing="1.4" fill="#444">WHAT THE TRANSFORMATION ADDED — AND WHAT IT LEFT ALONE</text>
+
+  <!-- BEFORE -->
+  <text x="28" y="62" font-size="10.5" letter-spacing="1.2" fill="#888">BASELINE #n</text>
+  <rect x="28" y="72" width="212" height="132" fill="#ffffff" stroke="#1a1a1a"/>
+  <text x="40" y="92" font-size="9.5" font-family="monospace" fill="#666">snapshot:70dd9dea…</text>
+  <rect x="44" y="104" width="180" height="30" fill="#f0f0f0" stroke="#999"/>
+  <text x="134" y="123" text-anchor="middle" font-size="10.5">baseline artifact</text>
+  <rect x="44" y="142" width="180" height="30" fill="#f0f0f0" stroke="#999"/>
+  <text x="134" y="161" text-anchor="middle" font-size="10.5">baseline artifact</text>
+  <text x="134" y="192" text-anchor="middle" font-size="10" fill="#666">two artifacts</text>
+
+  <!-- arrow -->
+  <line x1="248" y1="138" x2="290" y2="138" stroke="#1a1a1a" stroke-width="1.6" marker-end="url(#k)"/>
+  <text x="269" y="128" text-anchor="middle" font-size="9.5" fill="#666">G4</text>
+
+  <!-- AFTER -->
+  <text x="300" y="62" font-size="10.5" letter-spacing="1.2" fill="#888">BASELINE #n+1</text>
+  <rect x="300" y="72" width="248" height="228" fill="#ffffff" stroke="#1a1a1a" stroke-width="1.6"/>
+  <text x="312" y="92" font-size="9.5" font-family="monospace" fill="#666">snapshot:48fd5a4d…</text>
+  <rect x="316" y="104" width="216" height="26" fill="#f0f0f0" stroke="#999"/>
+  <text x="424" y="121" text-anchor="middle" font-size="10">baseline artifact — carried, unchanged</text>
+  <rect x="316" y="136" width="216" height="26" fill="#f0f0f0" stroke="#999"/>
+  <text x="424" y="153" text-anchor="middle" font-size="10">baseline artifact — carried, unchanged</text>
+
+  <rect x="316" y="170" width="216" height="38" fill="#ffffff" stroke="#1a1a1a" stroke-width="1.4"/>
+  <text x="326" y="186" font-size="10.5">capability  lend-copy-to-member</text>
+  <text x="326" y="196" font-size="8.5" fill="#666">copy_id · member_id · record_loan</text><text x="326" y="205" font-size="8.5" fill="#666">refusal: copy_already_on_loan</text>
+  <rect x="316" y="214" width="216" height="26" fill="#ffffff" stroke="#1a1a1a" stroke-width="1.4"/>
+  <text x="326" y="231" font-size="10.5">workflow  lend-copy-to-member</text>
+  <rect x="316" y="246" width="216" height="38" fill="#ffffff" stroke="#1a1a1a" stroke-width="1.4"/>
+  <text x="326" y="262" font-size="10.5">read operation</text>
+  <text x="326" y="277" font-size="8.5" fill="#666">current loan record for a named copy</text>
+
+  <text x="300" y="320" font-size="10" fill="#666">two carried · three realized · five total</text>
+
+  <!-- what makes the diff checkable -->
+  <line x1="28" y1="348" x2="548" y2="348" stroke="#c9c9c9"/>
+  <text x="28" y="372" font-size="11.5" letter-spacing="1.2" fill="#444">WHY THIS DIFF IS CHECKABLE BY SOMEONE ELSE</text>
+  <g font-size="11">
+    <text x="44" y="398">·  both snapshot identities are derived from content, not asserted</text>
+    <text x="44" y="420">·  the two carried artifacts keep their identities — the transformation did not touch them</text>
+    <text x="44" y="442">·  the design declared the baseline by its two artifact identities before realizing anything</text>
+    <text x="44" y="464">·  a fixture supplying <tspan font-family="monospace" font-size="10">snapshot:wrong</tspan> is refused with <tspan font-family="monospace" font-size="10">baseline_identity_mismatch</tspan></text>
+  </g>
+
+  <line x1="28" y1="486" x2="548" y2="486" stroke="#c9c9c9"/>
+  <text x="28" y="510" font-size="12" font-style="italic">The agent produced the delta. It did not produce the identity that</text>
+  <text x="28" y="526" font-size="12" font-style="italic">makes the delta checkable.</text>
+  <text x="28" y="550" font-size="9.5" fill="#888">Identifiers are snapshot identities, not projection hashes. The wrong-baseline demonstration became discriminating only</text>
+  <text x="28" y="563" font-size="9.5" fill="#888">after a negative demonstration was added; at first delivery it passed with the guard removed (&#167;8.4).</text>
+  </g>
+</svg>

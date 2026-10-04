@@ -1,5 +1,11 @@
 {{- /* Project styles layered on top of PaperMod. */ -}}
 <link rel="icon" type="image/svg+xml" href="{{ "favicon.svg" | absURL }}">
+{{- if .Params.math }}
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.16.11/dist/katex.min.css">
+<script defer src="https://cdn.jsdelivr.net/npm/katex@0.16.11/dist/katex.min.js"></script>
+<script defer src="https://cdn.jsdelivr.net/npm/katex@0.16.11/dist/contrib/auto-render.min.js"
+  onload="renderMathInElement(document.body, {delimiters: [{left: '\\(', right: '\\)', display: false}], throwOnError: false});"></script>
+{{- end }}
 <style>
   .series-box {
     margin: 36px 0 8px;

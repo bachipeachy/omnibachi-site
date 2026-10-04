@@ -5,8 +5,8 @@ weight: 30
 slug: lifecycle-architecture
 aliases:
   - /papers/lifecycle-architecture/
-publisher: 'Elsevier Journal of Systems and Software'
-status: 'Under review'
+publisher: '—'
+status: 'Not accepted'
 ---
 **Author:** Bhash Ganti (aka Bachi)
 
@@ -16,7 +16,7 @@ bachipeachy@gmail.com · ORCID [0009-0007-3810-6520](https://orcid.org/0009-0007
 
 **Preprint:** [https://doi.org/10.5281/zenodo.22758703](https://doi.org/10.5281/zenodo.22758703) — this page is the frozen rendition of that deposit.
 
-**Submitted to:** Elsevier Journal of Systems and Software — under review.
+**Submission history:** Elsevier *Journal of Systems and Software*, then Elsevier *Science of Computer Programming* — not accepted at either. The paper is being reworked.
 
 ---
 

@@ -1,0 +1,11 @@
+digraph R {
+  rankdir=LR; nodesep=0.25; ranksep=0.35;
+  node [fontname="Helvetica", fontsize=10, shape=box, style="rounded,filled", fillcolor=white, color=gray30];
+  edge [color=gray30];
+  subgraph cluster_a { label="Conventional execution"; fontname="Helvetica"; fontsize=11; color=gray60;
+    a1 [label="Model leaves\na decision open"]; a2 [label="Default, heuristic\nor error handler"]; a3 [label="Behavior the model\nnever stated", fillcolor="#fff1d6"];
+    a1 -> a2 -> a3; }
+  subgraph cluster_b { label="Sealed-model execution"; fontname="Helvetica"; fontsize=11; color=gray60;
+    b1 [label="Model leaves\na decision open"]; b2 [label="Refusal with\nrecorded grounds", shape=octagon, fillcolor="#fde2e2", color="#a32020"]; b3 [label="No behavioral\ndetermination", fillcolor="#f5f5f5"];
+    b1 -> b2 -> b3; }
+}

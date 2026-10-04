@@ -1,0 +1,78 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 576 616" width="576" height="616"
+     font-family="Helvetica, Arial, sans-serif">
+  <rect width="576" height="616" fill="#ffffff"/>
+  <defs>
+    <marker id="e" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse">
+      <path d="M0,0 L10,5 L0,10 z" fill="#1a1a1a"/></marker>
+  </defs>
+  <g fill="#1a1a1a">
+
+  <text x="28" y="30" font-size="11" letter-spacing="1.1" fill="#444">THE AGENT PARTICIPATES IN EVOLUTION WITHOUT BECOMING ITS AUTHORITY</text>
+
+  <!-- ================= LEFT: conventional ================= -->
+  <text x="28" y="66" font-size="11" letter-spacing="1.2" fill="#666">DIRECT REPOSITORY MUTATION</text>
+  <rect x="28" y="78" width="238" height="316" fill="#fafafa" stroke="#d0d0d0"/>
+
+  <rect x="52" y="104" width="190" height="44" fill="#ffffff" stroke="#1a1a1a"/>
+  <text x="147" y="122" text-anchor="middle" font-size="12.5">running software</text>
+  <text x="147" y="138" text-anchor="middle" font-size="10" fill="#666">the repository is the state</text>
+  <line x1="147" y1="150" x2="147" y2="176" stroke="#1a1a1a" marker-end="url(#e)"/>
+
+  <rect x="52" y="180" width="190" height="44" fill="#ffffff" stroke="#1a1a1a"/>
+  <circle cx="72" cy="202" r="6" fill="#ffffff" stroke="#1a1a1a" stroke-width="1.6"/>
+  <text x="152" y="199" text-anchor="middle" font-size="12.5">agent edits</text>
+  <text x="152" y="215" text-anchor="middle" font-size="10" fill="#666">writes directly to the state</text>
+  <line x1="147" y1="226" x2="147" y2="252" stroke="#1a1a1a" marker-end="url(#e)"/>
+
+  <rect x="52" y="256" width="190" height="44" fill="#1a1a1a"/>
+  <text x="147" y="283" text-anchor="middle" font-size="12.5" fill="#ffffff">new behaviour</text>
+
+  <text x="147" y="326" text-anchor="middle" font-size="11" font-style="italic">no authorizing act</text>
+  <text x="147" y="344" text-anchor="middle" font-size="10" fill="#666">the edit is the authorization</text>
+  <text x="147" y="372" text-anchor="middle" font-size="10.5" fill="#333">two steps · no authorizing act</text>
+  <!-- loop back -->
+  <path d="M242,278 L258,278 L258,126 L244,126" fill="none" stroke="#999" marker-end="url(#e)"/>
+
+  <!-- ================= RIGHT: governed ================= -->
+  <text x="310" y="66" font-size="11" letter-spacing="1.2" fill="#666">GOVERNED TRANSFORMATION</text>
+  <rect x="310" y="78" width="238" height="316" fill="#ffffff" stroke="#1a1a1a" stroke-width="1.6"/>
+
+  <rect x="334" y="96" width="190" height="34" fill="#1a1a1a"/>
+  <text x="429" y="118" text-anchor="middle" font-size="12" fill="#ffffff">baseline #n</text>
+  <line x1="429" y1="132" x2="429" y2="150" stroke="#1a1a1a" marker-end="url(#e)"/>
+
+  <rect x="334" y="154" width="190" height="40" fill="#ffffff" stroke="#1a1a1a"/>
+  <circle cx="352" cy="174" r="6" fill="#ffffff" stroke="#1a1a1a" stroke-width="1.6"/>
+  <text x="436" y="171" text-anchor="middle" font-size="12">agent transformation</text>
+  <text x="436" y="186" text-anchor="middle" font-size="9.5" fill="#666">grounded in #n, never writing to it</text>
+  <line x1="429" y1="196" x2="429" y2="214" stroke="#1a1a1a" marker-end="url(#e)"/>
+
+  <rect x="334" y="218" width="190" height="34" fill="#f0f0f0" stroke="#1a1a1a"/>
+  <text x="429" y="240" text-anchor="middle" font-size="12">governed candidate</text>
+  <line x1="429" y1="254" x2="429" y2="272" stroke="#1a1a1a" marker-end="url(#e)"/>
+
+  <rect x="334" y="276" width="190" height="40" fill="#f0f0f0" stroke="#1a1a1a" stroke-width="2.2" stroke-dasharray="6 3"/>
+  <circle cx="352" cy="296" r="6.5" fill="#1a1a1a"/>
+  <text x="429" y="293" text-anchor="middle" font-size="11" font-weight="bold">operator adoption</text>
+  <text x="429" y="308" text-anchor="middle" font-size="9" fill="#555">operator adoption — not a callable</text>
+  <line x1="429" y1="318" x2="429" y2="336" stroke="#1a1a1a" marker-end="url(#e)"/>
+
+  <rect x="334" y="340" width="190" height="34" fill="#1a1a1a"/>
+  <text x="429" y="362" text-anchor="middle" font-size="12" fill="#ffffff">baseline #n+1</text>
+  <!-- loop back: n+1 becomes n -->
+  <path d="M524,357 L540,357 L540,113 L526,113" fill="none" stroke="#1a1a1a" marker-end="url(#e)"/>
+  <text x="552" y="240" font-size="9.5" fill="#666" transform="rotate(90 552,240)" text-anchor="middle">#n+1 becomes #n</text>
+
+  <!-- ================= what changed ================= -->
+  <line x1="28" y1="424" x2="548" y2="424" stroke="#c9c9c9"/>
+  <text x="28" y="448" font-size="11.5" letter-spacing="1.2" fill="#444">WHAT THE AGENT DOES IN BOTH — AND WHAT DIFFERS</text>
+  <g font-size="11.5">
+    <text x="44" y="474">Same:  the agent performs the engineering work in both columns.</text>
+    <text x="44" y="500">Differs:  on the left its output <tspan font-style="italic">is</tspan> the new state; on the right its output is a</text>
+    <text x="44" y="516">candidate that must be authorized before any state changes.</text>
+  </g>
+  <text x="28" y="556" font-size="12.5" font-style="italic">Evolution is not an exception to governance — it is another governed</text>
+  <text x="28" y="572" font-size="12.5" font-style="italic">construction, run against the state the previous cycle established.</text>
+  <text x="28" y="598" font-size="10.5" fill="#666">Autonomy is unchanged. What differs is where authority sits.</text>
+  </g>
+</svg>
