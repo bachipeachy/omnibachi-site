@@ -417,7 +417,12 @@ standard question in electronic-package design, asked alongside cooling rather t
 
 ## 13. Open-source implementation
 
-The program will start as a public, multidisciplinary repository, `self-powered-gpu`:
+The program lives in a public repository,
+[github.com/bachipeachy/self-powered-gpu](https://github.com/bachipeachy/self-powered-gpu). Its
+first-order simulator reproduces the estimate of §7, and runs with nothing but Python. It also shows
+the trade §7.2 describes. With no thermal headroom, holding the junction temperature costs far more
+than a thermoelectric layer makes. With 20 K of headroom above ambient and a very good material
+(ZT ≈ 3), the net turns slightly positive. The repository will grow into this layout:
 
 ```text
 self-powered-gpu/
@@ -442,7 +447,8 @@ would settle it.
 We invite semiconductor researchers, photovoltaic and thermoelectric specialists, materials
 scientists, thermal engineers, GPU architects, power-electronics designers, university groups and
 independent hardware builders. Contributions can be analysis, simulation, materials, device models,
-experiment designs, measurements, or criticism. The comments below and the repository are both open.
+experiment designs, measurements, or criticism. The comments below and the
+[repository](https://github.com/bachipeachy/self-powered-gpu) are both open.
 
 ## 15. Conclusion: from heat management to heat utilisation
 
